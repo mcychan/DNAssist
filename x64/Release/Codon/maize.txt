@@ -1,0 +1,86 @@
+ CODONFREQUENCY  January 22, 1991  15:12
+
+Codon usage for maize (highly expressed) genes 1/24/91
+
+AmAcid  Codon    Number       /1000    Fraction   ..
+
+Gly     GGG      198.00       18.34        0.23
+Gly     GGA       71.00        6.58        0.08
+Gly     GGT       66.00        6.11        0.08
+Gly     GGC      527.00       48.81        0.61
+
+Glu     GAG      534.00       49.46        0.88
+Glu     GAA       71.00        6.58        0.12
+Asp     GAT       31.00        2.87        0.06
+Asp     GAC      481.00       44.55        0.94
+
+Val     GTG      396.00       36.68        0.47
+Val     GTA       22.00        2.04        0.03
+Val     GTT       44.00        4.08        0.05
+Val     GTC      384.00       35.57        0.45
+
+Ala     GCG      446.00       41.31        0.39
+Ala     GCA       71.00        6.58        0.06
+Ala     GCT      116.00       10.74        0.10
+Ala     GCC      503.00       46.59        0.44
+
+Arg     AGG      155.00       14.36        0.22
+Arg     AGA       25.00        2.32        0.04
+Ser     AGT       18.00        1.67        0.03
+Ser     AGC      207.00       19.17        0.30
+
+Lys     AAG      408.00       37.79        0.92
+Lys     AAA       34.00        3.15        0.08
+Asn     AAT       29.00        2.69        0.10
+Asn     AAC      265.00       24.54        0.90
+
+Met     ATG      262.00       24.27        1.00
+Ile     ATA       27.00        2.50        0.07
+Ile     ATT       29.00        2.69        0.07
+Ile     ATC      354.00       32.79        0.86
+
+Thr     ACG      199.00       18.43        0.36
+Thr     ACA       35.00        3.24        0.06
+Thr     ACT       33.00        3.06        0.06
+Thr     ACC      281.00       26.03        0.51
+
+Trp     TGG      141.00       13.06        1.00
+End     TGA       25.00        2.32        0.74
+Cys     TGT       23.00        2.13        0.10
+Cys     TGC      210.00       19.45        0.90
+
+End     TAG        6.00        0.56        0.18
+End     TAA        3.00        0.28        0.09
+Tyr     TAT        7.00        0.65        0.02
+Tyr     TAC      275.00       25.47        0.98
+
+Leu     TTG       43.00        3.98        0.05
+Leu     TTA        3.00        0.28        0.00
+Phe     TTT       18.00        1.67        0.05
+Phe     TTC      352.00       32.60        0.95
+
+Ser     TCG      154.00       14.26        0.22
+Ser     TCA       26.00        2.41        0.04
+Ser     TCT       29.00        2.69        0.04
+Ser     TCC      251.00       23.25        0.37
+
+Arg     CGG      136.00       12.60        0.20
+Arg     CGA       27.00        2.50        0.04
+Arg     CGT       43.00        3.98        0.06
+Arg     CGC      311.00       28.80        0.45
+
+Gln     CAG      406.00       37.60        0.91
+Gln     CAA       42.00        3.89        0.09
+His     CAT       44.00        4.08        0.16
+His     CAC      236.00       21.86        0.84
+
+Leu     CTG      404.00       37.42        0.44
+Leu     CTA       21.00        1.94        0.02
+Leu     CTT       41.00        3.80        0.04
+Leu     CTC      415.00       38.44        0.45
+
+Pro     CCG      356.00       32.97        0.45
+Pro     CCA      108.00       10.00        0.14
+Pro     CCT       58.00        5.37        0.07
+Pro     CCC      261.00       24.17        0.33
+

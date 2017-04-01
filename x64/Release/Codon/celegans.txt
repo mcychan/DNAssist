@@ -1,0 +1,86 @@
+Codon usage for C. elegans highly biased (highly expressed, by
+inference) genes.  (Stenico, M., Lloyd, A. T., and Sharp, P. M. (1994).
+Nucleic Acids Research 22: 2437-2246
+
+AmAcid  Codon     Number    /1000     Fraction   ..
+ 
+Gly     GGG        3.00      0.41      0.01
+Gly     GGA      448.00     61.54      0.85
+Gly     GGT       59.00      8.10      0.11
+Gly     GGC       17.00      2.34      0.03
+ 
+Glu     GAG      417.00     57.28      0.69
+Glu     GAA      183.00     25.14      0.31
+Asp     GAT      194.00     26.65      0.41
+Asp     GAC      278.00     38.19      0.59
+ 
+Val     GTG       30.00      4.12      0.07
+Val     GTA       13.00      1.79      0.03
+Val     GTT      137.00     18.82      0.30
+Val     GTC      272.00     37.36      0.60
+ 
+Ala     GCG        5.00      0.69      0.01
+Ala     GCA       34.00      4.67      0.05
+Ala     GCT      260.00     35.71      0.38
+Ala     GCC      382.00     52.47      0.56
+ 
+Arg     AGG        4.00      0.55      0.01
+Arg     AGA       61.00      8.38      0.18
+Ser     AGT        9.00      1.24      0.02
+Ser     AGC       24.00      3.30      0.06
+ 
+Lys     AAG      600.00     82.42      0.95
+Lys     AAA       31.00      4.26      0.05
+Asn     AAT       39.00      5.36      0.14
+Asn     AAC      244.00     33.52      0.86
+ 
+Met     ATG      167.00     22.94      1.00
+Ile     ATA        2.00      0.27      0.00
+Ile     ATT       91.00     12.50      0.22
+Ile     ATC      324.00     44.51      0.78
+ 
+Thr     ACG        5.00      0.69      0.01
+Thr     ACA        9.00      1.24      0.02
+Thr     ACT       93.00     12.77      0.25
+Thr     ACC      263.00     36.13      0.71
+ 
+Trp     TGG       52.00      7.14      1.00
+End     TGA        1.00      0.14      0.06
+Cys     TGT       14.00      1.92      0.18
+Cys     TGC       64.00      8.79      0.82
+ 
+End     TAG        1.00      0.14      0.06
+End     TAA       14.00      1.92      0.88
+Tyr     TAT       22.00      3.02      0.11
+Tyr     TAC      173.00     23.76      0.89
+ 
+Leu     TTG       82.00     11.26      0.14
+Leu     TTA        3.00      0.41      0.01
+Phe     TTT        8.00      1.10      0.03
+Phe     TTC      223.00     30.63      0.97
+ 
+Ser     TCG       29.00      3.98      0.07
+Ser     TCA       28.00      3.85      0.07
+Ser     TCT      111.00     15.25      0.27
+Ser     TCC      212.00     29.12      0.51
+ 
+Arg     CGG        1.00      0.14      0.00
+Arg     CGA        2.00      0.27      0.01
+Arg     CGT      156.00     21.43      0.46
+Arg     CGC      114.00     15.66      0.34
+ 
+Gln     CAG      113.00     15.52      0.35
+Gln     CAA      206.00     28.30      0.65
+His     CAT       38.00      5.22      0.26
+His     CAC      108.00     14.84      0.74
+ 
+Leu     CTG       10.00      1.37      0.02
+Leu     CTA        0.00      0.00      0.00
+Leu     CTT      207.00     28.43      0.36
+Leu     CTC      279.00     38.32      0.48
+ 
+Pro     CCG        4.00      0.55      0.01
+Pro     CCA      290.00     39.84      0.93
+Pro     CCT       10.00      1.37      0.03
+Pro     CCC        7.00      0.96      0.02
+

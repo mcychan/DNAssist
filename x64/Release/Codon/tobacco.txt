@@ -1,0 +1,94 @@
+
+Nicotiana tabacum (Tobacco)
+
+21 genes found in GenBank 63.
+
+ Produced by J. Michael Cherry (cherry@frodo.mgh.harvard.edu) with the
+ GCG program CodonFrequency.
+
+ Duplicates, pseudogenes, mutant and synthetic genes were not included.
+ Coding regions were specified using the Feature Table of each entry, then
+ checked for accuracy. If more than one stop codon was found the sequence
+ was not included.
+
+AmAcid  Codon     Number    /1000     Fraction   ..
+ 
+Gly     GGG       55.00      8.07      0.09
+Gly     GGA      197.00     28.92      0.33
+Gly     GGT      235.00     34.50      0.40
+Gly     GGC      107.00     15.71      0.18
+ 
+Glu     GAG      171.00     25.10      0.48
+Glu     GAA      188.00     27.60      0.52
+Asp     GAT      223.00     32.74      0.64
+Asp     GAC      124.00     18.20      0.36
+ 
+Val     GTG      110.00     16.15      0.24
+Val     GTA       92.00     13.51      0.20
+Val     GTT      178.00     26.13      0.39
+Val     GTC       82.00     12.04      0.18
+ 
+Ala     GCG       39.00      5.73      0.08
+Ala     GCA      138.00     20.26      0.27
+Ala     GCT      237.00     34.79      0.46
+Ala     GCC      106.00     15.56      0.20
+ 
+Arg     AGG       81.00     11.89      0.26
+Arg     AGA      104.00     15.27      0.33
+Ser     AGT       89.00     13.07      0.18
+Ser     AGC       79.00     11.60      0.16
+ 
+Lys     AAG      206.00     30.24      0.59
+Lys     AAA      144.00     21.14      0.41
+Asn     AAT      179.00     26.28      0.50
+Asn     AAC      182.00     26.72      0.50
+ 
+Met     atg      160.00     23.49      1.00
+Ile     ATA       64.00      9.40      0.18
+Ile     ATT      184.00     27.01      0.53
+Ile     ATC       99.00     14.53      0.29
+ 
+Thr     ACG       37.00      5.43      0.10
+Thr     ACA      118.00     17.32      0.30
+Thr     ACT      159.00     23.34      0.41
+Thr     ACC       75.00     11.01      0.19
+ 
+Trp     TGG      115.00     16.88      1.00
+End     TGA       10.00      1.47      0.45
+Cys     TGT       95.00     13.95      0.57
+Cys     TGC       71.00     10.42      0.43
+ 
+End     TAG        6.00      0.88      0.27
+End     TAA        6.00      0.88      0.27
+Tyr     TAT      120.00     17.62      0.53
+Tyr     TAC      105.00     15.41      0.47
+ 
+Leu     TTG      166.00     24.37      0.32
+Leu     TTA       63.00      9.25      0.12
+Phe     TTT      181.00     26.57      0.55
+Phe     TTC      146.00     21.43      0.45
+ 
+Ser     TCG       31.00      4.55      0.06
+Ser     TCA       88.00     12.92      0.18
+Ser     TCT      139.00     20.41      0.28
+Ser     TCC       71.00     10.42      0.14
+ 
+Arg     CGG       11.00      1.61      0.03
+Arg     CGA       40.00      5.87      0.13
+Arg     CGT       61.00      8.95      0.19
+Arg     CGC       19.00      2.79      0.06
+ 
+Gln     CAG       92.00     13.51      0.39
+Gln     CAA      143.00     20.99      0.61
+His     CAT       74.00     10.86      0.52
+His     CAC       67.00      9.84      0.48
+ 
+Leu     CTG       43.00      6.31      0.08
+Leu     CTA       60.00      8.81      0.11
+Leu     CTT      112.00     16.44      0.21
+Leu     CTC       80.00     11.74      0.15
+ 
+Pro     CCG       17.00      2.50      0.05
+Pro     CCA      132.00     19.38      0.37
+Pro     CCT      149.00     21.87      0.42
+Pro     CCC       57.00      8.37      0.16

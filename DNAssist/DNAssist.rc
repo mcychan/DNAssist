@@ -1,0 +1,1959 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+#include "verrsrc.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中性 (預設值) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(950)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "#include ""verrsrc.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#include ""res\\DNAssist.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""      // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\DNAssist.ico"
+
+IDR_strTYPE             ICON                    "res\\DNAssistDoc.ico"
+
+IDR_plotTYPE            ICON                    "res\\PlotDoc.ico"
+
+IDR_viewTYPE            ICON                    "res\\ResultDoc.ico"
+
+ICO_DNA1                ICON                    "res\\DNA1.ico"
+
+ICO_DNA2                ICON                    "res\\DNA2.ico"
+
+ICO_RNA1                ICON                    "res\\RNA1.ico"
+
+ICO_RNA2                ICON                    "res\\RNA2.ico"
+
+ICO_P1                  ICON                    "res\\P1.ico"
+
+ICO_P2                  ICON                    "res\\P2.ico"
+
+ICO_D1                  ICON                    "res\\D1.ico"
+
+ICO_D2                  ICON                    "res\\D2.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_TITLE               BITMAP                  "C:\\DNAssist\\DNAssist\\res\\Title.bmp"
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+IDB_ABOUT               BITMAP                  "res\\Title.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_EDIT_UNDO
+    BUTTON      ID_EDIT_REDO
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_BUTTON32829
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        POPUP "&New"
+        BEGIN
+            MENUITEM "&DNA\tCtrl+D",                ID_NEW_DNA
+            MENUITEM "&RNA\tCtrl+R",                ID_NEW_RNA
+            MENUITEM "Pro&tein\tCtrl+T",            ID_NEW_PROTEIN
+            MENUITEM "De&generate DNA\tCtrl+G",     ID_NEW_DEGENERATEDNA
+        END
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Editor...",                  ID_OPTIONS_EDITOR
+        MENUITEM "&Analysis...",                ID_OPTIONS_ANALYSIS
+        MENUITEM "&Result Display...",          ID_OPTIONS_RESULTDISPLAY
+        MENUITEM "Transcription &Factors...",   ID_OPTIONS_TRANSCRIPTIONFACTORS
+        MENUITEM "A&lignment...",               ID_OPTIONS_ALIGNMENT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Contents...",                ID_HELP_CONTENTS
+        MENUITEM "&Entrez",                     ID_HELP_ENTREZ
+        MENUITEM "BLAST",                       ID_HELP_BLAST
+        MENUITEM SEPARATOR
+        MENUITEM "&About DNAssist...",          ID_APP_ABOUT
+    END
+END
+
+IDR_strTYPE MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        POPUP "&New"
+        BEGIN
+            MENUITEM "&DNA\tCtrl+D",                ID_NEW_DNA
+            MENUITEM "&RNA\tCtrl+R",                ID_NEW_RNA
+            MENUITEM "Pro&tein\tCtrl+T",            ID_NEW_PROTEIN
+            MENUITEM "De&generate DNA\tCtrl+G",     ID_NEW_DEGENERATEDNA
+        END
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        POPUP "C&hange Case"
+        BEGIN
+            MENUITEM "&Uppercase",                  ID_CHANGECASE_UPPERCASE
+            MENUITEM "&Lowercase",                  ID_CHANGECASE_LOWERCASE
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "Select A&ll\tCtrl+A",         ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Find...\tCtrl+F",            ID_EDIT_FIND
+    END
+    POPUP "&Convert"
+    BEGIN
+        MENUITEM "&Circularize",                ID_CONVERT_CIRCULARIZE
+        MENUITEM "&Linearize",                  ID_CONVERT_LINEARIZE
+        MENUITEM SEPARATOR
+        MENUITEM "&Reverse-Complement",         ID_CONVERT_REVERSE
+        MENUITEM SEPARATOR
+        MENUITEM "D&NA -> RNA",                 ID_CONVERT_DNA2RNA
+        MENUITEM "RN&A -> DNA",                 ID_CONVERT_RNA2DNA
+        MENUITEM "DNA -> &protein",             ID_CONVERT_DNA2PRO
+        MENUITEM "RNA -> pr&otein",             ID_CONVERT_RNA2PRO
+        MENUITEM "Reverse &Translate",          ID_CONVERT_REVERSETRANSLATE
+    END
+    POPUP "&Analyze"
+    BEGIN
+        POPUP "&Translate"
+        BEGIN
+            MENUITEM "&1 phase",                    ID_TRANSLATE_1PHASE
+            MENUITEM "&3 phase",                    ID_TRANSLATE_3PHASE
+            MENUITEM "&6 phase",                    ID_TRANSLATE_6PHASE
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Find ORFs...",               ID_ANALYZE_FINDORFS
+        MENUITEM "Find &Pattern...",            ID_ANALYZE_FINDPATTERN
+        MENUITEM SEPARATOR
+        MENUITEM "&List",                       ID_ANALYZE_LIST
+        POPUP "P&roperties"
+        BEGIN
+            MENUITEM "&Physicochemical",            ID_PROPERTIES_PHYSICOCHEMICAL
+            MENUITEM "Hydroph&obicity",             ID_PROPERTIES_HYDROPHOBICITY
+            MENUITEM "Hydroph&ilicity",             ID_PROPERTIES_HYDROPHILICITY
+            MENUITEM "&Antigenicity",               ID_PROPERTIES_ANTIGENICITY
+        END
+        MENUITEM "R&estriction Mapping...",     ID_ANALYZE_RESTRICTIONMAPPING
+        MENUITEM "Tran&scription Factors...",   ID_ANALYZE_TRANSCRIPTIONFACTORS
+        MENUITEM "&Nucleosome Positions",       ID_ANALYZE_NUCLEOSOMEPOSITIONS
+        MENUITEM "&Align...",                   ID_ANALYZE_ALIGN
+        MENUITEM "Randomi&ze",                  ID_ANALYZE_RANDOMIZE
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Editor...",                  ID_OPTIONS_EDITOR
+        MENUITEM "&Analysis...",                ID_OPTIONS_ANALYSIS
+        MENUITEM "&Result Display...",          ID_OPTIONS_RESULTDISPLAY
+        MENUITEM "Transcription &Factors...",   ID_OPTIONS_TRANSCRIPTIONFACTORS
+        MENUITEM "A&lignment...",               ID_OPTIONS_ALIGNMENT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+        MENUITEM "Close All",                   ID_WINDOW_CLOSEALL
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Contents...",                ID_HELP_CONTENTS
+        MENUITEM "&Entrez",                     ID_HELP_ENTREZ
+        MENUITEM "BLAST",                       ID_HELP_BLAST
+        MENUITEM SEPARATOR
+        MENUITEM "&About DNAssist...",          ID_APP_ABOUT
+    END
+END
+
+IDR_plotTYPE MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        POPUP "&New"
+        BEGIN
+            MENUITEM "&DNA\tCtrl+D",                ID_NEW_DNA
+            MENUITEM "&RNA\tCtrl+R",                ID_NEW_RNA
+            MENUITEM "Pro&tein\tCtrl+T",            ID_NEW_PROTEIN
+            MENUITEM "De&generate DNA\tCtrl+G",     ID_NEW_DEGENERATEDNA
+        END
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Editor...",                  ID_OPTIONS_EDITOR
+        MENUITEM "&Analysis...",                ID_OPTIONS_ANALYSIS
+        MENUITEM "&Result Display...",          ID_OPTIONS_RESULTDISPLAY
+        MENUITEM "Transcription &Factors...",   ID_OPTIONS_TRANSCRIPTIONFACTORS
+        MENUITEM "A&lignment...",               ID_OPTIONS_ALIGNMENT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+        MENUITEM "Close All",                   ID_WINDOW_CLOSEALL
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Contents...",                ID_HELP_CONTENTS
+        MENUITEM "&Entrez",                     ID_HELP_ENTREZ
+        MENUITEM "BLAST",                       ID_HELP_BLAST
+        MENUITEM SEPARATOR
+        MENUITEM "&About DNAssist...",          ID_APP_ABOUT
+    END
+END
+
+IDR_viewTYPE MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        POPUP "&New"
+        BEGIN
+            MENUITEM "&DNA\tCtrl+D",                ID_NEW_DNA
+            MENUITEM "&RNA\tCtrl+R",                ID_NEW_RNA
+            MENUITEM "Pro&tein\tCtrl+T",            ID_NEW_PROTEIN
+            MENUITEM "De&generate DNA\tCtrl+G",     ID_NEW_DEGENERATEDNA
+        END
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Editor...",                  ID_OPTIONS_EDITOR
+        MENUITEM "&Analysis...",                ID_OPTIONS_ANALYSIS
+        MENUITEM "&Result Display...",          ID_OPTIONS_RESULTDISPLAY
+        MENUITEM "Transcription &Factors...",   ID_OPTIONS_TRANSCRIPTIONFACTORS
+        MENUITEM "A&lignment...",               ID_OPTIONS_ALIGNMENT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+        MENUITEM "Close All",                   ID_WINDOW_CLOSEALL
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Contents...",                ID_HELP_CONTENTS
+        MENUITEM "&Entrez",                     ID_HELP_ENTREZ
+        MENUITEM "BLAST",                       ID_HELP_BLAST
+        MENUITEM SEPARATOR
+        MENUITEM "&About DNAssist...",          ID_APP_ABOUT
+    END
+END
+
+IDR_strTYPE_CNTR_IP MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    MENUITEM SEPARATOR
+    MENUITEM SEPARATOR
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Y",            ID_EDIT_REDO,           VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL
+    VK_F3,          ID_EDIT_REPEAT,         VIRTKEY 
+    "H",            ID_EDIT_REPLACE,        VIRTKEY, CONTROL
+    VK_RETURN,      ID_OLE_EDIT_PROPERTIES, VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+    VK_ESCAPE,      ID_CANCEL_EDIT_CNTR,    VIRTKEY, NOINVERT
+END
+
+IDR_strTYPE_CNTR_IP ACCELERATORS
+BEGIN
+    VK_ESCAPE,      ID_CANCEL_EDIT_CNTR,    VIRTKEY, NOINVERT
+    "D",            ID_NEW_DNA,             VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    "R",            ID_NEW_RNA,             VIRTKEY, CONTROL, NOINVERT
+    "T",            ID_NEW_PROTEIN,         VIRTKEY, CONTROL, NOINVERT
+    "G",            ID_NEW_DEGENERATEDNA,   VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROTEINPROPERTIES DIALOGEX 0, 0, 297, 262
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DNAssist"
+FONT 10, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Physical properties",IDC_STATIC,8,172,280,56
+    GROUPBOX        "Amino acid composition",IDC_STATIC,8,8,280,158
+    DEFPUSHBUTTON   "OK",IDOK,123,240,50,14
+    LTEXT           "Amino acid",IDC_STATIC,25,23,44,9
+    LTEXT           "Residues",IDC_STATIC,219,23,33,9
+    LTEXT           "Mole%",IDC_STATIC,117,23,28,9
+    LTEXT           "Glycine (G)",IDC_STATIC,24,125,41,8
+    LTEXT           "Alanine (A)",IDC_STATIC,24,43,40,8
+    LTEXT           "Valine(V)",IDC_STATIC,165,149,51,8
+    LTEXT           "Leucine (L)",IDC_STATIC,164,42,40,8
+    LTEXT           "Isoleucine (I)",IDC_STATIC,24,149,44,8
+    LTEXT           "Proline (P)",IDC_STATIC,164,89,36,8
+    LTEXT           "Phenylalanine (F)",IDC_STATIC,164,77,56,8
+    LTEXT           "Tyrosine (Y)",IDC_STATIC,164,137,40,8
+    LTEXT           "Tryptophan (W)",IDC_STATIC,164,124,52,8
+    LTEXT           "Serine (S)",IDC_STATIC,164,101,36,8
+    LTEXT           "Threonine (T)",IDC_STATIC,164,112,44,8
+    LTEXT           "Aspartate (D)",IDC_STATIC,24,79,44,8
+    LTEXT           "Glutamate (E)",IDC_STATIC,24,102,44,8
+    LTEXT           "Asparagine (N)",IDC_STATIC,24,67,48,8
+    LTEXT           "Glutamine (Q)",IDC_STATIC,24,113,44,8
+    LTEXT           "Cysteine (C)",IDC_STATIC,24,90,40,8
+    LTEXT           "Methionine (M)",IDC_STATIC,164,66,48,8
+    LTEXT           "Histidine (H)",IDC_STATIC,24,138,40,8
+    LTEXT           "Lysine (K)",IDC_STATIC,164,54,32,8
+    LTEXT           "Arginine (R)",IDC_STATIC,24,55,40,8
+    LTEXT           "Amino acid",IDC_STATIC,163,23,44,9
+    LTEXT           "Residues",IDC_STATIC,80,23,31,8
+    LTEXT           "Mole%",IDC_STATIC,257,23,23,9
+    LTEXT           "Molecular weight:",IDC_STATIC,135,188,60,8
+    LTEXT           "Isoelectric point:",IDC_STATIC,23,200,60,8
+    LTEXT           "Absorption (280nm):",IDC_STATIC,136,200,38,8
+    LTEXT           "E 0.1% (280nm):",IDC_STATIC,136,212,52,8
+    LTEXT           "Text32",IDC_RES_A,80,43,28,8
+    LTEXT           "Text33",IDC_RES_R,80,55,28,8
+    LTEXT           "Text34",IDC_RES_N,80,67,28,8
+    LTEXT           "Text35",IDC_RES_D,80,78,32,8
+    LTEXT           "Text36",IDC_RES_C,80,90,32,8
+    LTEXT           "Text37",IDC_RES_E,80,102,28,8
+    LTEXT           "Text38",IDC_RES_Q,80,113,32,8
+    LTEXT           "Text39",IDC_RES_G,80,125,32,8
+    LTEXT           "Text40",IDC_RES_H,80,137,60,8
+    LTEXT           "Text41",IDC_RES_I,80,149,28,8
+    LTEXT           "Text42",IDC_MOLE_A,116,43,28,8
+    LTEXT           "Text43",IDC_MOLE_R,116,55,28,8
+    LTEXT           "Text44",IDC_MOLE_N,116,67,32,8
+    LTEXT           "Text45",IDC_MOLE_D,116,78,24,8
+    LTEXT           "Text46",IDC_MOLE_C,116,90,24,8
+    LTEXT           "Text47",IDC_MOLE_E,116,102,24,8
+    LTEXT           "Text48",IDC_MOLE_Q,116,113,28,8
+    LTEXT           "Text49",IDC_MOLE_G,116,125,28,8
+    LTEXT           "Text50",IDC_MOLE_H,116,137,28,8
+    LTEXT           "Text51",IDC_MOLE_I,116,149,28,8
+    LTEXT           "Text52",IDC_RES_L,219,43,32,8
+    LTEXT           "Text53",IDC_MOLE_L,256,42,28,8
+    LTEXT           "Text54",IDC_RES_K,219,55,28,8
+    LTEXT           "Text55",IDC_MOLE_K,256,54,28,8
+    LTEXT           "Text56",IDC_RES_M,219,66,24,8
+    LTEXT           "Text57",IDC_MOLE_M,256,66,28,8
+    LTEXT           "Text58",IDC_RES_F,219,77,28,8
+    LTEXT           "Text59",IDC_MOLE_F,256,76,28,8
+    LTEXT           "Text60",IDC_RES_P,219,89,28,8
+    LTEXT           "Text61",IDC_MOLE_P,256,89,28,8
+    LTEXT           "Text62",IDC_RES_S,219,100,28,8
+    LTEXT           "Text63",IDC_MOLE_S,256,100,24,8
+    LTEXT           "Text64",IDC_RES_T,219,112,28,8
+    LTEXT           "Text65",IDC_MOLE_T,256,112,28,8
+    LTEXT           "Text66",IDC_RES_W,219,124,24,8
+    LTEXT           "Text67",IDC_MOLE_W,256,124,28,8
+    LTEXT           "Text68",IDC_RES_Y,219,137,28,8
+    LTEXT           "Text69",IDC_MOLE_Y,256,137,28,8
+    LTEXT           "Text70",IDC_RES_V,219,149,28,8
+    LTEXT           "Text71",IDC_MOLE_V,256,149,28,8
+    LTEXT           "Text72",IDC_MW,194,188,46,8
+    LTEXT           "Text73",IDC_PI,82,200,46,8
+    LTEXT           "Text74",IDC_A280,194,200,84,8
+    LTEXT           "Text75",IDC_E280,189,212,95,8
+    LTEXT           "Length:",IDC_STATIC,24,188,28,8
+    LTEXT           "Text76",IDC_PROTEINLENGTH,62,188,60,8
+    LTEXT           "Charge at pH7.4: ",IDC_STATIC,22,212,60,8
+    LTEXT           "Text78",IDC_CHARGEATPH,80,212,32,8
+END
+
+IDD_ADDENZYME DIALOGEX 50, 47, 189, 124
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Enzyme"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_ADDENZYMENAME,16,16,85,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ADDENZYMESITE,16,50,85,12,ES_UPPERCASE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_ADDENZYMEUPPER,15,95,43,12,ES_AUTOHSCROLL | ES_NUMBER,WS_EX_RIGHT
+    EDITTEXT        IDC_ADDENZYMELOWER,73,95,43,12,ES_AUTOHSCROLL | ES_NUMBER,WS_EX_RIGHT
+    LTEXT           "Upper Strand:",IDC_STATIC,15,84,46,8
+    LTEXT           "Lower Strand:",IDC_STATIC,73,84,47,8
+    DEFPUSHBUTTON   "OK",IDOK,126,10,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,126,30,50,14
+    GROUPBOX        "Enzyme Name:",IDC_STATIC,10,6,97,29
+    GROUPBOX        "Cleavage Sequence:",IDC_STATIC,10,39,97,29
+    GROUPBOX        "Cleavage Positions:",IDC_STATIC,10,73,112,41
+END
+
+IDD_ALIGN DIALOGEX 0, 0, 182, 199
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DNAssist"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Align",IDOK,36,172,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,92,172,50,14
+    CONTROL         "",IDC_ALIGN_SEQUENCES,"SysListView32",LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,1,1,180,161
+END
+
+IDD_ALIGN_GENERAL DIALOGEX 0, 0, 250, 215
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "General"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_DELAY_DIVERGENT_SEQUENCES,162,61,36,95,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_GAP_OPENING_PENALTY,162,88,36,88,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_GAP_EXTENSION_PENALTY,162,115,36,14,ES_AUTOHSCROLL,WS_EX_RIGHT
+    LTEXT           "Delay divergent sequences (0-100)",IDC_STATIC,43,64,112,8
+    LTEXT           "Gap opening penalty (0-100)",IDC_STATIC,43,91,92,8
+    LTEXT           "Gap extension penalty (0-10)",IDC_STATIC,43,118,92,8
+    DEFPUSHBUTTON   "Default",IDC_ALIGN_DEFAULTS,100,187,50,14
+END
+
+IDD_ALIGN_DNA DIALOGEX 0, 0, 250, 215
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DNA"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_DNA_WEIGHT_MATRIX,126,80,84,58,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_DNA_TRANSITION_WEIGHT,126,103,36,79,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "DNA weight matrix",IDC_STATIC,38,83,60,8
+    LTEXT           "DNA transition weight (0-1)",IDC_STATIC,38,106,88,8
+    DEFPUSHBUTTON   "Default",IDC_ALIGN_DEFAULT_DNA,100,187,50,14
+END
+
+IDD_ALIGN_PROTEIN DIALOGEX 0, 0, 250, 215
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Protein"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_PROTEIN_WEIGHT_MATRIX,107,26,68,65,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_HYDROPHILIC_RESIDUES,146,74,60,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GAP_SEPARATION_DISTANCE,146,94,60,14,ES_AUTOHSCROLL | ES_NUMBER,WS_EX_RIGHT
+    CONTROL         "",IDC_END_GAP_SEPARATION,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,119,114,16,12
+    CONTROL         "",IDC_HYDROPHYLIC_PENALTY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,119,133,12,12
+    CONTROL         "",IDC_RESIDUE_SPECIFIC_PENALTY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,119,152,12,12
+    LTEXT           "Protein weight matrix",IDC_STATIC,23,26,68,8
+    LTEXT           "Hydrophilic residues",IDC_STATIC,38,76,68,8
+    LTEXT           "Gap separation distance (0-100)",IDC_STATIC,38,97,104,8
+    LTEXT           "End gap separation",IDC_STATIC,38,116,72,8
+    LTEXT           "Hydrophilic penalty",IDC_STATIC,38,135,64,8
+    LTEXT           "Residue specific penalty",IDC_STATIC,38,153,80,8
+    GROUPBOX        "Protein gap parameters",IDC_STATIC,18,56,212,116
+    DEFPUSHBUTTON   "Default",IDC_ALIGN_DEFAULTS_PROTEIN,100,187,50,14
+END
+
+IDD_ALIGN_COLOR DIALOGEX 0, 0, 250, 215
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Color"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Conserved",IDC_STATIC,22,100,204,72
+    GROUPBOX        "Identical",IDC_STATIC,22,15,204,72
+    COMBOBOX        IDC_IDENTICAL_PERCENTAGE,114,34,39,13,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CONSERVED_PERCENTAGE,115,120,39,64,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "",IDC_IDENTICAL_FOREGROUND,82,58,27,12
+    PUSHBUTTON      "",IDC_IDENTICAL_BACKGROUND,183,58,27,12
+    PUSHBUTTON      "",IDC_CONSERVED_FOREGROUND,82,144,27,12
+    PUSHBUTTON      "",IDC_CONSERVED_BACKGROUND,183,144,27,12
+    LTEXT           "Indicate when at least",IDC_STATIC,36,36,75,8
+    LTEXT           "Font foreground",IDC_STATIC,35,61,39,8
+    LTEXT           "% is identical",IDC_STATIC,157,36,58,8
+    LTEXT           "Font background",IDC_STATIC,123,61,56,8
+    LTEXT           "Indicate when at least",IDC_STATIC,36,122,75,8
+    LTEXT           "Font foreground",IDC_STATIC,35,147,35,8
+    LTEXT           "% is conserved",IDC_STATIC,157,122,58,8
+    LTEXT           "Font background",IDC_STATIC,123,147,56,8
+    DEFPUSHBUTTON   "Default",IDC_ALIGN_DEFAULT_COLOR,100,187,50,14
+END
+
+IDD_EDITOR_DIRECTORIES DIALOGEX 0, 0, 204, 164
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Directories"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Sequence Directory",IDC_STATIC,11,48,185,57
+    EDITTEXT        IDC_EDITOR_SEQUENCE,23,60,166,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_EDITOR_SEQUENCES_BROWSE,139,78,50,14
+END
+
+IDD_EDITOR_LINELENGTH DIALOGEX 0, 0, 204, 164
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Linelength"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Groups per line",IDC_STATIC,15,46,172,39
+    EDITTEXT        IDC_EDITOR_LINELENGTH,39,61,53,12,ES_AUTOHSCROLL | ES_NUMBER,WS_EX_RIGHT
+END
+
+IDD_FINDDLG DIALOGEX 48, 35, 210, 114
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DNAssist"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_FINDTEXT,19,22,114,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Find",IDC_FIND,154,15,50,14
+    PUSHBUTTON      "Find Next",IDC_FINDAGAIN,154,39,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,154,61,50,14
+    CONTROL         "Global",IDC_SCOPEGLOBAL,"Button",BS_AUTORADIOBUTTON | WS_GROUP,18,66,60,12
+    CONTROL         "From Cursor",IDC_SCOPEFROMCURSOR,"Button",BS_AUTORADIOBUTTON,18,79,60,12
+    GROUPBOX        "Find",IDC_STATIC,10,8,132,36
+    GROUPBOX        "Scope",IDC_STATIC,12,54,129,43
+END
+
+IDD_FINDORF DIALOGEX 48, 35, 210, 93
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Find ORF"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Scope:",IDC_STATIC,12,22,129,43
+    CONTROL         "Global",IDC_ORFSCOPEGLOBAL,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,18,34,60,12
+    CONTROL         "From Cursor",IDC_ORFSCOPEFROMCURSOR,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,18,47,60,12
+    PUSHBUTTON      "Find",IDC_FINDORF,154,15,50,14
+    PUSHBUTTON      "Find Next",IDC_FINDNEXTORF,154,39,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,154,61,50,14
+END
+
+IDD_FINDPATTERN DIALOGEX 14, 15, 249, 210
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Find Pattern"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Mismatch",IDC_STATIC,10,108,230,36
+    GROUPBOX        "Gaps",IDC_STATIC,10,60,230,38
+    GROUPBOX        "Pattern",IDC_STATIC,9,11,230,38
+    EDITTEXT        IDC_FINDPATTERN,20,25,207,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "Find",IDC_FINDPATTERN_FIND,27,179,50,14
+    PUSHBUTTON      "Cancel",IDC_FINDPATTERN_CANCEL,167,179,50,14
+    LTEXT           "Allow",IDC_STATIC,19,77,17,8
+    COMBOBOX        IDC_NUMBERGAPS,42,75,22,13,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "amino acids maximum gapsize",IDC_FINDPATTERN_NUCLEOTIDE,127,77,101,8
+    LTEXT           "of",IDC_STATIC,89,77,8,8
+    COMBOBOX        IDC_GAPSIZE,100,75,22,13,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "gap",IDC_FINDPATTERN_GAP,67,77,21,8
+    LTEXT           "Allow",IDC_STATIC,20,124,19,8
+    COMBOBOX        IDC_MISMATCH,42,122,22,13,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "mismatch",IDC_FINDPATTERN_MISMATCH,68,124,43,8
+    PUSHBUTTON      "Find next",IDC_FINDPATTERN_FINDNEXT,97,179,50,14
+    CONTROL         "Include complementary strand",IDC_FINDPATTERN_SECONDSTRAND,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,18,152,116,12
+END
+
+IDD_SELECTGENBANKSEQUENCE DIALOGEX 0, 0, 189, 185
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DNAssist"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,36,165,50,14
+    LISTBOX         IDC_SELECTSEQUENCE,8,61,172,106,LBS_SORT | LBS_MULTIPLESEL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "This GenBank file contains multiple sequences.",IDC_STATIC,16,33,155,8
+    LTEXT           "Please select the sequence(s) you want to open",IDC_STATIC,16,43,152,8
+    ICON            32514,IDC_QUERY,76,8,21,20
+    PUSHBUTTON      "Cancel",IDCANCEL,92,165,50,14
+END
+
+IDD_HELIXPARAMS DIALOGEX 0, 0, 250, 275
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DNAssist"
+FONT 9, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Chemical Composition",IDC_STATIC,10,12,232,56
+    GROUPBOX        "Absorbance (260nm)",IDC_STATIC,9,178,232,56
+    DEFPUSHBUTTON   "OK",IDOK,101,247,50,14
+    LTEXT           "G:",IDC_STATIC,25,27,8,8
+    LTEXT           "A:",IDC_STATIC,25,38,8,8
+    LTEXT           "T:",IDC_TLABEL,122,27,9,8
+    LTEXT           "C:",IDC_STATIC,122,38,9,8
+    LTEXT           "G+C%:",IDC_STATIC,25,52,24,8
+    LTEXT           "A+T%:",IDC_APLUSTLABEL,122,52,24,8
+    GROUPBOX        "Physical Properties",IDC_STATIC,10,80,232,88
+    CTEXT           "Double stranded:",IDC_STATIC,27,192,96,8
+    CTEXT           "Single stranded:",IDC_STATIC,129,192,96,8
+    LTEXT           "Melting temperature:",IDC_STATIC,28,110,76,8
+    LTEXT           "Text6",IDC_MELT,108,110,28,8
+    LTEXT           "Annealing temperature:",IDC_STATIC,28,123,76,8
+    LTEXT           "Text7",IDC_ANNEAL,108,123,28,8
+    LTEXT           "Molecular weight (single stranded):",IDC_STATIC,28,137,116,8
+    LTEXT           "Text19",IDC_G,37,27,76,8
+    LTEXT           "Text20",IDC_T,138,27,84,8
+    LTEXT           "Text21",IDC_A,37,38,76,8
+    LTEXT           "Text22",IDC_C,138,38,84,8
+    LTEXT           "Text23",IDC_GplusC,53,52,60,8
+    LTEXT           "Text24",IDC_AplusT,151,52,60,8
+    LTEXT           "Text25",IDC_MOLWEIGHTSINGLE,141,137,86,8
+    LTEXT           "Text26",IDC_A_MOLE_DOUBLE,27,206,96,8
+    LTEXT           "Text27",IDC_A_MG_DOUBLE,27,219,96,8
+    LTEXT           "Text28",IDC_A_MOL_SINGLE,129,206,96,8
+    LTEXT           "Text29",IDC_A_MG_SINGLE,129,219,96,8
+    LTEXT           "Molecular weight (double stranded):",IDC_STATIC,28,151,116,8
+    LTEXT           "Text30",IDC_MOLWEIGHTDOUBLE,144,151,84,8
+    LTEXT           "Length:",IDC_STATIC,28,96,28,8
+    LTEXT           "Text28",IDC_LENGTH,62,96,158,8
+END
+
+IDD_HELIXPARAM DIALOGEX 0, 0, 140, 122
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_DLGMODALFRAME
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Helix parameters",IDC_STATIC,8,9,124,75
+    DEFPUSHBUTTON   "OK",IDOK,41,96,50,14
+    LTEXT           "Melting temperature:",IDC_STATIC,16,24,76,8
+    LTEXT           "Annealing temperature:",IDC_STATIC,16,37,76,8
+    LTEXT           "Entropy:",IDC_STATIC,16,50,60,8
+    LTEXT           "Enthalpy:",IDC_STATIC,16,64,60,8
+    LTEXT           "Text6",IDC_MELT,96,24,28,8
+    LTEXT           "Text7",IDC_ANNEAL,96,37,28,8
+    LTEXT           "Text8",IDC_ENTROPY,96,50,32,8
+    LTEXT           "Text9",IDC_ENTHALPY,96,64,32,8
+END
+
+IDD_FACTOR DIALOGEX 0, 0, 240, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Factors"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_FACTOR,12,20,100,160,LBS_SORT | LBS_MULTIPLESEL | LBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_SEQUENCE,128,20,100,160,LBS_SORT | LBS_MULTIPLESEL | LBS_HASSTRINGS | LBS_NOSEL | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    LTEXT           "Factors",IDC_STATIC,16,10,60,8
+    LTEXT           "Binding Sequences",IDC_STATIC,132,10,68,8
+    CONTROL         "Select All",IDC_TRANSFAC_SELECTALL,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | WS_TABSTOP,23,178,48,12
+END
+
+IDD_SPECIES DIALOGEX 0, 0, 240, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Species"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_SPECIES,44,24,152,152,LBS_SORT | LBS_MULTIPLESEL | LBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_GROUP DIALOGEX 0, 0, 240, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Family"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_GROUP,44,24,152,152,LBS_SORT | LBS_MULTIPLESEL | LBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_KINGDOM DIALOGEX 0, 0, 240, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Kingdom"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_KINGDOM,44,24,152,152,LBS_SORT | LBS_MULTIPLESEL | LBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_TRANSFAC_DISPLAY DIALOGEX 0, 0, 240, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Display format"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Display result in following format",IDC_STATIC,56,44,123,100
+    CONTROL         "Graphic map",IDC_TRANSFAC_GRAPHICMAP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,75,84,57,12
+    CONTROL         "Table",IDC_TRANSFAC_TABLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,75,120,41,12
+    CONTROL         "Sequence list",IDC_TRANSFAC_SEQUENCELIST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,75,103,68,12
+    CONTROL         "All formats",IDC_TRANSFAC_ALLFORMATS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,75,65,48,12
+END
+
+IDD_TRANSFAC_OPTIONS DIALOGEX 0, 0, 240, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Graphic map display options",IDC_STATIC,32,64,172,57
+    CONTROL         "Show only unique factors",IDC_TRANSFAC_UNIQUE,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,44,77,100,12
+    CONTROL         "Show both unique and selected factors",IDC_TRANSFAC_UNIQUEANDSEL,
+                    "Button",BS_AUTORADIOBUTTON | WS_TABSTOP,44,89,156,12
+    CONTROL         "Show only selected factors",IDC_TRANSFAC_SELECTION,
+                    "Button",BS_AUTORADIOBUTTON | WS_TABSTOP,44,101,116,12
+END
+
+IDD_INPUTDIALOG DIALOGEX 20, 24, 129, 64
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DNAssist"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "",ID_PROMPT,16,16,93,11
+    EDITTEXT        ID_INPUT,15,18,94,11,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,12,42,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,68,42,50,14
+    GROUPBOX        "Line length",IDC_STATIC,9,7,108,27
+END
+
+IDD_PROGRESSDIALOG DIALOGEX 0, 0, 225, 112
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Progress"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,10,31,204,39
+    PUSHBUTTON      "Cancel",IDC_USERCANCEL,82,87,50,14
+    CONTROL         "%d%%",IDC_PROGRESSBAR1,"msctls_progress32",WS_BORDER,20,44,184,13
+    LTEXT           "",IDC_PROGRESSMESSAGE1,16,0,196,8
+    LTEXT           "",IDC_PROGRESSMESSAGE2,16,19,200,8
+END
+
+IDD_PROPERTIES DIALOGEX 0, 0, 216, 167
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Profiles"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Window Size:",IDC_STATIC,26,17,164,134
+    COMBOBOX        IDC_HYDROPHOBICITY,110,39,50,34,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_ANTIGENICITY,110,118,50,34,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_HYDROPHILICITY,110,78,50,34,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Hydrophobicity",IDC_STATIC,46,40,57,8
+    LTEXT           "Hydrophilicity",IDC_STATIC,46,79,57,8
+    LTEXT           "Antigenicity",IDC_STATIC,45,119,57,8
+END
+
+IDD_RESTENDO DIALOGEX 0, 0, 220, 220
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select enzymes"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Restriction Enzymes:",IDC_STATIC,12,45,196,169
+    GROUPBOX        "Enzyme Files:",IDC_STATIC,11,3,196,34
+    COMBOBOX        IDC_SORT_BY,33,16,96,98,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_ADDENZYME,33,58,50,14
+    PUSHBUTTON      "Remove",IDC_REMOVEENZYME,85,58,50,14
+    PUSHBUTTON      "Save as...",IDC_SAVEENZYMELIST,137,58,50,14
+    PUSHBUTTON      "Browse",IDC_BROWSE,137,15,50,14
+    CONTROL         "",IDC_ENZYMELIST,"SysListView32",LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,19,80,181,130
+END
+
+IDD_SEQUENCETYPE DIALOGEX 0, 0, 192, 75
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Ambiguous Sequence Type"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Assign sequence as ",IDC_STATIC,40,16,67,8
+    ICON            32515,IDC_WARNING,8,12,20,20
+    DEFPUSHBUTTON   "OK",IDOK,73,44,50,14
+    COMBOBOX        IDC_SEQUENCETYPE,108,15,76,58,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_ANALYSISOPTIONS DIALOGEX 0, 0, 220, 220
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Analysis options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Use only the following from the set selected above",IDC_STATIC,20,55,172,86
+    GROUPBOX        "Use the following enzymes",IDC_STATIC,20,9,172,35
+    CONTROL         "The whole set",IDC_SLWHOLESET,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,32,72,60,12
+    CONTROL         "5' overhang",IDC_SLFIVEPRIME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,32,84,60,12
+    CONTROL         "3' overhang",IDC_SLTHREEPRIME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,32,96,60,12
+    CONTROL         "Blunt ended",IDC_SLBLUNT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,32,108,60,12
+    CONTROL         "4bp sites",IDC_SLFOURCUTTER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,32,120,48,12
+    CONTROL         "6bp sites",IDC_SLSIXCUTTER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,100,72,48,12
+    CONTROL         "8bp sites",IDC_SLEIGHTCUTTER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,100,84,52,12
+    CONTROL         "Palindromic sites",IDC_SLPALINDROME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,100,96,76,12
+    CONTROL         "Cleaves outside site",IDC_SLOUTSIDE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,100,108,80,12
+    CONTROL         "All enzymes",IDC_SLALL,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,32,24,60,12
+    CONTROL         "Selected enzymes only",IDC_SLSELECTION,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,100,24,88,12
+    GROUPBOX        "Graphic map display options",IDC_STATIC,20,151,172,57
+    CONTROL         "Show only unique enzymes",IDC_GPUNIQUE,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,32,164,100,12
+    CONTROL         "Show both unique and selected enzymes",IDC_GPUNIQUESEL,
+                    "Button",BS_AUTORADIOBUTTON | WS_TABSTOP,32,176,156,12
+    CONTROL         "Show only selected enzymes",IDC_GPSEL,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,32,188,116,12
+END
+
+IDD_SHOWAS DIALOGEX 0, 0, 220, 220
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Display format"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Display result in following format",IDC_STATIC,45,48,123,124
+    CONTROL         "Graphic map",IDC_FORMATGRAPHIC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,64,88,57,12
+    CONTROL         "Table",IDC_FORMATTABLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,64,124,41,12
+    CONTROL         "Sequence list",IDC_FORMATSEQUENCE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,64,107,68,12
+    CONTROL         "Line graph",IDC_FORMATLINE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,64,142,53,12
+    CONTROL         "All formats",IDC_FORMATALL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,64,69,48,12
+END
+
+IDD_ABOUTBOX DIALOGEX 8, 53, 277, 191
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About DNAssist"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,16,9,244,153
+    DEFPUSHBUTTON   "OK",IDOK,116,170,50,14
+    LTEXT           "Copyright c 2017",IDC_ABOUT_COPYRIGHT,25,128,113,8
+    LTEXT           "Hugh Patterton",IDC_ABOUT_OWNER,140,128,109,8
+    LTEXT           "Version 3.01",IDC_ABOUT_VERSION,112,109,51,8
+    CONTROL         IDR_TITLE,IDB_ABOUT,"Static",SS_BITMAP | WS_BORDER,54,34,167,58,WS_EX_TRANSPARENT
+    LTEXT           "Enhanced by",IDC_OSVERSION,25,145,114,8
+    LTEXT           "Miller Cy Chan",IDC_ABOUT_OWNER2,139,145,109,8
+END
+
+IDD_PRINTFORMAT DIALOGEX 0, 0, 216, 196
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Format"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Sequence Display Format",IDC_STATIC,24,60,168,64
+    GROUPBOX        "Strand To Show",IDC_STATIC,24,10,168,39
+    GROUPBOX        "Sequence Numbering",IDC_STATIC,24,134,168,52
+    CONTROL         "Watson strand only",IDC_DISPLAYWATSONONLY,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,32,21,92,12
+    CONTROL         "Watson and Crick strands",IDC_DISPLAYWATSONANDCRICK,
+                    "Button",BS_AUTORADIOBUTTON | WS_TABSTOP,32,33,104,12
+    CONTROL         "Continuous sequence",IDC_DISPLAYCONTINOUSSEQUENCE,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,32,76,88,12
+    CONTROL         "As sequence blocks",IDC_DISPLAYSEQUENCEBLOCKS,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,32,88,84,12
+    COMBOBOX        IDC_BLOCKSIZE,47,105,32,54,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_BLOCKGAPSIZE,129,105,28,13,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "bp blocks with",IDC_STATIC,80,106,48,8
+    LTEXT           "bp gaps",IDC_STATIC,158,106,29,8
+    CONTROL         "Show number above the sequence",IDC_NUMBERABOVESEQUENCE,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,32,146,128,12
+    CONTROL         "Show number below the sequence",IDC_NUMBERBELOW,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,32,158,132,12
+    CONTROL         "Show number to the right of the sequence",IDC_NUMBERRIGHT,
+                    "Button",BS_AUTORADIOBUTTON | WS_TABSTOP,32,170,152,12
+END
+
+IDD_PRINTFONT DIALOGEX 39, 92, 204, 164
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Font"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Sample",IDC_STATIC,24,104,160,49
+    LTEXT           "&Font:",1088,25,12,59,9
+    LTEXT           "&Size:",1090,149,12,30,9
+    COMBOBOX        IDC_FACESIZE,152,26,32,78,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Rambasat Hariwize\nFunirarawimakaji",IDC_STATIC,30,111,149,37
+    COMBOBOX        IDC_STYLE,112,26,39,78,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Font S&tyle",IDC_STATIC,110,13,36,8
+    COMBOBOX        IDC_FACENAME,28,24,83,74,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_CODON DIALOGEX 0, 0, 216, 167
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Codon Tables"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Select codon directory:",IDC_STATIC,11,12,197,48
+    GROUPBOX        "Select codon table file:",IDC_STATIC,11,70,196,91
+    PUSHBUTTON      "Browse",IDC_CODONPATHBROWSE,159,40,42,14
+    EDITTEXT        IDC_CODONPATH,17,26,184,13,ES_AUTOHSCROLL
+    COMBOBOX        IDC_CODONFILES,18,87,181,67,CBS_SIMPLE | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_OUTPUT DIALOGEX 0, 0, 216, 167
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Output"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "The converted sequence:",IDC_STATIC,36,44,144,78
+    CONTROL         "Replaces the current sequence",IDC_OUTPUTREPLACE,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,52,68,116,12
+    CONTROL         "Is shown in a new window",IDC_OUTPUTNEWWINDOW,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,52,88,108,12
+END
+
+IDD_TRANSFACOPTIONS DIALOGEX 0, 0, 245, 209
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Display"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Display search result as:",IDC_STATIC,33,32,180,136
+    CONTROL         "Sequence list",IDC_DISPLAYSEQUENCELIST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,52,98,60,12
+    CONTROL         "Tables",IDC_DISPLAYTABLES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,52,117,60,12
+    CONTROL         "Graphic map",IDC_DISPLAYGRAPHIC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,52,79,60,12
+    CONTROL         "Lines graph",IDC_DISPLAYLINES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,52,136,60,12
+    CONTROL         "All formats",IDC_DISPLAYALL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,52,60,60,12
+END
+
+IDD_TRANSFACSEARCH DIALOGEX 0, 0, 245, 209
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Use consensus sequence matrix:",IDC_STATIC,24,117,196,46
+    COMBOBOX        IDC_WHENMATRIX,37,136,168,62,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Search with the following sequences:",IDC_STATIC,23,39,196,53
+    CONTROL         "All the displayed sequences",IDC_SEARCHWITHALL,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,38,57,108,12
+    CONTROL         "Only the selected sequences",IDC_SEARCHWITHSELECTION,
+                    "Button",BS_AUTORADIOBUTTON | WS_TABSTOP,38,71,109,12
+END
+
+IDD_UNDO DIALOGEX 0, 0, 204, 146
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Undo"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Number of undo levels",IDC_STATIC,13,35,180,44
+    COMBOBOX        IDC_UNDOLEVELS,63,52,50,76,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_FONTPROPERTYPAGE DIALOGEX 13, 54, 269, 171
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Font"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "&Font:",stc1,6,3,40,9
+    COMBOBOX        IDC_FONT,6,13,131,98,CBS_SIMPLE | CBS_AUTOHSCROLL | CBS_SORT | CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Font St&yle:",stc2,153,3,44,9
+    COMBOBOX        IDC_STYLE,153,13,64,98,CBS_SIMPLE | CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Size:",stc3,224,3,30,9
+    COMBOBOX        IDC_FONTSIZE,224,13,32,98,CBS_SIMPLE | CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Sample",grp2,6,112,252,49,WS_GROUP
+    CTEXT           "AaBbYyZz",IDC_SAMPLE,57,121,149,37,SS_NOPREFIX
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_PROTEINPROPERTIES, DIALOG
+    BEGIN
+    END
+
+    IDD_ADDENZYME, DIALOG
+    BEGIN
+    END
+
+    IDD_ALIGN, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 169
+    END
+
+    IDD_ALIGN_GENERAL, DIALOG
+    BEGIN
+    END
+
+    IDD_ALIGN_DNA, DIALOG
+    BEGIN
+    END
+
+    IDD_ALIGN_PROTEIN, DIALOG
+    BEGIN
+    END
+
+    IDD_ALIGN_COLOR, DIALOG
+    BEGIN
+    END
+
+    IDD_EDITOR_DIRECTORIES, DIALOG
+    BEGIN
+    END
+
+    IDD_EDITOR_LINELENGTH, DIALOG
+    BEGIN
+    END
+
+    IDD_FINDDLG, DIALOG
+    BEGIN
+    END
+
+    IDD_FINDORF, DIALOG
+    BEGIN
+    END
+
+    IDD_FINDPATTERN, DIALOG
+    BEGIN
+    END
+
+    IDD_SELECTGENBANKSEQUENCE, DIALOG
+    BEGIN
+    END
+
+    IDD_HELIXPARAMS, DIALOG
+    BEGIN
+    END
+
+    IDD_HELIXPARAM, DIALOG
+    BEGIN
+    END
+
+    IDD_FACTOR, DIALOG
+    BEGIN
+    END
+
+    IDD_SPECIES, DIALOG
+    BEGIN
+    END
+
+    IDD_GROUP, DIALOG
+    BEGIN
+    END
+
+    IDD_KINGDOM, DIALOG
+    BEGIN
+    END
+
+    IDD_TRANSFAC_DISPLAY, DIALOG
+    BEGIN
+    END
+
+    IDD_TRANSFAC_OPTIONS, DIALOG
+    BEGIN
+    END
+
+    IDD_INPUTDIALOG, DIALOG
+    BEGIN
+    END
+
+    IDD_PROGRESSDIALOG, DIALOG
+    BEGIN
+    END
+
+    IDD_PROPERTIES, DIALOG
+    BEGIN
+    END
+
+    IDD_RESTENDO, DIALOG
+    BEGIN
+    END
+
+    IDD_SEQUENCETYPE, DIALOG
+    BEGIN
+    END
+
+    IDD_ANALYSISOPTIONS, DIALOG
+    BEGIN
+    END
+
+    IDD_SHOWAS, DIALOG
+    BEGIN
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 186
+    END
+
+    IDD_PRINTFORMAT, DIALOG
+    BEGIN
+    END
+
+    IDD_PRINTFONT, DIALOG
+    BEGIN
+    END
+
+    IDD_CODON, DIALOG
+    BEGIN
+    END
+
+    IDD_OUTPUT, DIALOG
+    BEGIN
+    END
+
+    IDD_TRANSFACOPTIONS, DIALOG
+    BEGIN
+    END
+
+    IDD_TRANSFACSEARCH, DIALOG
+    BEGIN
+    END
+
+    IDD_UNDO, DIALOG
+    BEGIN
+    END
+
+    IDD_FONTPROPERTYPAGE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 264
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ADDENZYME AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_PROTEINPROPERTIES AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ALIGN AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ALIGN_GENERAL AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ALIGN_DNA AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ALIGN_PROTEIN AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ALIGN_COLOR AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_EDITOR_DIRECTORIES AFX_DIALOG_LAYOUT
+BEGIN
+    0,
+    0, 0, 100, 0,
+    0, 0, 100, 0,
+    100, 0, 0, 0
+END
+
+IDD_FINDDLG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_FINDORF AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_FINDPATTERN AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_SELECTGENBANKSEQUENCE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_HELIXPARAM AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_HELIXPARAMS AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_FACTOR AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_SPECIES AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_GROUP AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_KINGDOM AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_TRANSFAC_DISPLAY AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_TRANSFAC_OPTIONS AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_PROGRESSDIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_PROPERTIES AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_RESTENDO AFX_DIALOG_LAYOUT
+BEGIN
+    0,
+    0, 0, 100, 0,
+    0, 0, 100, 0,
+    0, 0, 0, 0,
+    0, 0, 0, 0,
+    0, 0, 0, 0,
+    0, 0, 0, 0,
+    0, 0, 0, 0,
+    0, 0, 100, 0
+END
+
+IDD_SEQUENCETYPE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ANALYSISOPTIONS AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_PRINTFORMAT AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_CODON AFX_DIALOG_LAYOUT
+BEGIN
+    0,
+    0, 0, 0, 0,
+    0, 0, 0, 0,
+    100, 0, 0, 0,
+    0, 0, 100, 0,
+    0, 0, 100, 0
+END
+
+IDD_OUTPUT AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_TRANSFACOPTIONS AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_TRANSFACSEARCH AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_EDITOR_LINELENGTH AFX_DIALOG_LAYOUT
+BEGIN
+    0,
+    0, 0, 100, 0,
+    0, 0, 0, 0
+END
+
+IDD_UNDO AFX_DIALOG_LAYOUT
+BEGIN
+    0,
+    0, 0, 100, 0,
+    0, 0, 0, 0
+END
+
+IDD_FONTPROPERTYPAGE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_FINDPATTERN DLGINIT
+BEGIN
+    IDC_NUMBERGAPS, 0x403, 2, 0
+0x0030, 
+    IDC_NUMBERGAPS, 0x403, 2, 0
+0x0031, 
+    IDC_GAPSIZE, 0x403, 2, 0
+0x0030, 
+    IDC_GAPSIZE, 0x403, 2, 0
+0x0031, 
+    IDC_GAPSIZE, 0x403, 2, 0
+0x0032, 
+    IDC_MISMATCH, 0x403, 2, 0
+0x0030, 
+    IDC_MISMATCH, 0x403, 2, 0
+0x0031, 
+    IDC_MISMATCH, 0x403, 2, 0
+0x0032, 
+    0
+END
+
+IDD_SEQUENCETYPE DLGINIT
+BEGIN
+    IDC_SEQUENCETYPE, 0x403, 15, 0
+0x6544, 0x6567, 0x656e, 0x6172, 0x6574, 0x4420, 0x414e, "\000" 
+    IDC_SEQUENCETYPE, 0x403, 4, 0
+0x4e44, 0x0041, 
+    IDC_SEQUENCETYPE, 0x403, 4, 0
+0x4e52, 0x0041, 
+    IDC_SEQUENCETYPE, 0x403, 8, 0
+0x7250, 0x746f, 0x6965, 0x006e, 
+    0
+END
+
+IDD_PROPERTIES DLGINIT
+BEGIN
+    IDC_HYDROPHOBICITY, 0x403, 3, 0
+0x3131, "\000" 
+    IDC_HYDROPHOBICITY, 0x403, 3, 0
+0x3331, "\000" 
+    IDC_HYDROPHOBICITY, 0x403, 3, 0
+0x3531, "\000" 
+    IDC_HYDROPHOBICITY, 0x403, 2, 0
+0x0033, 
+    IDC_HYDROPHOBICITY, 0x403, 2, 0
+0x0035, 
+    IDC_HYDROPHOBICITY, 0x403, 2, 0
+0x0037, 
+    IDC_HYDROPHOBICITY, 0x403, 2, 0
+0x0039, 
+    IDC_ANTIGENICITY, 0x403, 3, 0
+0x3131, "\000" 
+    IDC_ANTIGENICITY, 0x403, 3, 0
+0x3331, "\000" 
+    IDC_ANTIGENICITY, 0x403, 3, 0
+0x3531, "\000" 
+    IDC_ANTIGENICITY, 0x403, 2, 0
+0x0033, 
+    IDC_ANTIGENICITY, 0x403, 2, 0
+0x0035, 
+    IDC_ANTIGENICITY, 0x403, 2, 0
+0x0037, 
+    IDC_ANTIGENICITY, 0x403, 2, 0
+0x0039, 
+    IDC_HYDROPHILICITY, 0x403, 3, 0
+0x3131, "\000" 
+    IDC_HYDROPHILICITY, 0x403, 3, 0
+0x3331, "\000" 
+    IDC_HYDROPHILICITY, 0x403, 3, 0
+0x3531, "\000" 
+    IDC_HYDROPHILICITY, 0x403, 2, 0
+0x0033, 
+    IDC_HYDROPHILICITY, 0x403, 2, 0
+0x0035, 
+    IDC_HYDROPHILICITY, 0x403, 2, 0
+0x0037, 
+    IDC_HYDROPHILICITY, 0x403, 2, 0
+0x0039, 
+    0
+END
+
+IDD_PRINTFORMAT DLGINIT
+BEGIN
+    IDC_BLOCKSIZE, 0x403, 2, 0
+0x0035, 
+    IDC_BLOCKSIZE, 0x403, 3, 0
+0x3031, "\000" 
+    IDC_BLOCKSIZE, 0x403, 3, 0
+0x3032, "\000" 
+    IDC_BLOCKSIZE, 0x403, 3, 0
+0x3532, "\000" 
+    IDC_BLOCKSIZE, 0x403, 3, 0
+0x3035, "\000" 
+    IDC_BLOCKGAPSIZE, 0x403, 2, 0
+0x0031, 
+    IDC_BLOCKGAPSIZE, 0x403, 2, 0
+0x0032, 
+    IDC_BLOCKGAPSIZE, 0x403, 2, 0
+0x0033, 
+    IDC_BLOCKGAPSIZE, 0x403, 2, 0
+0x0034, 
+    IDC_BLOCKGAPSIZE, 0x403, 2, 0
+0x0035, 
+    0
+END
+
+IDD_ALIGN_GENERAL DLGINIT
+BEGIN
+    IDC_DELAY_DIVERGENT_SEQUENCES, 0x403, 2, 0
+0x0030, 
+    IDC_DELAY_DIVERGENT_SEQUENCES, 0x403, 3, 0
+0x3031, "\000" 
+    IDC_DELAY_DIVERGENT_SEQUENCES, 0x403, 3, 0
+0x3032, "\000" 
+    IDC_DELAY_DIVERGENT_SEQUENCES, 0x403, 3, 0
+0x3033, "\000" 
+    IDC_DELAY_DIVERGENT_SEQUENCES, 0x403, 3, 0
+0x3034, "\000" 
+    IDC_DELAY_DIVERGENT_SEQUENCES, 0x403, 3, 0
+0x3035, "\000" 
+    IDC_DELAY_DIVERGENT_SEQUENCES, 0x403, 3, 0
+0x3036, "\000" 
+    IDC_DELAY_DIVERGENT_SEQUENCES, 0x403, 3, 0
+0x3037, "\000" 
+    IDC_DELAY_DIVERGENT_SEQUENCES, 0x403, 3, 0
+0x3038, "\000" 
+    IDC_DELAY_DIVERGENT_SEQUENCES, 0x403, 3, 0
+0x3039, "\000" 
+    IDC_DELAY_DIVERGENT_SEQUENCES, 0x403, 4, 0
+0x3031, 0x0030, 
+    IDC_GAP_OPENING_PENALTY, 0x403, 2, 0
+0x0030, 
+    IDC_GAP_OPENING_PENALTY, 0x403, 3, 0
+0x3031, "\000" 
+    IDC_GAP_OPENING_PENALTY, 0x403, 3, 0
+0x3032, "\000" 
+    IDC_GAP_OPENING_PENALTY, 0x403, 3, 0
+0x3033, "\000" 
+    IDC_GAP_OPENING_PENALTY, 0x403, 3, 0
+0x3034, "\000" 
+    IDC_GAP_OPENING_PENALTY, 0x403, 3, 0
+0x3035, "\000" 
+    IDC_GAP_OPENING_PENALTY, 0x403, 3, 0
+0x3036, "\000" 
+    IDC_GAP_OPENING_PENALTY, 0x403, 3, 0
+0x3037, "\000" 
+    IDC_GAP_OPENING_PENALTY, 0x403, 3, 0
+0x3038, "\000" 
+    IDC_GAP_OPENING_PENALTY, 0x403, 3, 0
+0x3039, "\000" 
+    IDC_GAP_OPENING_PENALTY, 0x403, 4, 0
+0x3031, 0x0030, 
+    0
+END
+
+IDD_ALIGN_DNA DLGINIT
+BEGIN
+    IDC_DNA_WEIGHT_MATRIX, 0x403, 4, 0
+0x5549, 0x0042, 
+    IDC_DNA_WEIGHT_MATRIX, 0x403, 14, 0
+0x4c43, 0x5355, 0x4154, 0x574c, 0x3128, 0x362e, 0x0029, 
+    IDC_DNA_TRANSITION_WEIGHT, 0x403, 4, 0
+0x2e30, 0x0030, 
+    IDC_DNA_TRANSITION_WEIGHT, 0x403, 4, 0
+0x2e30, 0x0031, 
+    IDC_DNA_TRANSITION_WEIGHT, 0x403, 4, 0
+0x2e30, 0x0032, 
+    IDC_DNA_TRANSITION_WEIGHT, 0x403, 4, 0
+0x2e30, 0x0033, 
+    IDC_DNA_TRANSITION_WEIGHT, 0x403, 4, 0
+0x2e30, 0x0034, 
+    IDC_DNA_TRANSITION_WEIGHT, 0x403, 4, 0
+0x2e30, 0x0035, 
+    IDC_DNA_TRANSITION_WEIGHT, 0x403, 4, 0
+0x2e30, 0x0036, 
+    IDC_DNA_TRANSITION_WEIGHT, 0x403, 4, 0
+0x2e30, 0x0037, 
+    IDC_DNA_TRANSITION_WEIGHT, 0x403, 4, 0
+0x2e30, 0x0038, 
+    IDC_DNA_TRANSITION_WEIGHT, 0x403, 4, 0
+0x2e30, 0x0039, 
+    IDC_DNA_TRANSITION_WEIGHT, 0x403, 4, 0
+0x2e31, 0x0030, 
+    0
+END
+
+IDD_ALIGN_PROTEIN DLGINIT
+BEGIN
+    IDC_PROTEIN_WEIGHT_MATRIX, 0x403, 7, 0
+0x6c42, 0x736f, 0x6d75, "\000" 
+    IDC_PROTEIN_WEIGHT_MATRIX, 0x403, 4, 0
+0x4150, 0x004d, 
+    IDC_PROTEIN_WEIGHT_MATRIX, 0x403, 7, 0
+0x6f47, 0x6e6e, 0x7465, "\000" 
+    IDC_PROTEIN_WEIGHT_MATRIX, 0x403, 9, 0
+0x6449, 0x6e65, 0x6974, 0x7974, "\000" 
+    0
+END
+
+IDD_ALIGN_COLOR DLGINIT
+BEGIN
+    IDC_IDENTICAL_PERCENTAGE, 0x403, 3, 0
+0x3031, "\000" 
+    IDC_IDENTICAL_PERCENTAGE, 0x403, 3, 0
+0x3032, "\000" 
+    IDC_IDENTICAL_PERCENTAGE, 0x403, 3, 0
+0x3033, "\000" 
+    IDC_IDENTICAL_PERCENTAGE, 0x403, 3, 0
+0x3034, "\000" 
+    IDC_IDENTICAL_PERCENTAGE, 0x403, 3, 0
+0x3035, "\000" 
+    IDC_IDENTICAL_PERCENTAGE, 0x403, 3, 0
+0x3036, "\000" 
+    IDC_IDENTICAL_PERCENTAGE, 0x403, 3, 0
+0x3037, "\000" 
+    IDC_IDENTICAL_PERCENTAGE, 0x403, 3, 0
+0x3038, "\000" 
+    IDC_IDENTICAL_PERCENTAGE, 0x403, 3, 0
+0x3039, "\000" 
+    IDC_IDENTICAL_PERCENTAGE, 0x403, 4, 0
+0x3031, 0x0030, 
+    IDC_CONSERVED_PERCENTAGE, 0x403, 3, 0
+0x3031, "\000" 
+    IDC_CONSERVED_PERCENTAGE, 0x403, 3, 0
+0x3032, "\000" 
+    IDC_CONSERVED_PERCENTAGE, 0x403, 3, 0
+0x3033, "\000" 
+    IDC_CONSERVED_PERCENTAGE, 0x403, 3, 0
+0x3034, "\000" 
+    IDC_CONSERVED_PERCENTAGE, 0x403, 3, 0
+0x3035, "\000" 
+    IDC_CONSERVED_PERCENTAGE, 0x403, 3, 0
+0x3036, "\000" 
+    IDC_CONSERVED_PERCENTAGE, 0x403, 3, 0
+0x3037, "\000" 
+    IDC_CONSERVED_PERCENTAGE, 0x403, 3, 0
+0x3038, "\000" 
+    IDC_CONSERVED_PERCENTAGE, 0x403, 3, 0
+0x3039, "\000" 
+    IDC_CONSERVED_PERCENTAGE, 0x403, 4, 0
+0x3031, 0x0030, 
+    0
+END
+
+IDD_UNDO DLGINIT
+BEGIN
+    IDC_UNDOLEVELS, 0x403, 2, 0
+0x0031, 
+    IDC_UNDOLEVELS, 0x403, 2, 0
+0x0035, 
+    IDC_UNDOLEVELS, 0x403, 3, 0
+0x3031, "\000" 
+    IDC_UNDOLEVELS, 0x403, 3, 0
+0x3531, "\000" 
+    IDC_UNDOLEVELS, 0x403, 3, 0
+0x3532, "\000" 
+    IDC_UNDOLEVELS, 0x403, 3, 0
+0x3035, "\000" 
+    IDC_UNDOLEVELS, 0x403, 4, 0
+0x3031, 0x0030, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+    IDP_FAILED_TO_CREATE    "Failed to create object.  Make sure the object is entered in the system registry."
+END
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "DNAssist"
+    IDR_seqTYPE             "\nSequence \nseq\nDNAssist files (*.seq)\n.seq"
+    IDR_txtTYPE             "\nSequence \ntxt\nText files (*.txt)\n.txt"
+    IDR_strTYPE             "\nSequence \nstr\nStrider files (*.str)\n.str"
+    IDR_fasTYPE             "\nSequence \nfas\nFasta files (*.fas)\n.fas"
+    IDR_gcgTYPE             "\nSequence \ngcg\nGCG files (*.gcg)\n.gcg"
+    IDR_gbkTYPE             "\nSequence \ngbk\nGenBank files (*.gbk)\n.gbk"
+    IDR_plotTYPE            "\nSequence \nemf\nEnhanced Metafile (*.emf)\n.emf"
+    IDR_viewTYPE            "\nSequence \nwmf\nWindows Metafile (*.wmf)\n.wmf"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "DNAssist"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_SEL        "                                                                          "
+    ID_INDICATOR_POS        "                                          "
+    ID_INDICATOR_SEQTYPE    "                                    "
+    ID_INDICATOR_FORM       "                "
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_DIRECT    "Print the active document using current options\nQuick Print"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ONEPHASETRANSLATION "One Phase Translation: "
+    IDS_THREEPHASETRANSLATION "Three Phase Translation: "
+    IDS_SIXPHASETRANSLATION "Six Phase Translation: "
+    IDS_RESTRICTIONMAP      "Restriction Map: "
+    IDS_TRANSCRIPTIONFACTORMAP "Transcription Factor Search Results: "
+    IDS_DREWPLOT            "Nucleosome Rotational Placement: "
+    IDS_LIST                "List: "
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FINDPATTERN         "Find Pattern: "
+    IDS_INITIALIZINGCODONTABLE "Initializing the Codon Table"
+    IDS_INITIALIZINGTRANSCRIPTIONFACTORDATABASE 
+                            "Initializing the Transcription Factor Database"
+    IDS_INITIALIZINGRESTRICTIONDATABASE 
+                            "Initializing the Restriction Enzyme Database"
+    IDS_APPLICATIONNAME     "DNAssist"
+    IDS_SEARCHONLYSELECTION "Search only the selection?"
+    IDS_TRANSCRIPTIONFACTORMANAGER "Transcription Factor Manager"
+    IDS_VERSIONNUMBER       "Version 3.0"
+    IDS_KINGDOMHEADER       "[Kingdom]"
+    IDS_SPECIESHEADER       "[Species]"
+    IDS_FACTORHEADER        "[Factor]"
+    IDS_SEQUENCEHEADER      "[Sequence]"
+    IDS_MATRIXHEADER        "[Matrix]"
+    IDS_DATAHEADER          "[Data]"
+    IDS_USEMATRIX_NEVER     "Use only individual sequences"
+    IDS_USEMATRIX_ALSOWHENAVAILABLE "In conjunction with individual sequences"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_USEMATRIX_EXCLUSIVELYWHENAVAILABLE "Exclusively when available"
+    IDS_USEMATRIX_EXCLUSIVELY "Only matrixes"
+    IDS_READFACTORFILE      "Reading factor file"
+    IDS_READSITEFILE        "Reading site file"
+    IDS_READNATIVEFILE      "Reading TransFac file"
+    IDS_INITIALIZEDATABASE  "Initializing TransFac database"
+    IDS_FOUNDNEWTRANSFAC    "DNAtools found a new TransFac database"
+    IDS_THISMAYTAKEAFEWMINUTES "This may take a few minutes..."
+    IDS_WRITINGDATABASE     "Writing TransFac database in native format"
+    IDS_CONVERTINGDATABASE  "Converting database to native format"
+    IDS_WRITING_            "Writing "
+    IDS_WRITINGHEADERSECTION "Writing header section"
+    IDS_WRITINGDATASECTION  "Writing data section"
+    IDS_NOSELECTEDFACTORS   "Please select factors\nto search with"
+    IDS_REQUIREMORETHANTWO  "Calculation requires\nmore than 2bp"
+    IDS_READMATRIXFILE      "Reading matrix file"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MATRIXNEVER         "Never"
+    IDS_MATRIXASWELL        "In combination, when available"
+    IDS_MATRIXWHENAVAILABLE "Exclusively, when available"
+    IDS_MATRIXEXCLUSIVE     "Exclusively"
+    IDS_GRAPHIC             "restriction map"
+    IDS_TABLE               "restriction analysis"
+    IDS_FILEWRITEFAILED     "Disk write failed"
+    IDS_VERSION             "Version 3.0"
+    IDS_COPYRIGHT           "Copyright c 1994-2016"
+    IDS_OWNER               "University of the Free State"
+    IDS_NOTREGISTERED       "Unregistered Copy"
+    IDS_NODELETEFILE        "nodelete.txt"
+    IDS_NOTPROPERLYINSTALLED "This application was not installed properly"
+    IDS_RUNSETUP            "Please run the DNAssist installation program again"
+    IDS_REGISTRYCORRUPTED   "The registry appears to be corrupted!"
+    IDS_FINDRESTRICTIONENZYMEDIRECTORY 
+                            "Please locate the restriction enzyme folder"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CANNOTDORESTRICTIONANALYSIS 
+                            "Cannot perform a restriction enzyme analysis without a restriction enzyme data file"
+    IDS_HELPFILE            "Help\\DNAssist.chm"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_PASTE_LINK      "Insert Clipboard contents and a link to its source\nPaste Link"
+    ID_EDIT_PASTE_SPECIAL   "Insert Clipboard contents with options\nPaste Special"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle Status Bar"
+END
+
+STRINGTABLE
+BEGIN
+    ID_OLE_INSERT_NEW       "Insert new embedded object\nNew Object"
+    ID_OLE_EDIT_LINKS       "Edit linked objects\nEdit Links"
+    ID_OLE_EDIT_CONVERT     "Convert object to different type\nConvert Object"
+END
+
+STRINGTABLE
+BEGIN
+    ID_OLE_VERB_FIRST       "Activate embedded or linked object"
+END
+
+STRINGTABLE
+BEGIN
+    ID_OLE_VERB_POPUP       "Activate embedded or linked object"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+#endif    // 中性 (預設值) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#include "res\DNAssist.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"      // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

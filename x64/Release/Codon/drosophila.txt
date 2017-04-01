@@ -1,0 +1,86 @@
+ CODONFREQUENCY  January 22, 1991  15:51
+
+Codon usage for Drosophila (highly expressed) genes 1/22/91
+
+AmAcid  Codon    Number       /1000    Fraction   ..
+
+Gly     GGG        6.00        0.28        0.00
+Gly     GGA      380.00       18.04        0.22
+Gly     GGT      575.00       27.29        0.34
+Gly     GGC      746.00       35.41        0.44
+
+Glu     GAG     1217.00       57.77        0.91
+Glu     GAA      115.00        5.46        0.09
+Asp     GAT      503.00       23.88        0.43
+Asp     GAC      654.00       31.04        0.57
+
+Val     GTG      719.00       34.13        0.45
+Val     GTA       29.00        1.38        0.02
+Val     GTT      226.00       10.73        0.14
+Val     GTC      608.00       28.86        0.38
+
+Ala     GCG       94.00        4.46        0.05
+Ala     GCA       80.00        3.80        0.04
+Ala     GCT      446.00       21.17        0.24
+Ala     GCC     1277.00       60.61        0.67
+
+Arg     AGG       48.00        2.28        0.06
+Arg     AGA       12.00        0.57        0.01
+Ser     AGT       16.00        0.76        0.01
+Ser     AGC      267.00       12.67        0.23
+
+Lys     AAG     1360.00       64.55        0.93
+Lys     AAA      108.00        5.13        0.07
+Asn     AAT      127.00        6.03        0.13
+Asn     AAC      878.00       41.67        0.87
+
+Met     ATG      387.00       18.37        1.00
+Ile     ATA        4.00        0.19        0.00
+Ile     ATT      390.00       18.51        0.29
+Ile     ATC      969.00       45.99        0.71
+
+Thr     ACG      114.00        5.41        0.08
+Thr     ACA       34.00        1.61        0.02
+Thr     ACT      164.00        7.78        0.11
+Thr     ACC     1127.00       53.49        0.78
+
+Trp     TGG      243.00       11.53        1.00
+End     TGA        1.00        0.05        0.01
+Cys     TGT       20.00        0.95        0.08
+Cys     TGC      220.00       10.44        0.92
+
+End     TAG       12.00        0.57        0.17
+End     TAA       58.00        2.75        0.82
+Tyr     TAT      113.00        5.36        0.16
+Tyr     TAC      574.00       27.25        0.84
+
+Leu     TTG      210.00        9.97        0.12
+Leu     TTA        9.00        0.43        0.01
+Phe     TTT       62.00        2.94        0.09
+Phe     TTC      635.00       30.14        0.91
+
+Ser     TCG      195.00        9.26        0.17
+Ser     TCA       29.00        1.38        0.02
+Ser     TCT      103.00        4.89        0.09
+Ser     TCC      558.00       26.49        0.48
+
+Arg     CGG        7.00        0.33        0.01
+Arg     CGA       25.00        1.19        0.03
+Arg     CGT      281.00       13.34        0.34
+Arg     CGC      465.00       22.07        0.55
+
+Gln     CAG      703.00       33.37        0.91
+Gln     CAA       66.00        3.13        0.09
+His     CAT       88.00        4.18        0.22
+His     CAC      312.00       14.81        0.78
+
+Leu     CTG     1182.00       56.10        0.69
+Leu     CTA       21.00        1.00        0.01
+Leu     CTT       55.00        2.61        0.03
+Leu     CTC      224.00       10.63        0.13
+
+Pro     CCG       84.00        3.99        0.09
+Pro     CCA      135.00        6.41        0.15
+Pro     CCT       72.00        3.42        0.08
+Pro     CCC      626.00       29.71        0.68
+

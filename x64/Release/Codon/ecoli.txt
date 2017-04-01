@@ -1,0 +1,83 @@
+Codon usage for enteric bacterial (highly expressed) genes 7/19/83
+
+AmAcid  Codon     Number    /1000     Fraction   ..
+Gly     GGG       13.00      1.89      0.02
+Gly     GGA        3.00      0.44      0.00
+Gly     GGU      365.00     52.99      0.59
+Gly     GGC      238.00     34.55      0.38
+ 
+Glu     GAG      108.00     15.68      0.22
+Glu     GAA      394.00     57.20      0.78
+Asp     GAU      149.00     21.63      0.33
+Asp     GAC      298.00     43.26      0.67
+ 
+Val     GUG       93.00     13.50      0.16
+Val     GUA      146.00     21.20      0.26
+Val     GUU      289.00     41.96      0.51
+Val     GUC       38.00      5.52      0.07
+ 
+Ala     GCG      161.00     23.37      0.26
+Ala     GCA      173.00     25.12      0.28
+Ala     GCU      212.00     30.78      0.35
+Ala     GCC       62.00      9.00      0.10
+ 
+Arg     AGG        1.00      0.15      0.00
+Arg     AGA        0.00      0.00      0.00
+Ser     AGU        9.00      1.31      0.03
+Ser     AGC       71.00     10.31      0.20
+ 
+Lys     AAG      111.00     16.11      0.26
+Lys     AAA      320.00     46.46      0.74
+Asn     AAU       19.00      2.76      0.06
+Asn     AAC      274.00     39.78      0.94
+ 
+Met     AUG      170.00     24.68      1.00
+Ile     AUA        1.00      0.15      0.00
+Ile     AUU       70.00     10.16      0.17
+Ile     AUC      345.00     50.09      0.83
+ 
+Thr     ACG       25.00      3.63      0.07
+Thr     ACA       14.00      2.03      0.04
+Thr     ACU      130.00     18.87      0.35
+Thr     ACC      206.00     29.91      0.55
+ 
+Trp     UGG       55.00      7.98      1.00
+End     UGA        0.00      0.00      0.00
+Cys     UGU       22.00      3.19      0.49
+Cys     UGC       23.00      3.34      0.51
+ 
+End     UAG        0.00      0.00      0.00
+End     UAA        0.00      0.00      0.00
+Tyr     UAU       51.00      7.40      0.25
+Tyr     UAC      157.00     22.79      0.75
+ 
+Leu     UUG       18.00      2.61      0.03
+Leu     UUA       12.00      1.74      0.02
+Phe     UUU       51.00      7.40      0.24
+Phe     UUC      166.00     24.10      0.76
+ 
+Ser     UCG       14.00      2.03      0.04
+Ser     UCA        7.00      1.02      0.02
+Ser     UCU      120.00     17.42      0.34
+Ser     UCC      131.00     19.02      0.37
+ 
+Arg     CGG        1.00      0.15      0.00
+Arg     CGA        2.00      0.29      0.01
+Arg     CGU      290.00     42.10      0.74
+Arg     CGC       96.00     13.94      0.25
+ 
+Gln     CAG      233.00     33.83      0.86
+Gln     CAA       37.00      5.37      0.14
+His     CAU       18.00      2.61      0.17
+His     CAC       85.00     12.34      0.83
+ 
+Leu     CUG      480.00     69.69      0.83
+Leu     CUA        2.00      0.29      0.00
+Leu     CUU       25.00      3.63      0.04
+Leu     CUC       38.00      5.52      0.07
+ 
+Pro     CCG      190.00     27.58      0.77
+Pro     CCA       36.00      5.23      0.15
+Pro     CCU       19.00      2.76      0.08
+Pro     CCC        1.00      0.15      0.00
+

@@ -1,0 +1,574 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="原始程式檔">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="標頭檔">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="資源檔">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DNAssist.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildFrm.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="DNAssistDoc.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="AlignOptionsColorPropertyPage.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="AddEnzymeDialog.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="AlignOptionsDNAPropertyPage.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="AlignOptionsGeneralPropertyPage.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="AlignOptionsProteinPropertyPage.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorDirectoryOptionsPropertyPage.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorLinelengthOptionsPropertyPage.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="SequenceTypeDialog.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="TransFacPropertyPage.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="PrintFormatPropertyPage.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="ProteinPropertiesDialog.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="CodonOptionPropertyPage.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgressDialog.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="FindDialog.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="FindPatternDialog.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="FormatPropertyPage.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\FileTypeDetector.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\SeqValidator.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="MemDC.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="FindORFDialog.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="VersionNo.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="MDITabs.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\DocVarManager.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\CodonTable.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\DrewCalladine.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\SeqConvertor.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\FileEncoder.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\FileDecoder.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="MultDocManager.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="HelixParamsDialog.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorOptionsPropertySheet.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="AnalysisOptionsPropertySheet.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="ProfilesPropertyPage.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultDisplayOptionsPropertySheet.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="AlignOptionsPropertySheet.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="UndoPropertyPage.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="RestrictEnzymesPropertySheet.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectEnzymesPropertyPage.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="AnalysisOptionsPropertyPage.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="FontPage.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\RestrictionEnzymeCut.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\RestrictionCutList.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\AnalyzeDNAList.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\PrintItemRow.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\FormatPrintRows.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\BubbleSort.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\PrintItemRowList.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\ProteinProperties.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\DnaHelixParameters.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\EnzymeList.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\GapsInPattern.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\Hydrophobicity.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\Hydrophilicity.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\Antigenicity.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="DrewPlotView.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\DNASearch.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\QuickSort.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\FormatTransfer.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="CppSQLite3.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultDoc.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="FactorSequencePropertyPage.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="TransFacPropertySheet.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="ConversionOutputPropertyPage.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="DrewPlotDoc.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorButton.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="ColourPopup.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="AlignDoc.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="AlignView.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="AlignDialog.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="model\MultAlignment.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultView.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="DNAssistView.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="TransfacFormatPropertyPage.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="TransFacOptionsPropertyPage.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="SortClass.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="UPDialog.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="RichTextFormat.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="InitCommonControls.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DNAssist.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="ChildFrm.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="DNAssistDoc.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="AlignOptionsColorPropertyPage.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="AddEnzymeDialog.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="AlignOptionsDNAPropertyPage.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="AlignOptionsGeneralPropertyPage.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="AlignOptionsProteinPropertyPage.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorDirectoryOptionsPropertyPage.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorLinelengthOptionsPropertyPage.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="SequenceTypeDialog.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="TransFacPropertyPage.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="PrintFormatPropertyPage.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="ProteinPropertiesDialog.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="CodonOptionPropertyPage.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgressDialog.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="FindDialog.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="FindPatternDialog.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="FormatPropertyPage.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\FileTypeDetector.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\SeqValidator.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="FindORFDialog.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="MDITabs.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\DocVarManager.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\CodonTable.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\DrewCalladine.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\SeqConvertor.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\FileDecoder.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\FileEncoder.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="MultDocManager.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="MemDC.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="HelixParamsDialog.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorOptionsPropertySheet.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="AnalysisOptionsPropertySheet.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="ProfilesPropertyPage.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultDisplayOptionsPropertySheet.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="AlignOptionsPropertySheet.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="UndoPropertyPage.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="RestrictEnzymesPropertySheet.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectEnzymesPropertyPage.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="AnalysisOptionsPropertyPage.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="FontPage.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\RestrictionCutList.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\RestrictionEnzymeCut.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\AnalyzeDNAList.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\FormatPrintRows.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\BubbleSort.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\PrintItemRow.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\PrintItemRowList.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\DnaHelixParameters.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\EnzymeList.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\GapsInPattern.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\Hydrophilicity.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\Hydrophobicity.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\Antigenicity.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="DrewPlotView.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\ProteinProperties.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\DNASearch.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\QuickSort.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="CppSQLite3.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultDoc.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="FactorSequencePropertyPage.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="TransFacPropertySheet.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="ConversionOutputPropertyPage.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="DrewPlotDoc.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="ColorButton.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="ColourPopup.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="AlignDoc.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="AlignView.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="AlignDialog.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="model\MultAlignment.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultView.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="DNAssistView.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="TransfacFormatPropertyPage.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="TransFacOptionsPropertyPage.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="SortClass.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="UPDialog.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="RichTextFormat.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DNAssist.reg" />
+    <None Include="res\DNAssist.rc2">
+      <Filter>資源檔</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DNAssist.rc">
+      <Filter>資源檔</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\DNAssistDoc.ico">
+      <Filter>資源檔</Filter>
+    </Image>
+    <Image Include="res\DNAssist.ico">
+      <Filter>資源檔</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>資源檔</Filter>
+    </Image>
+    <Image Include="res\Title.bmp">
+      <Filter>資源檔</Filter>
+    </Image>
+    <Image Include="res\PlotDoc.ico">
+      <Filter>資源檔</Filter>
+    </Image>
+    <Image Include="res\ResultDoc.ico">
+      <Filter>資源檔</Filter>
+    </Image>
+    <Image Include="res\DNA1.ico">
+      <Filter>資源檔</Filter>
+    </Image>
+    <Image Include="res\DNA2.ico">
+      <Filter>資源檔</Filter>
+    </Image>
+    <Image Include="res\RNA1.ico">
+      <Filter>資源檔</Filter>
+    </Image>
+    <Image Include="res\RNA2.ico">
+      <Filter>資源檔</Filter>
+    </Image>
+    <Image Include="res\P1.ico">
+      <Filter>資源檔</Filter>
+    </Image>
+    <Image Include="res\P2.ico">
+      <Filter>資源檔</Filter>
+    </Image>
+    <Image Include="res\D1.ico">
+      <Filter>資源檔</Filter>
+    </Image>
+    <Image Include="res\D2.ico">
+      <Filter>資源檔</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

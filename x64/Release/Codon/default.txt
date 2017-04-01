@@ -1,0 +1,94 @@
+
+Homo sapiens
+
+1952 genes found in GenBank 63.
+
+ Produced by J. Michael Cherry (cherry@frodo.mgh.harvard.edu) with the
+ GCG program CodonFrequency.
+
+ Duplicates, pseudogenes, mutant and synthetic genes were not included.
+ Coding regions were specified using the Feature Table of each entry, then
+ checked for accuracy. If more than one stop codon was found the sequence
+ was not included.
+
+AmAcid  Codon     Number    /1000     Fraction   ..
+ 
+Gly     GGG    10216.00     17.08      0.23
+Gly     GGA    11553.00     19.31      0.26
+Gly     GGT     8174.00     13.66      0.18
+Gly     GGC    14920.00     24.94      0.33
+ 
+Glu     GAG    23226.00     38.82      0.59
+Glu     GAA    16460.00     27.51      0.41
+Asp     GAT    12834.00     21.45      0.44
+Asp     GAC    16192.00     27.06      0.56
+ 
+Val     GTG    17112.00     28.60      0.48
+Val     GTA     3644.00      6.09      0.10
+Val     GTT     6162.00     10.30      0.17
+Val     GTC     8981.00     15.01      0.25
+ 
+Ala     GCG     4349.00      7.27      0.10
+Ala     GCA     9271.00     15.50      0.22
+Ala     GCT    12104.00     20.23      0.28
+Ala     GCC    17006.00     28.43      0.40
+ 
+Arg     AGG     7231.00     12.09      0.22
+Arg     AGA     7020.00     11.73      0.21
+Ser     AGT     6091.00     10.18      0.14
+Ser     AGC    11094.00     18.54      0.25
+ 
+Lys     AAG    20214.00     33.79      0.60
+Lys     AAA    13356.00     22.32      0.40
+Asn     AAT     9827.00     16.43      0.44
+Asn     AAC    12741.00     21.30      0.56
+ 
+Met     atg    13077.00     21.86      1.00
+Ile     ATA     3620.00      6.05      0.14
+Ile     ATT     8993.00     15.03      0.35
+Ile     ATC    13442.00     22.47      0.52
+ 
+Thr     ACG     4071.00      6.80      0.12
+Thr     ACA     8996.00     15.04      0.27
+Thr     ACT     7924.00     13.24      0.23
+Thr     ACC    12873.00     21.52      0.38
+ 
+Trp     TGG     8820.00     14.74      1.00
+End     TGA     1577.00      2.64      0.61
+Cys     TGT     5976.00      9.99      0.42
+Cys     TGC     8293.00     13.86      0.58
+ 
+End     TAG      438.00      0.73      0.17
+End     TAA      570.00      0.95      0.22
+Tyr     TAT     7057.00     11.80      0.42
+Tyr     TAC     9858.00     16.48      0.58
+ 
+Leu     TTG     6838.00     11.43      0.12
+Leu     TTA     3320.00      5.55      0.06
+Phe     TTT     9191.00     15.36      0.43
+Phe     TTC    12399.00     20.72      0.57
+ 
+Ser     TCG     2622.00      4.38      0.06
+Ser     TCA     6554.00     10.96      0.15
+Ser     TCT     8085.00     13.51      0.18
+Ser     TCC    10394.00     17.37      0.23
+ 
+Arg     CGG     6224.00     10.40      0.19
+Arg     CGA     3366.00      5.63      0.10
+Arg     CGT     3088.00      5.16      0.09
+Arg     CGC     6476.00     10.82      0.19
+ 
+Gln     CAG    19710.00     32.95      0.73
+Gln     CAA     7141.00     11.94      0.27
+His     CAT     5720.00      9.56      0.41
+His     CAC     8374.00     14.00      0.59
+ 
+Leu     CTG    23890.00     39.93      0.43
+Leu     CTA     3840.00      6.42      0.07
+Leu     CTT     6727.00     11.24      0.12
+Leu     CTC    11448.00     19.14      0.20
+ 
+Pro     CCG     4200.00      7.02      0.11
+Pro     CCA    10239.00     17.11      0.27
+Pro     CCT    10785.00     18.03      0.29
+Pro     CCC    12270.00     20.51      0.33
