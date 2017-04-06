@@ -1,3 +1,6 @@
+title: DNAssist
+description: DNAssist 64 bit download
+author: HG Patterton
 gems:
   - jekyll-seo-tag
 theme: jekyll-theme-slate
