@@ -3,8 +3,8 @@
 
 [Setup]
 AppName=DNAssist
-AppVersion=3.01
-AppVerName=DNAssist 3.01
+AppVersion=3.02
+AppVerName=DNAssist 3.02
 AppPublisher=Miller Cy Chan
 AppPublisherURL=http://dnassist.co.nf/
 AppSupportURL=http://ichiba.geocities.jp/chan_ykf/
@@ -17,21 +17,22 @@ DisableProgramGroupPage=yes
 OutputBaseFilename=DNAssist3_x64
 OutputDir=..\..\Release
 SolidCompression=yes
+UninstallDisplayIcon={app}\DNAssist.exe
 VersionInfoDescription=Dnassist Setup
-VersionInfoVersion=3.0.1
+VersionInfoVersion=3.0.2
 
 [Tasks]
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
 Source: "..\..\x64\Release\DNAssist.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\..\DNAssist\res\vcomp140.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\..\DNAssist\res\vcomp140.dll"; DestDir: "{sys}"; Flags: onlyifdoesntexist uninsneveruninstall
 Source: "..\..\sqlite3\sqlite3-64.dll"; DestDir: "{app}"; DestName: "sqlite3.dll"; Flags: ignoreversion
-Source: "..\..\x64\Release\Transfac.db"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\..\x64\Release\Codon\*"; DestDir: "{app}\Codon"; Flags: ignoreversion recursesubdirs
-Source: "..\..\x64\Release\Enzymes\*"; DestDir: "{app}\Enzymes"; Flags: ignoreversion recursesubdirs
-Source: "..\..\x64\Release\Help\*"; DestDir: "{app}\Help"; Flags: ignoreversion recursesubdirs
-Source: "..\..\x64\Release\Sequences\*"; DestDir: "{app}\Sequences"; Flags: ignoreversion recursesubdirs
+Source: "..\..\x64\Release\Transfac.db"; DestDir: "{app}"; Flags: onlyifdoesntexist
+Source: "..\..\x64\Release\Codon\*"; DestDir: "{app}\Codon"; Flags: onlyifdoesntexist recursesubdirs
+Source: "..\..\x64\Release\Enzymes\*"; DestDir: "{app}\Enzymes"; Flags: onlyifdoesntexist recursesubdirs
+Source: "..\..\x64\Release\Help\*"; DestDir: "{app}\Help"; Flags: onlyifdoesntexist recursesubdirs
+Source: "..\..\x64\Release\Sequences\*"; DestDir: "{app}\Sequences"; Flags: onlyifdoesntexist recursesubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
