@@ -35,24 +35,17 @@ char CFileTypeDetector::GetMostLikelySequenceType(const char* sequence)
 
 size_t CFileTypeDetector::RemoveBadCharacters(string& sequence, char sequencetype, int strict)
 {
-	string seq(sequence);
-	size_t length = seq.length();
-	if(length <= 0)
+	if(sequence.empty())
 		return 0;
 
-	string tempsequence(seq);
-	string::const_iterator it = seq.begin();
-
-	int copyposition = 0;
-	while(it != seq.end()) {
+	auto it = sequence.begin();
+	while(it != sequence.end()) {
 		if(m_seqValidator.IsValid(sequencetype, *it, strict))
-			tempsequence[copyposition++] = *it;
-		++it;
+			++it;
+		else
+			it = sequence.erase(it);
    	}
-	tempsequence.resize(copyposition);
-
-	seq = tempsequence;
-	return seq.length();
+	return sequence.length();
 }
 
 char CFileTypeDetector::GetMostLikelySequenceType(string& sequence_to_pass_back, const string& temp_sequence)

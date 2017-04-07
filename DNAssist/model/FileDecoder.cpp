@@ -127,9 +127,9 @@ char CFileDecoder::DecodeDNAtoolsFile(string& sequence_to_pass_back, char& form,
 		DecodeDNAtoolsFile(sequence_to_pass_back, temp_sequence, type);
 	else if(temp_sequence.length() > 0) {
 		sequence_to_pass_back = "";
-		string::const_iterator it = temp_sequence.begin();
+		auto it = temp_sequence.cbegin();
 
-		while(it != temp_sequence.end()) {
+		while(it != temp_sequence.cend()) {
 			if(m_seqValidator.IsAminoAcid(*it))
 				sequence_to_pass_back += *it;
 			++it;
@@ -188,8 +188,10 @@ bool CFileDecoder::ExtractCharactersFromByte(char byte, string& characters, char
 	int code;
 	int bottom_bit = 3;
 	int combined_bits;
+	characters.clear();
+	characters.resize(number_of_bases_in_byte);
 	char base;
-	characters.resize(3);
+	
 	if(type == 'D') {
 		for(int x = 0; x < number_of_bases_in_byte; x++) {
 			// Generate mask with shifted 11s (00000011, 00001100 etc.) in successive rounds
@@ -223,7 +225,7 @@ bool CFileDecoder::ExtractCharactersFromByte(char byte, string& characters, char
 	return characters.length() > 0;
 }
 
-bool CFileDecoder::DecodeDNAtoolsFile(string& sequence_to_pass_back, string temp_seq, char type)
+bool CFileDecoder::DecodeDNAtoolsFile(string& sequence_to_pass_back, const string& temp_seq, char type)
 {
 /*
 Byte is 128|64|32|16|8|4|2|1 -- value
@@ -246,12 +248,11 @@ The one base C will be:
 +3 (C: bits 1+0 set).
 This scheme allow up to three DNA or RNA bases to be stored per byte.
 */
-	string temp_sequence = m_content;
 	string threebases = "";
 	sequence_to_pass_back = "";
-	std::string::const_iterator it = temp_sequence.begin();
+	auto it = m_content.cbegin();
 
-	while(it != temp_sequence.end()) {
+	while(it != m_content.cend()) {
    //	If it is a garbage character (bit 7 not set), ExtractCharactersFromByte will
    //return 0.  If this happens, don't insert it.  This usually happens with
    //	the last byte in the file fetched by ifstream ('\n').
