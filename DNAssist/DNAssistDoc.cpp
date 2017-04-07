@@ -90,8 +90,10 @@ BOOL CDNAssistDoc::OnOpenDocument(LPCTSTR pszPathName)
 	if (GetSeqType() == 0) {
 		CSequenceTypeDialog seqTypeDialog;
 		seqTypeDialog.DoModal();
-		SetSeqType(seqTypeDialog.GetSeqType());
+		SetSeqType(seqTypeDialog.GetSeqType());		
 	}
+	if (GetSeqType() != 0)
+		m_fileTypeDetector.RemoveBadCharacters(m_dataStr, GetSeqType());
 	
 	return TRUE;
 }

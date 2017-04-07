@@ -254,6 +254,7 @@ void CAboutDlg::DoDataExchange(CDataExchange* pDX)
 BOOL CAboutDlg::OnInitDialog()
 {
 	CDialog::OnInitDialog();
+	SetDlgItemText(IDC_ABOUT_VERSION, _T(VER_FILE_VERSION_STR));
 	SetDlgItemText(IDC_ABOUT_COPYRIGHT, _T(VER_LEGALCOPYRIGHT_STR));
 	CenterWindow();
 	return TRUE;
