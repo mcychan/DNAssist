@@ -206,7 +206,7 @@ void CCodonTable::GetStopCodons(vector<string>& result, char type)
 				if(zop == '*') {
 					string codon;
 					GetCodon(codon, CodonIndex(x, y, z), type);
-					result.emplace_back(codon);
+					result.push_back(move(codon));
 				}
 			}
 		}
@@ -222,7 +222,7 @@ void CCodonTable::GetCodonFromAminoAcid(vector<string>& result, char aminoacid)
 				if(table[x][y][z] == aminoacid) {
 					string codon;
 					GetCodon(codon, CodonIndex(x, y, z), 'D');
-					result.emplace_back(codon);
+					result.push_back(move(codon));
 				}
 			}
 		}

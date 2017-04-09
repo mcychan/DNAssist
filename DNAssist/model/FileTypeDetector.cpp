@@ -8,9 +8,9 @@ char CFileTypeDetector::GetMostLikelySequenceType(const char* sequence)
 		return '\0';
 
 	int dna = 0, rna = 0, protein = 0, degenerate = 0;
-	string::const_iterator it = seq.begin();
+	auto it = seq.cbegin();
 
-	while(it != seq.end()) {
+	while(it != seq.cend()) {
 		if(m_seqValidator.IsValid('D', *it, 1))
 			dna++;
 		if(m_seqValidator.IsValid('R', *it, 1))
@@ -56,9 +56,9 @@ char CFileTypeDetector::GetMostLikelySequenceType(string& sequence_to_pass_back,
 		return type;
 
 	string temp_dna = "", temp_rna = "", temp_protein = "", temp_degenerate_dna = "";
-	string::const_iterator it = temp_sequence.begin();
+	auto it = temp_sequence.cbegin();
 
-	while(it != temp_sequence.end()) {
+	while(it != temp_sequence.cend()) {
 		if(m_seqValidator.IsDNAbase(*it))
 			temp_dna += *it;
 		if(m_seqValidator.IsRNAbase(*it))

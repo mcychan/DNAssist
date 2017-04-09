@@ -23,7 +23,7 @@ CEnzymeList::~CEnzymeList()
 
 int CEnzymeList::AddEnzyme(const string& name, const string& site, const string& upper, const string& lower, const string& attr)
 {
-	enzymearray.emplace_back(Enzyme{ name, site, upper, lower, attr });
+	enzymearray.emplace_back(name, site, upper, lower, attr);
 	return enzymearray.size();
 }
 

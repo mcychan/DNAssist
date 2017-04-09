@@ -2,7 +2,7 @@
 #include <iomanip>
 #include <iostream>
 #include <sstream>
-#include <stdlib.h>
+#include <cstdlib>
 
 static const string amino_acid_codes = "ABCDEFGHIKLMNPQRSTUVWXYZ-";  /* DES */
 static const string amino_acid_order = "ABCDEFGHIKLMNPQRSTVWXYZ";
@@ -652,9 +652,6 @@ void CMultAlignment::init_interface()
 
 int CMultAlignment::main_menu()
 {
-	int i, j;
-	int value;
-
 	init_interface();
 	init_matrix();
 
@@ -662,8 +659,8 @@ int CMultAlignment::main_menu()
 	usemenu = true;
 	interactive = false;
 	seq_input(false);
-	value = multiple_align_menu();
-	for(j=0; j < numberofseqs; j++)
+	int value = multiple_align_menu();
+	for(int j=0; j < numberofseqs; j++)
 		free_seq(j);
 	free_aln(nseqs);
 	return value;
@@ -671,8 +668,12 @@ int CMultAlignment::main_menu()
 
 bool CMultAlignment::open_output_file(ofstream& prompt, const wstring& path, wstring& file_name, const string& file_extension)
 {
-	string directory(getenv("temp"));
-	string fileName = directory + "\\$temp." + file_extension;
+	size_t len = 260;
+	char directory[260];
+	getenv_s(&len, directory, "temp");
+	string fileName(directory);
+	fileName += "\\$temp.";
+	fileName += file_extension;
 	wstring wTmpPath(fileName.begin(), fileName.end());
 
 	file_name = wTmpPath;
@@ -694,7 +695,6 @@ bool CMultAlignment::open_explicit_file(ofstream& ofs, const wstring& file_name)
 
 int CMultAlignment::seq_input(bool append)
 {
-    int i;
 	int local_nseqs;
 
     if (append)
@@ -849,7 +849,6 @@ void CMultAlignment::print_sec_struct_mask(int prf_length, const string& mask, s
 void CMultAlignment::create_alignment_output(int fseq, int lseq)
 {
 	int i, length = 0;
-	int a;
 	order = make_unique<int[]>(lseq);
 	for (i=fseq;i<=lseq;i++) {
 		if (length < seqlen_array[i])
@@ -1318,7 +1317,7 @@ bool CMultAlignment::keyword(const string& line, const string& code)
 void CMultAlignment::get_rsf_feature(const string& line)
 {
 	char c, s;
-	int  i, tmp, start_pos, end_pos;
+	int  i, start_pos, end_pos;
 	string str1, str2, feature;
 
 	stringstream ss(line);
@@ -1748,7 +1747,7 @@ void CMultAlignment::get_tree(wstring& phylip_name)
 
 int CMultAlignment::profile_input()   /* read a profile   */
 {                                           /* profile_no is 1 or 2  */
-	int local_nseqs, i;
+	int local_nseqs;
 
 	if(profile_no == 2 && profile1_empty)  {
 		cerr << "You must read in profile number 1 first";
@@ -3731,7 +3730,6 @@ int CMultAlignment::palign2(wstring& p1_tree_name, wstring& p2_tree_name)
 {
 	int 	i, j, sum, entries, status;
 	int 		score;
-	int dscore;
 
    //info("Start of Multiple Alignment");
 
@@ -3972,7 +3970,6 @@ void CMultAlignment::add(int v)
 int CMultAlignment::calc_score(int iat,int jat,int v1,int v2)
 {
 	int ipos,jpos;
-	int ret;
 
 	ipos = v1 + iat;
 	jpos = v2 + jat;
@@ -6136,9 +6133,9 @@ int CMultAlignment::getargs(const string& inline1, vector<string>& args, int max
 	while (getline(iss, token)) {
 		size_t found = token.find_last_of('\t');
 		if(found != string::npos)
-			args.emplace_back(token.substr(0, found));
+			args.push_back(move(token.substr(0, found)));
 		else
-			args.emplace_back(token);
+			args.push_back(move(token));
 	}
 
 	return args.size();

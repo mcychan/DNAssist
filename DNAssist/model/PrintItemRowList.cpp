@@ -10,7 +10,7 @@ CPrintItemRowList::~CPrintItemRowList()
 
 void CPrintItemRowList::AddPrintItemRow(const CPrintItemRow& row)
 {
-	array.emplace_back(row);
+	array.push_back(move(row));
 }
 
 CPrintItemRow* CPrintItemRowList::GetPrintItemRow(int index)

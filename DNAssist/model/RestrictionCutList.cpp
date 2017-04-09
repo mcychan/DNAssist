@@ -30,7 +30,7 @@ void CRestrictionCutList::AddElement(const string& enzymename, const string& rec
 
 void CRestrictionCutList::AddEntry(const CRestrictionEnzymeCut& restrictioncutarray)
 {
-   array.emplace_back(restrictioncutarray);
+   array.push_back(move(restrictioncutarray));
 }
 
 string CRestrictionCutList::GetName(int index)
@@ -90,11 +90,11 @@ void CRestrictionCutList::MakeSequentialArray()
 	int counter = 0;
 	for(int x = 0; x < size(); x++) {
 		for(int y = 0; y < GetArrayLength(x); y ++) {
-			sequentialnames.emplace_back(GetName(x));
-			sequentialcutpos.emplace_back(GetArrayEntry(x, y));
+			sequentialnames.push_back(move(GetName(x)));
+			sequentialcutpos.push_back(move(GetArrayEntry(x, y)));
 			//	data == true is unique cutter.  Everything else == flase;
 			bool data = (GetNumberOfCutPositions(x) == 1);
-			sequentialdata.emplace_back(data);
+			sequentialdata.push_back(move(data));
 			sortpointers.emplace_back(counter++);
 		}
 	}

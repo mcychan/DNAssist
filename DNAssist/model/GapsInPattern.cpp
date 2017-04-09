@@ -117,7 +117,7 @@ int CGapsInPattern::PermuteSequence(const char* /*pattern*/, int length, vector<
 	if(gaps == 0) {
 		result.clear();
 		vector<int> row(length);
-		result.emplace_back(row);
+		result.push_back(move(row));
 		return 1;
 	}
 
@@ -198,13 +198,13 @@ int CGapsInPattern::RemoveDuplicates(int entries, int width, vector<vector<int> 
 			vector<int> row(width);
 			for(int z = 0; z < width; z++)
 				row[z] = result[x][z];
-			temp.emplace_back(row);
+			temp.push_back(move(row));
 		}
 		else if(CompareEntries(width, &result[x][0], &temp[number - 1][0]) != 0) {
 			vector<int> row(width);
 			for(int p = 0; p < width; p++)
 				row[p] = result[x][p];
-			temp.emplace_back(row);
+			temp.push_back(move(row));
 			number++;
 		}
 	}

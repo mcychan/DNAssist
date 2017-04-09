@@ -39,7 +39,7 @@ DocVar* CDocVarManager::GetFromUndoList()
 
 void CDocVarManager::PutInRedoOperation(shared_ptr<DocVar> pDocVar)
 {
-	redoList.emplace_back(pDocVar);
+	redoList.push_back(move(pDocVar));
 }
 
 DocVar* CDocVarManager::GetRedoOperation()
@@ -49,6 +49,6 @@ DocVar* CDocVarManager::GetRedoOperation()
 
 	auto pDocVar = redoList.back();
 	redoList.pop_back();
-	undoList.emplace_back(pDocVar);
+	undoList.push_back(move(pDocVar));
 	return pDocVar.get();
 }

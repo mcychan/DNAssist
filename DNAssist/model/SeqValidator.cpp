@@ -154,9 +154,9 @@ bool CSeqValidator::IsFloat(const string& data)
 	if(length <= 0)
 		return false;
 
-	string::const_iterator it = data.begin();
+	auto it = data.cbegin();
 
-	while(it != data.end()) {
+	while(it != data.cend()) {
 		switch(*it) {
 			case '0' :
 			case '1' :
@@ -185,9 +185,9 @@ bool CSeqValidator::IsInt(const string& data)
 	if(length <= 0)
 		return false;
 
-	std::string::const_iterator it = data.begin();
+	auto it = data.cbegin();
 
-	while(it != data.end()) {
+	while(it != data.cend()) {
 		switch(*it) {
 			case '0' :
 			case '1' :
@@ -212,13 +212,13 @@ bool CSeqValidator::IsProtein(const string& data)
 	if(length <= 0)
 		return false;
 
-	std::string::const_iterator it = data.begin();
+	auto it = data.cbegin();
 
-	while(it != data.end()) {
+	while(it != data.cend()) {
 		if(!IsAminoAcid(*it))
 			break;
 		++it;
 	}
 
-	return it == data.end();
+	return it == data.cend();
 }

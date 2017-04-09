@@ -64,10 +64,10 @@ unsigned char CFileEncoder::CompressCharactersIntoByte(const string& threebases)
 	unsigned char currByte = 128; // Set bit 7;
 	int bit;
 	int shifted_bits;
-	string::const_iterator it = threebases.begin();
+	auto it = threebases.cbegin();
 
 	int x = 0;
-	while(it != threebases.end()) {
+	while(it != threebases.cend()) {
 		bit = EncodeDNAOrRNABase(*it);
 		shifted_bits = bit<<(2*(threebases.length() - (x++) - 1));
 		currByte = (unsigned char)(currByte | shifted_bits);

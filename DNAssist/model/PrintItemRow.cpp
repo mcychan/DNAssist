@@ -20,7 +20,7 @@ CPrintItemRow::~CPrintItemRow()
 
 void CPrintItemRow::AddItem(const string& data, int coord, bool itemdata)
 {
-	items.emplace_back(PrintItem{data, coord, itemdata});
+	items.emplace_back(data, coord, itemdata);
 }
 
 void CPrintItemRow::AddItem(const string& data, int stringlength, int coord, bool itemdata)
