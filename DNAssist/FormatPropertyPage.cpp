@@ -1,4 +1,4 @@
-// FormatPropertyPage.cpp : ��@��
+// FormatPropertyPage.cpp :
 //
 
 #include "stdafx.h"
@@ -7,7 +7,7 @@
 
 
 
-// CFormatPropertyPage ��ܤ��
+// CFormatPropertyPage
 
 IMPLEMENT_DYNAMIC(CFormatPropertyPage, CPropertyPage)
 
@@ -89,7 +89,7 @@ BOOL CFormatPropertyPage::OnInitDialog()
 	return TRUE;
 }
 
-// CFormatPropertyPage �T���B�z�`��
+// CFormatPropertyPage
 void CFormatPropertyPage::OnBnClickedAll()
 {
 	m_all = !m_all;

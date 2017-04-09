@@ -1,4 +1,4 @@
-// AlignOptionsDNAPropertyPage.cpp : ��@��
+// AlignOptionsDNAPropertyPage.cpp :
 //
 
 #include "stdafx.h"
@@ -7,7 +7,7 @@
 
 
 
-// CAlignOptionsDNAPropertyPage ��ܤ��
+// CAlignOptionsDNAPropertyPage
 
 IMPLEMENT_DYNAMIC(CAlignOptionsDNAPropertyPage, CPropertyPage)
 

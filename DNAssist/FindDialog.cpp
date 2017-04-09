@@ -1,4 +1,4 @@
-// FindDialog.cpp : ��@��
+// FindDialog.cpp :
 //
 
 #include "stdafx.h"
@@ -7,7 +7,7 @@
 
 #include "model/DNASearch.h"
 
-// CFindDialog ��ܤ��
+// CFindDialog
 
 IMPLEMENT_DYNAMIC(CFindDialog, CDialog)
 
@@ -54,7 +54,7 @@ BEGIN_MESSAGE_MAP(CFindDialog, CDialog)
 	ON_BN_CLICKED(IDC_FINDAGAIN, OnBnClickedFindAgain)
 END_MESSAGE_MAP()
 
-// CFindDialog �T���B�z�`��
+// CFindDialog
 void CFindDialog::OnBnClickedFind()
 {
 	UpdateData(TRUE);

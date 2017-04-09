@@ -1,7 +1,7 @@
 #pragma once
 
 
-// CAlignOptionsDNAPropertyPage ��ܤ��
+// CAlignOptionsDNAPropertyPage
 
 class CAlignOptionsDNAPropertyPage : public CPropertyPage
 {

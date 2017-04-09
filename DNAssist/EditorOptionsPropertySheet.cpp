@@ -1,4 +1,4 @@
-// EditorOptionsPropertySheet.cpp : ��@��
+// EditorOptionsPropertySheet.cpp :
 //
 
 #include "stdafx.h"
@@ -34,4 +34,4 @@ CEditorOptionsPropertySheet::~CEditorOptionsPropertySheet()
 BEGIN_MESSAGE_MAP(CEditorOptionsPropertySheet, CPropertySheet)
 END_MESSAGE_MAP()
 
-// CEditorOptionsPropertySheet �T���B�z�`��
+// CEditorOptionsPropertySheet

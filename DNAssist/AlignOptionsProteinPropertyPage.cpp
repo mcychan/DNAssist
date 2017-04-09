@@ -1,4 +1,4 @@
-// AlignOptionsProteinPropertyPage.cpp : ��@��
+// AlignOptionsProteinPropertyPage.cpp :
 //
 
 #include "stdafx.h"
@@ -7,7 +7,7 @@
 
 
 
-// CAlignOptionsProteinPropertyPage ��ܤ��
+// CAlignOptionsProteinPropertyPage
 
 IMPLEMENT_DYNAMIC(CAlignOptionsProteinPropertyPage, CPropertyPage)
 

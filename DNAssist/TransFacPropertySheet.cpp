@@ -1,4 +1,4 @@
-// TransFacPropertySheet.cpp : ��@��
+// TransFacPropertySheet.cpp :
 //
 
 #include "stdafx.h"

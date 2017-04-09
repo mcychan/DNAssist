@@ -8,7 +8,7 @@
 #include <string>
 using namespace std;
 
-// CFindORF ��ܤ��
+// CFindORF
 
 class CFindORFDialog : public CDialog
 {
@@ -20,7 +20,7 @@ private:
 	CSeqValidator m_SeqValidator;
 
 public:
-	CFindORFDialog(CWnd* pParent = NULL);   // �зǫغc�禡
+	CFindORFDialog(CWnd* pParent = NULL); 
 	void MakeTranspanency(double transparencyPercentage = 80.0);
 	inline BOOL IsGlobal() {
 		return !m_global;
@@ -31,7 +31,7 @@ public:
 	enum { IDD = IDD_FINDORF };
 
 protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV �䴩
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV
 	void GeneratePointArrayOfORFs(const vector<int>& startpositions, const vector<int>& stoppositions, vector<CPoint>& points, int sequencelength);
 	LRESULT NotifyView(UINT id);
 

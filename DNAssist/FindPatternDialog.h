@@ -9,7 +9,7 @@
 
 using namespace std;
 
-// CFindPatternDialog ��ܤ��
+// CFindPatternDialog 
 
 class CFindPatternDialog : public CDialog
 {
@@ -31,7 +31,7 @@ private:
 	CSeqValidator m_seqValidator;
 
 public:
-	CFindPatternDialog(CWnd* pParent = NULL);   // �зǫغc�禡
+	CFindPatternDialog(CWnd* pParent = NULL); 
 	void MakeTranspanency(double transparencyPercentage = 80.0);
 	afx_msg void AdjustListBoxes(char sequence_type);
 	afx_msg void FindCallback(const string& seq, char sequence_type, char seqForm, vector<int>& patternLocation, vector<int>& patternLength);
@@ -43,7 +43,7 @@ public:
 	enum { IDD = IDD_FINDPATTERN };
 
 protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV �䴩
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV
 	LRESULT NotifyView(UINT id);
 
 	DECLARE_MESSAGE_MAP()

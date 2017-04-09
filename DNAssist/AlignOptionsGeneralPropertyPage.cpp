@@ -1,4 +1,4 @@
-// AlignOptionsGeneralPropertyPage.cpp : ��@��
+// AlignOptionsGeneralPropertyPage.cpp :
 //
 
 #include "stdafx.h"
@@ -7,7 +7,7 @@
 
 
 
-// CAlignOptionsGeneralPropertyPage ��ܤ��
+// CAlignOptionsGeneralPropertyPage
 
 IMPLEMENT_DYNAMIC(CAlignOptionsGeneralPropertyPage, CPropertyPage)
 

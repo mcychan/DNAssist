@@ -1,4 +1,4 @@
-// ConversionOutputPropertyPage.cpp : ��@��
+// ConversionOutputPropertyPage.cpp :
 //
 
 #include "stdafx.h"
@@ -7,7 +7,7 @@
 
 
 
-// CConversionOutputPropertyPage ��ܤ��
+// CConversionOutputPropertyPage
 
 IMPLEMENT_DYNAMIC(CConversionOutputPropertyPage, CPropertyPage)
 
@@ -32,7 +32,7 @@ BEGIN_MESSAGE_MAP(CConversionOutputPropertyPage, CPropertyPage)
 END_MESSAGE_MAP()
 
 
-// CConversionOutputPropertyPage �T���B�z�`��
+// CConversionOutputPropertyPage
 void CConversionOutputPropertyPage::OnOK()
 {
 	CPropertyPage::OnOK();

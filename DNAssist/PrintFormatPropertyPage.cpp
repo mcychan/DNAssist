@@ -1,4 +1,4 @@
-// PrintFormatPropertyPage.cpp : ��@��
+// PrintFormatPropertyPage.cpp :
 //
 
 #include "stdafx.h"
@@ -7,7 +7,7 @@
 
 
 
-// CPrintFormatPropertyPage ��ܤ��
+// CPrintFormatPropertyPage
 
 IMPLEMENT_DYNAMIC(CPrintFormatPropertyPage, CPropertyPage)
 
@@ -65,7 +65,7 @@ BOOL CPrintFormatPropertyPage::OnInitDialog()
 	return TRUE;
 }
 
-// CPrintFormatPropertyPage �T���B�z�`��
+// CPrintFormatPropertyPage
 void CPrintFormatPropertyPage::OnOK()
 {
 	CPropertyPage::OnOK();

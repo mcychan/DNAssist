@@ -1,7 +1,7 @@
 #pragma once
 
 
-// CAnalysisOptionsPropertyPage ��ܤ��
+// CAnalysisOptionsPropertyPage
 
 class CAnalysisOptionsPropertyPage : public CPropertyPage
 {

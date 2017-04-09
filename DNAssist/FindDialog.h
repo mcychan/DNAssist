@@ -3,14 +3,14 @@
 
 using namespace std;
 
-// CFindDialog ��ܤ��
+// CFindDialog
 
 class CFindDialog : public CDialog
 {
 	DECLARE_DYNAMIC(CFindDialog)
 
 public:
-	CFindDialog(CWnd* pParent = NULL);   // �зǫغc�禡
+	CFindDialog(CWnd* pParent = NULL);
 	void MakeTranspanency(double transparencyPercentage = 80.0);
 	afx_msg CPoint Search(const string& seq, char sequence_type, char seqForm, int match);
 	inline BOOL IsGlobal() {
@@ -24,7 +24,7 @@ public:
 	enum { IDD = IDD_FINDDLG };
 
 protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV �䴩
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV
 	LRESULT NotifyView(UINT id);
 
 	DECLARE_MESSAGE_MAP()

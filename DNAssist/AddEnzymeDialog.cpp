@@ -41,7 +41,7 @@ BEGIN_MESSAGE_MAP(CAddEnzymeDialog, CDialog)
 END_MESSAGE_MAP()
 
 
-// CAddEnzymeDialog �T���B�z�`��
+// CAddEnzymeDialog
 void CAddEnzymeDialog::OnOK()
 {
 	if(!OkIsValid()) {

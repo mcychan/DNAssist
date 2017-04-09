@@ -1,11 +1,11 @@
-// ProfilesPropertyPage.cpp : ��@��
+// ProfilesPropertyPage.cpp :
 //
 
 #include "stdafx.h"
 #include "DNAssist.h"
 #include "ProfilesPropertyPage.h"
 
-// CProfilesPropertyPage ��ܤ��
+// CProfilesPropertyPage
 
 IMPLEMENT_DYNAMIC(CProfilesPropertyPage, CPropertyPage)
 
@@ -34,7 +34,7 @@ BEGIN_MESSAGE_MAP(CProfilesPropertyPage, CPropertyPage)
 END_MESSAGE_MAP()
 
 
-// CProfilesPropertyPage �T���B�z�`��
+// CProfilesPropertyPage
 
 void CProfilesPropertyPage::OnOK()
 {

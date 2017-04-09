@@ -1,4 +1,4 @@
-// FindPatternDialog.cpp : ��@��
+// FindPatternDialog.cpp :
 //
 
 #include "stdafx.h"
@@ -9,7 +9,7 @@
 #include "model/DNASearch.h"
 #include "model/GapsInPattern.h"
 
-// CFindPatternDialog ��ܤ��
+// CFindPatternDialog
 
 IMPLEMENT_DYNAMIC(CFindPatternDialog, CDialog)
 
@@ -63,7 +63,7 @@ BEGIN_MESSAGE_MAP(CFindPatternDialog, CDialog)
 END_MESSAGE_MAP()
 
 
-// CFindPatternDialog �T���B�z�`��
+// CFindPatternDialog
 void CFindPatternDialog::OnFindPatternChanged()
 {
 	UpdateData(TRUE);

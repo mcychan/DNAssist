@@ -41,7 +41,7 @@ BEGIN_MESSAGE_MAP(CFactorSequencePropertyPage, CPropertyPage)
 END_MESSAGE_MAP()
 
 
-// CFactorSequencePropertyPage �T���B�z�`��
+// CFactorSequencePropertyPage
 BOOL CFactorSequencePropertyPage::OnSetActive()
 {
 	if(selectionchanged)
@@ -61,7 +61,7 @@ void CFactorSequencePropertyPage::GetListBoxSelectedStrings(vector<string>& entr
 				CString temp;
 				m_listbox1.GetText(i, temp);
 				string str((LPCSTR) CStringA(temp));
-				entries.emplace_back(str);
+				entries.push_back(move(str));
 			}
 		}
 	}

@@ -1,4 +1,4 @@
-// AnalysisOptionsPropertyPage.cpp : ��@��
+// AnalysisOptionsPropertyPage.cpp :
 //
 
 #include "stdafx.h"
@@ -6,7 +6,7 @@
 #include "AnalysisOptionsPropertyPage.h"
 
 
-// CAnalysisOptionsPropertyPage ��ܤ��
+// CAnalysisOptionsPropertyPage
 
 IMPLEMENT_DYNAMIC(CAnalysisOptionsPropertyPage, CPropertyPage)
 
@@ -145,7 +145,7 @@ BOOL CAnalysisOptionsPropertyPage::OnInitDialog()
 	return TRUE;
 }
 
-// CAnalysisOptionsPropertyPage �T���B�z�`��
+// CAnalysisOptionsPropertyPage
 void CAnalysisOptionsPropertyPage::OnBnClickedWholeSet()
 {
 	m_wholeset = !m_wholeset;

@@ -677,7 +677,7 @@ void CResultView::MakeGraphicLabelTag()
 				data += number;
 				data += rec->GetName();
 				data += " ";
-				graphiclabeltag.emplace_back(data);
+				graphiclabeltag.push_back(move(data));
 				graphiclabelposition.emplace_back(rec->GetCutPosition(cuts));
 			}
 		}

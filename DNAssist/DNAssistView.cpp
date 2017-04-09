@@ -695,7 +695,7 @@ void CDNAssistView::FormatSelLineSeq(std::vector<string> &vecRes, size_t dwStart
 				// reset group counter because we are in the next line
 				k = 0;
 				// add this line to the array
-				vecRes.emplace_back(strLine);
+				vecRes.push_back(strLine);
 				// prepare line for next line
 				strLine = "";
 				continue;
@@ -707,7 +707,7 @@ void CDNAssistView::FormatSelLineSeq(std::vector<string> &vecRes, size_t dwStart
 	// don't forget last line
 	const auto strEnd = strLine.find_last_not_of(' ');
 	strLine.substr(0, strEnd);
-	vecRes.emplace_back(strLine);
+	vecRes.push_back(move(strLine));
 }
 
 BOOL CDNAssistView::MoveCaretUp()

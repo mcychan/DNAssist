@@ -36,7 +36,7 @@ BEGIN_MESSAGE_MAP(CTransFacPropertyPage, CPropertyPage)
 END_MESSAGE_MAP()
 
 
-// CTransFacPropertyPage �T���B�z�`��
+// CTransFacPropertyPage
 BOOL CTransFacPropertyPage::OnSetActive()
 {
 	if(selectionchanged)
@@ -57,7 +57,7 @@ void CTransFacPropertyPage::GetListBoxSelectedStrings(vector<string>& entries)
 				CString temp;
 				m_listBox.GetText(i, temp);
 				string str((LPCSTR) CStringA(temp));
-				entries.emplace_back(str);
+				entries.push_back(move(str));
 			}
 		}
 	}
