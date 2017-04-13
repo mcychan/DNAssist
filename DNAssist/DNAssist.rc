@@ -17,7 +17,7 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// 中性 (預設值) resources
+// Neutral (Default) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
 LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
@@ -715,7 +715,7 @@ BEGIN
     GROUPBOX        "Pattern",IDC_STATIC,9,11,230,38
     EDITTEXT        IDC_FINDPATTERN,20,25,207,13,ES_AUTOHSCROLL
     PUSHBUTTON      "Find",IDC_FINDPATTERN_FIND,27,179,50,14
-    PUSHBUTTON      "Cancel",IDC_FINDPATTERN_CANCEL,167,179,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,167,179,50,14
     LTEXT           "Allow",IDC_STATIC,19,77,17,8
     COMBOBOX        IDC_NUMBERGAPS,42,75,22,13,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
     LTEXT           "amino acids maximum gapsize",IDC_FINDPATTERN_NUCLEOTIDE,127,77,101,8
@@ -1935,7 +1935,7 @@ BEGIN
     AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
 END
 
-#endif    // 中性 (預設值) resources
+#endif    // Neutral (Default) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
