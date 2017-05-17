@@ -90,6 +90,7 @@ protected:
 	virtual void PrintFooter(CDC *pDC, CPrintInfo *pInfo);
 	virtual void OnBeginPrinting(CDC* pDC, CPrintInfo* pInfo);
 	virtual void OnDraw(CDC* pDCView);
+	virtual BOOL OnScroll(UINT nScrollCode, UINT nPos, BOOL bDoScroll);
 	virtual BOOL OnScrollBy(CSize sizeScroll, BOOL bDoScroll = TRUE);
 	//! Paints Seq data to the Seq data area
 	virtual void PaintSeqData(CDC* pDC, CPrintInfo* pInfo);

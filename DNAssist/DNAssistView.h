@@ -305,6 +305,7 @@ protected:
 	virtual void PrintFooter(CDC *pDC, CPrintInfo *pInfo);
 	virtual void OnUpdate(CView* pSender, LPARAM lHint, CObject* pHint);
 	virtual void OnDraw(CDC* pDCView);
+	virtual BOOL OnScroll(UINT nScrollCode, UINT nPos, BOOL bDoScroll);
 	virtual BOOL OnScrollBy(CSize sizeScroll, BOOL bDoScroll = TRUE);
 	void CalculateNucleosome(const CString& title, const string& dataStr, int selStart = 0);
 

@@ -1078,17 +1078,34 @@ void CDNAssistView::OnDraw(CDC* pDCView)
 	else
 		nDstHeight = by;
 
-	CRect rcClip(0, 0, 0, 0);
-	pDCView->GetClipBox(rcClip);
-	pDCView->BitBlt(rcClip.left, rcClip.top, nDstWidth, nDstHeight,
+	pDCView->BitBlt(rcClient.left, rcClient.top, nDstWidth, nDstHeight,
 		&dc,
 		xPos, yPos,
 		SRCCOPY);
 	m_rectAddr.bottom = m_rectDataSeq.bottom;
 	pDCView->ExcludeClipRect(m_rectAddr);
 	pDCView->ExcludeClipRect(m_rectDataSeq);
-	pDCView->FillSolidRect(rcClip, m_colorAddrBkgnd);
+	pDCView->FillSolidRect(rcClient, m_colorAddrBkgnd);
 	ReleaseDC(pDCView);	
+}
+
+BOOL CDNAssistView::OnScroll(UINT nScrollCode, UINT nPos, BOOL bDoScroll)
+{
+	SCROLLINFO info;
+	info.cbSize = sizeof(SCROLLINFO);
+	info.fMask = SIF_TRACKPOS;
+
+	if (LOBYTE(nScrollCode) == SB_THUMBTRACK) {
+		GetScrollInfo(SB_HORZ, &info);
+		nPos = info.nTrackPos;
+	}
+
+	if (HIBYTE(nScrollCode) == SB_THUMBTRACK) {
+		GetScrollInfo(SB_VERT, &info);
+		nPos = info.nTrackPos;
+	}
+
+	return CScrollView::OnScroll(nScrollCode, nPos, bDoScroll);
 }
 
 BOOL CDNAssistView::OnScrollBy(CSize sizeScroll, BOOL bDoScroll)
@@ -1116,21 +1133,15 @@ BOOL CDNAssistView::OnScrollBy(CSize sizeScroll, BOOL bDoScroll)
 
 	// adjust current x position
 	xOrig = x = GetScrollPos(SB_HORZ);
-	int xMax = GetScrollLimit(SB_HORZ);
 	x += sizeScroll.cx;
 	if (x < 0)
 		x = 0;
-	else if (x > xMax)
-		x = xMax;
 
 	// adjust current y position
 	yOrig = y = GetScrollPos(SB_VERT);
-	int yMax = GetScrollLimit(SB_VERT);
 	y += sizeScroll.cy;
 	if (y < 0)
 		y = 0;
-	else if (y > yMax)
-		y = yMax;
 
 	// did anything change?
 	if (x == xOrig && y == yOrig)
