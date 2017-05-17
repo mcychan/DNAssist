@@ -4,8 +4,8 @@
 
 [Setup]
 AppName={#MyAppName}
-AppVersion=3.03
-AppVerName={#MyAppName} 3.03
+AppVersion=3.04
+AppVerName={#MyAppName} 3.04
 AppPublisher=Miller Cy Chan
 AppPublisherURL=http://dnassist.co.nf/
 AppSupportURL=http://ichiba.geocities.jp/chan_ykf/
@@ -20,7 +20,7 @@ OutputDir=..\..\Release
 SolidCompression=yes
 UninstallDisplayIcon={app}\{#MyAppName}.exe
 VersionInfoDescription={#MyAppName} Setup
-VersionInfoVersion=3.0.3
+VersionInfoVersion=3.0.4
 
 [Tasks]
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
