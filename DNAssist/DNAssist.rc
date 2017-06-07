@@ -420,6 +420,15 @@ BEGIN
     END
 END
 
+IDR_CONTEXT_MENU MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+    END
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //

@@ -91,6 +91,7 @@ void CAlignView::OnSetFocus(CWnd* pOldWnd)
 {
 	// take care of caret
 	CScrollView::OnSetFocus(pOldWnd);
+	SetScrollSizes(MM_TEXT, CSize(printsize_pixels.cx, printsize_pixels.cy));
 	UpdateCtrlStatus();
 }
 
@@ -855,7 +856,9 @@ void CAlignView::OnEditCopy()
 
 void CAlignView::OnContextMenu(CWnd* pWnd, CPoint point)
 {
-	CMenu *pContextMenu = AfxGetMainWnd()->GetMenu()->GetSubMenu(2);
+	CMenu menu;
+	VERIFY(menu.LoadMenu(IDR_CONTEXT_MENU));
+	auto pContextMenu = menu.GetSubMenu(0);
 	pContextMenu->TrackPopupMenu(TPM_LEFTALIGN | TPM_RIGHTBUTTON, point.x, point.y, this);
 }
 

@@ -159,7 +159,7 @@ void CDNAssistView::LoadDefaultFont()
 	m_Font.DeleteObject();
 
 	auto editorFontTransferBuffer = theApp.GetEditorFontTransferBuffer();
-	m_Font.CreateFont(editorFontTransferBuffer->facesize * theApp.GetSystemScaleFactor(), 0, 0, 0, editorFontTransferBuffer->facestyle, FALSE, FALSE, FALSE, 1, OUT_DEFAULT_PRECIS,
+	m_Font.CreateFont(editorFontTransferBuffer->facesize, 0, 0, 0, editorFontTransferBuffer->facestyle, FALSE, FALSE, FALSE, 1, OUT_DEFAULT_PRECIS,
 			CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY, FIXED_PITCH|FF_DONTCARE, theApp.editorFontFace);
 }
 
