@@ -4,12 +4,12 @@
 
 [Setup]
 AppName={#MyAppName}
-AppVersion=3.04
-AppVerName={#MyAppName} 3.04
+AppVersion=3.05
+AppVerName={#MyAppName} 3.05
 AppPublisher=Miller Cy Chan
-AppPublisherURL=http://dnassist.co.nf/
-AppSupportURL=http://ichiba.geocities.jp/chan_ykf/
-AppUpdatesURL=http://dnassist.co.nf/
+AppPublisherURL=https://github.com/dnassist/DNAssist/
+AppSupportURL=https://github.com/dnassist/DNAssist/wiki/
+AppUpdatesURL=https://github.com/dnassist/DNAssist/releases/
 DefaultDirName={pf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes
@@ -18,7 +18,7 @@ OutputDir=..\..\Release
 SolidCompression=yes
 UninstallDisplayIcon={app}\{#MyAppName}.exe
 VersionInfoDescription={#MyAppName} Setup
-VersionInfoVersion=3.0.4
+VersionInfoVersion=3.0.5
 
 [Tasks]
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
