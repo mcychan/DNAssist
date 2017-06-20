@@ -54,8 +54,8 @@ protected:
 	int vertpixels;
 	int pageprintwidth;
 	int pageprintheight;	
-	int width;
-	int height;
+	int width = 100;
+	int height = 100;
 	int leftmargin;
 	int rightmargin;
 	int topmargin;

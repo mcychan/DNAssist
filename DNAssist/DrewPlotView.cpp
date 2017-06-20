@@ -135,8 +135,7 @@ void CDrewPlotView::UpdateCtrlStatus()
 void CDrewPlotView::OnSetFocus(CWnd* pOldWnd)
 {
 	// take care of caret
-	CScrollView::OnSetFocus(pOldWnd);
-	SetScrollSizes(MM_TEXT, CSize(width, height));
+	CScrollView::OnSetFocus(pOldWnd);	
 	UpdateCtrlStatus();
 }
 
@@ -229,10 +228,8 @@ BOOL CDrewPlotView::OnPreparePrinting(CPrintInfo* pInfo)
 void CDrewPlotView::OnPrepareDC(CDC* pDC, CPrintInfo* pInfo)
 {
 	CDrewPlotDoc* pDoc = GetDocument();
-	if (sequence_length == 0) {
-		CSize sizeTotal(100, 100);
-		SetScrollSizes(MM_TEXT, sizeTotal);
-	}
+	if (sequence_length == 0)
+		SetScrollSizes(MM_TEXT, CSize(width, height));
 
 	CScrollView::OnPrepareDC(pDC, pInfo);
 	pDC->SetViewportOrg(CPoint(0, 0)); // force viewport origin to zero
@@ -587,7 +584,7 @@ void CDrewPlotView::PaintSeqData(CDC* pDC)
 }
 
 void CDrewPlotView::OnDraw(CDC* pDCView)
-{
+{	
 	ASSERT(CPoint(0, 0) == pDCView->GetViewportOrg());
 	if (GetDocument()->IsCalculating()) {
 		CRect rcClip(0, 0, 0, 0);

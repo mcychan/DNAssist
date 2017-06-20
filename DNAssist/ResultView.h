@@ -31,8 +31,8 @@ private:
 	int GetTotalNumberOfPages();
 
 protected:
-	int pagewidth;
-	int pageheight;
+	int pagewidth = 100;
+	int pageheight = 100;
 	int leftmargin;
 	int leftoffset;
 	int rightmargin;

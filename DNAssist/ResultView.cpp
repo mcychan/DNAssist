@@ -89,7 +89,6 @@ void CResultView::OnSetFocus(CWnd* pOldWnd)
 {
 	// take care of caret
 	CScrollView::OnSetFocus(pOldWnd);
-	SetScrollSizes(MM_TEXT, CSize(pagewidth, pageheight));
 	UpdateCtrlStatus();
 }
 
@@ -833,8 +832,7 @@ void CResultView::OnPrepareDC(CDC* pDC, CPrintInfo* pInfo)
 	CResultDoc* pDoc = GetDocument();
 	auto data = pDoc->GetData();
 	if (data && data->size() <= 0) {
-		CSize sizeTotal(100, 100);
-		SetScrollSizes(MM_TEXT, sizeTotal);
+		SetScrollSizes(MM_TEXT, CSize(pagewidth, pageheight));
 		return;
 	}
 
@@ -1071,7 +1069,7 @@ void CResultView::OnPrint(CDC* pDC, CPrintInfo* pInfo)
 }
 
 void CResultView::OnDraw(CDC* pDCView)
-{
+{	
 	ASSERT(MM_TEXT == pDCView->GetMapMode());
 	ASSERT(CPoint(0, 0) == pDCView->GetViewportOrg());
 

@@ -58,6 +58,7 @@ CAlignView::CAlignView()
 	secondpositionstart = 0;
 	cumulatedwheelrotation = 0;
 	m_colorAddrBkgnd = ::GetSysColor(COLOR_BTNFACE);
+	printsize_pixels.cx = printsize_pixels.cy = 100;
 }
 
 CAlignView::~CAlignView()
@@ -76,8 +77,7 @@ void CAlignView::OnInitialUpdate()
 {	
 	CScrollView::OnInitialUpdate();	
 
-	CSize sizeTotal(100, 100);
-	SetScrollSizes(MM_TEXT, sizeTotal);	
+	SetScrollSizes(MM_TEXT, CSize(printsize_pixels.cx, printsize_pixels.cy));
 }
 
 void CAlignView::UpdateCtrlStatus()
@@ -90,8 +90,7 @@ void CAlignView::UpdateCtrlStatus()
 void CAlignView::OnSetFocus(CWnd* pOldWnd)
 {
 	// take care of caret
-	CScrollView::OnSetFocus(pOldWnd);
-	SetScrollSizes(MM_TEXT, CSize(printsize_pixels.cx, printsize_pixels.cy));
+	CScrollView::OnSetFocus(pOldWnd);	
 	UpdateCtrlStatus();
 }
 
