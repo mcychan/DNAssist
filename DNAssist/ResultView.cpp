@@ -1446,24 +1446,36 @@ void CResultView::OnEditCopy()
 {
 	CResultDoc* pDoc = GetDocument();
 	if(pDoc->displayflags & DF_GRAPHIC) {
-		CRect rect(0, 0, pagewidth, pageheight);
-		CBitmap junk;
+		CMetaFileDC MFDC;
 		CClientDC cdc(this);
-		CDC dc;
-		dc.CreateCompatibleDC(&cdc);
-		junk.CreateCompatibleBitmap(&cdc, rect.Width(), rect.Height());
-		dc.SelectObject(&junk);
 
-		//draw background		
-		CRect rcDoc(0, 0, pagewidth, pageheight);
-		dc.FillSolidRect(rcDoc, m_colorAddrBkgnd);
-		PaintSeqData(&dc, NULL);
+		MFDC.CreateEnhanced(NULL, NULL, NULL, NULL);
+		MFDC.SetAttribDC(cdc.m_hAttribDC);
 
-		if (OpenClipboard()) {
-			EmptyClipboard();
-			SetClipboardData(CF_BITMAP, junk.m_hObject);
-			CloseClipboard();
-		}
+		MFDC.SetMapMode(MM_LOENGLISH);
+		MFDC.SetMapMode(MM_ANISOTROPIC);
+		CSize size;
+		GetViewportExtEx(MFDC.GetSafeHdc(), &size);
+		SetViewportExtEx(MFDC.GetSafeHdc(), size.cx * 1.5, -size.cy * 1.5, NULL);
+		if (MFDC.CreateEnhanced(NULL, NULL, NULL, NULL)) {
+			PaintSeqData(&MFDC, NULL);
+			HENHMETAFILE hmf;
+			if ((hmf = MFDC.CloseEnhanced())) {
+				if (OpenClipboard()) {
+					EmptyClipboard();
+					SetClipboardData(CF_ENHMETAFILE, hmf);
+					CloseClipboard();
+				}
+				else {
+					/*
+					* The metafile is deleted only
+					* when it has not been set in
+					* the clipboard.
+					*/
+					::DeleteEnhMetaFile(hmf);
+				}
+			}
+		}		
 	}
 	else if((pDoc->displayflags & DF_LIST) || (pDoc->displayflags & DF_TABLE) || (pDoc->displayflags & DF_TRANSLATE)) {		
 		CLIPFORMAT cfRTF = RegisterClipboardFormat(_T("Rich Text Format"));

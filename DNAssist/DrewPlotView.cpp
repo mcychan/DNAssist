@@ -857,20 +857,35 @@ void CDrewPlotView::OnEditSelectAll()
 
 void CDrewPlotView::OnEditCopy()
 {
-	CRect rect(0, 0, width, height);
-	CBitmap junk;
+	CMetaFileDC MFDC;
 	CClientDC cdc(this);
-	CDC dc;
-	dc.CreateCompatibleDC(&cdc);
-	junk.CreateCompatibleBitmap(&cdc, rect.Width(), rect.Height());
-	dc.SelectObject(&junk);
 
-	PaintSeqData(&dc);
+	MFDC.CreateEnhanced(NULL, NULL, NULL, NULL);
+	MFDC.SetAttribDC(cdc.m_hAttribDC);
 
-	if(OpenClipboard()) {
-		EmptyClipboard();
-		SetClipboardData(CF_BITMAP, junk.m_hObject);
-		CloseClipboard();
+	MFDC.SetMapMode(MM_LOENGLISH);
+	MFDC.SetMapMode(MM_ANISOTROPIC);
+	CSize size;
+	GetViewportExtEx(MFDC.GetSafeHdc(), &size);
+	SetViewportExtEx(MFDC.GetSafeHdc(), size.cx * 1.5, -size.cy * 1.5, NULL);
+	if (MFDC.CreateEnhanced(NULL, NULL, NULL, NULL)) {
+		PaintSeqData(&MFDC);
+		HENHMETAFILE hmf;
+		if ((hmf = MFDC.CloseEnhanced())) {
+			if (OpenClipboard()) {
+				EmptyClipboard();
+				SetClipboardData(CF_ENHMETAFILE, hmf);
+				CloseClipboard();
+			}
+			else {
+				/*
+				* The metafile is deleted only
+				* when it has not been set in
+				* the clipboard.
+				*/
+				::DeleteEnhMetaFile(hmf);
+			}
+		}
 	}
 }
 
