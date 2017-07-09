@@ -85,6 +85,8 @@ BOOL CDNAssistDoc::OnNewDocument()
 BOOL CDNAssistDoc::OnOpenDocument(LPCTSTR pszPathName)
 {	
 	CFileDecoder fileDecoder(pszPathName);
+	if (!fileDecoder.IsValid())
+		return FALSE;
 	
 	SetSeqType(fileDecoder.GetSequence(m_dataStr, m_form, m_comment, theApp.GetApplicationName()));	
 	if (GetSeqType() == 0) {
@@ -179,7 +181,8 @@ BOOL CDNAssistDoc::OnSaveDocument(LPCTSTR pszPathName)
 {
 	CFileEncoder fileEncoder(pszPathName);
 	bool bResult = fileEncoder.WriteFile(m_dataStr, GetSeqType(), m_form, m_comment, theApp.GetApplicationName(), theApp.GetVersion());
-	SetModifiedFlag(FALSE);
+	if(bResult)
+		SetModifiedFlag(FALSE);
 	return bResult;
 }
 

@@ -911,9 +911,11 @@ void CDNAssistView::DeleteData(UINT nChar, UINT nRepCnt, UINT nFlags)
 	// lets check do we need to delete a bunch of selected bytes or just one byte
 	if (m_nSelStart == m_nSelEnd) {
 		size_t nStart = GetCaretPosFileOffset();
-		string dataSegment = "" + m_pDataStr->at(nStart);
-		m_pDocVarManager->AddToUndoList(1, dataSegment, GetCaretPosFileOffset(), 0, 0);
-		m_pDataStr->erase(nStart, 1);
+		if (nStart < m_pDataStr->length()) {
+			string dataSegment = "" + m_pDataStr->at(nStart);
+			m_pDocVarManager->AddToUndoList(1, dataSegment, GetCaretPosFileOffset(), 0, 0);
+			m_pDataStr->erase(nStart, 1);
+		}
 	}
 	else {
 		string dataSegment;
@@ -921,9 +923,11 @@ void CDNAssistView::DeleteData(UINT nChar, UINT nRepCnt, UINT nFlags)
 		int nStart = min(m_nSelStart, m_nSelEnd);
 		int nSelectionExtent = abs((int) m_nSelStart - (int) m_nSelEnd);
 		m_pDocVarManager->AddToUndoList(1, dataSegment, GetCaretPosFileOffset(), nStart, nSelectionExtent);
-		m_pDataStr->erase(nStart, nSelectionExtent);
-		// now we have to move caret to the position of the selection start
-		MoveCaretToFilePos(nStart);
+		if (nStart < m_pDataStr->length()) {
+			m_pDataStr->erase(nStart, nSelectionExtent);
+			// now we have to move caret to the position of the selection start
+			MoveCaretToFilePos(nStart);
+		}
 	}
 
 	m_nSelEnd = m_nSelStart = GetCaretPosFileOffset();
