@@ -16,33 +16,43 @@ CFileEncoder::CFileEncoder(const wstring& fullfilepath)
 bool CFileEncoder::EncodeTextFile(const string& tempsequence)
 {
 	ofstream outfile(m_pathname);
-	outfile << tempsequence;
+	if(tempsequence.length() > 0)
+		outfile << tempsequence;
 	outfile.close();
-	return tempsequence.length() > 0;
+	return outfile.good();
 }
 
 bool CFileEncoder::EncodeFastaFile(const string& tempsequence)
 {
 	ofstream outfile(m_pathname);
-	outfile << '>' << tempsequence << '\n';
+	outfile << '>';
+	if (tempsequence.length() > 0)
+		outfile << tempsequence;
+	outfile << '\n';
 	outfile.close();
-	return tempsequence.length() > 0;
+	return outfile.good();
 }
 
 bool CFileEncoder::EncodeGenBankFile(const string& tempsequence)
 {
 	ofstream outfile(m_pathname);
-	outfile << "ORIGIN" << tempsequence << "//";
+	outfile << "ORIGIN";
+	if (tempsequence.length() > 0)
+		outfile << tempsequence;
+	outfile << "//";
 	outfile.close();
-	return tempsequence.length() > 0;
+	return outfile.good();
 }
 
 bool CFileEncoder::EncodeGCGFile(const string& tempsequence)
 {
 	ofstream outfile(m_pathname);
-	outfile << ".." << tempsequence << '\0';
+	outfile << "..";
+	if (tempsequence.length() > 0)
+		outfile << tempsequence;
+	outfile << '\0';
 	outfile.close();
-	return tempsequence.length() > 0;
+	return outfile.good();
 }
 
 bool CFileEncoder::EncodeDNAtoolsFile(const string& tempsequence, char type, char form, const string& comment, const string& applicationName, const string& version)
@@ -55,8 +65,9 @@ bool CFileEncoder::EncodeDNAtoolsFile(const string& tempsequence, char type, cha
 	outfile << type << separator;
 	outfile << form << separator;
 	outfile << comment << separator;
-	outfile << tempsequence;
-	return tempsequence.length() > 0;
+	if (tempsequence.length() > 0)
+		outfile << tempsequence;
+	return outfile.good();
 }
 
 unsigned char CFileEncoder::CompressCharactersIntoByte(const string& threebases)
@@ -98,9 +109,6 @@ int CFileEncoder::EncodeDNAOrRNABase(char base)
 
 bool CFileEncoder::WriteFile(const string& sequence, char type, char form, const string& comments, const string& applicationName, const string& version)
 {
-	if(sequence.length() == 0)
-		return true;
-
 	if (m_extension == L"fas")
 		return EncodeFastaFile(sequence);
 	if (m_extension == L"gbk")

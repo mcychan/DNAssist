@@ -12,10 +12,13 @@ CFileDecoder::CFileDecoder(const wstring& fullfilepath) {
 		m_extension = L"";
 
 	ifstream ifs(fullfilepath);
-	if(ifs) {
+	if (ifs) {
+		m_isValid = ifs.good();
 		m_content = string(istreambuf_iterator<char>(ifs), istreambuf_iterator<char>());
 		ifs.close();
 	}
+	else
+		m_isValid = false;
 }
 
 char CFileDecoder::DecodeTextFile(string& sequence_to_pass_back)
