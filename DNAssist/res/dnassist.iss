@@ -4,8 +4,8 @@
 
 [Setup]
 AppName={#MyAppName}
-AppVersion=3.06
-AppVerName={#MyAppName} 3.06
+AppVersion=3.07
+AppVerName={#MyAppName} 3.07
 AppPublisher=Miller Cy Chan
 AppPublisherURL=https://github.com/dnassist/DNAssist/
 AppSupportURL=https://github.com/dnassist/DNAssist/wiki/
@@ -18,7 +18,7 @@ OutputDir=..\..\Release
 SolidCompression=yes
 UninstallDisplayIcon={app}\{#MyAppName}.exe
 VersionInfoDescription={#MyAppName} Setup
-VersionInfoVersion=3.0.6
+VersionInfoVersion=3.0.7
 
 [Tasks]
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
