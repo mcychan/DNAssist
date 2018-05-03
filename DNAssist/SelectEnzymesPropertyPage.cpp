@@ -401,10 +401,12 @@ void CSelectEnzymesPropertyPage::OnItemchangedListCtrl(NMHDR* pNMHDR, LRESULT* p
         	item.mask = LVIF_TEXT;
         	item.iItem = pNMLV->iItem;
         	m_listEnzymeNames.GetItem(&item);
-        	wstring Name(item.pszText);
-        	string name(Name.begin(), Name.end());
-        	int index = m_pEnzymelist->GetIndex(name);
-        	m_pEnzymelist->SetSelected(index, true);
+			if (item.pszText) {
+				wstring Name(item.pszText);
+				string name(Name.begin(), Name.end());
+				int index = m_pEnzymelist->GetIndex(name);
+				m_pEnzymelist->SetSelected(index, true);
+			}
         }
     }
 
