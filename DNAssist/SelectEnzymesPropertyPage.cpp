@@ -395,19 +395,24 @@ void CSelectEnzymesPropertyPage::OnItemchangedListCtrl(NMHDR* pNMHDR, LRESULT* p
 
     ASSERT(pNMLV);
     if(pNMLV->uChanged & LVIF_STATE) {
-        if((pNMLV->uNewState ^ pNMLV->uOldState) & LVIS_SELECTED) {
-        	LVITEM item;
-        	ZeroMemory(&item, sizeof(item));
-        	item.mask = LVIF_TEXT;
-        	item.iItem = pNMLV->iItem;
-        	m_listEnzymeNames.GetItem(&item);
-			if (item.pszText) {
-				wstring Name(item.pszText);
+		if ((pNMLV->uOldState & LVIS_SELECTED) == 0 && (pNMLV->uNewState & LVIS_SELECTED) != 0) {
+			const CString& zText = m_listEnzymeNames.GetItemText(pNMLV->iItem, 0);
+			if (!zText.IsEmpty()) {
+				wstring Name((LPCTSTR) zText);
 				string name(Name.begin(), Name.end());
 				int index = m_pEnzymelist->GetIndex(name);
 				m_pEnzymelist->SetSelected(index, true);
 			}
         }
+		else if ((pNMLV->uOldState & LVIS_SELECTED) != 0 && (pNMLV->uNewState & LVIS_SELECTED) == 0) {
+			const CString& zText = m_listEnzymeNames.GetItemText(pNMLV->iItem, 0);
+			if (!zText.IsEmpty()) {
+				wstring Name((LPCTSTR)zText);
+				string name(Name.begin(), Name.end());
+				int index = m_pEnzymelist->GetIndex(name);
+				m_pEnzymelist->SetSelected(index, false);
+			}
+		}
     }
 
     *pResult = FALSE;
