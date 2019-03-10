@@ -1,6 +1,6 @@
 //{{NO_DEPENDENCIES}}
-// Microsoft Visual C++ 產生的 Include 檔案。
-// 由 DNAssist.rc 使用
+// Microsoft Visual C++ generated include file.
+// Used by DNAssist.rc
 //
 #define IDR_strTYPE_CNTR_IP             7
 #define ID_INDICATOR_SEL                101
@@ -67,6 +67,7 @@
 #define ICO_P2                          401
 #define ICO_D1                          402
 #define ICO_D2                          403
+#define IDR_CONTEXT_MENU                404
 #define IDC_COMBO1                      1009
 #define IDC_STRIKEOUT                   0x0410
 #define IDC_UNDERLINE                   0x0411
@@ -390,7 +391,7 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        400
+#define _APS_NEXT_RESOURCE_VALUE        401
 #define _APS_NEXT_COMMAND_VALUE         32830
 #define _APS_NEXT_CONTROL_VALUE         1012
 #define _APS_NEXT_SYMED_VALUE           311

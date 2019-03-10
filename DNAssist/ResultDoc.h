@@ -74,10 +74,6 @@ public:
 	virtual BOOL OnSaveDocument(LPCTSTR lpszPathName);
 	virtual void SetModifiedFlag(BOOL bModified);
 	virtual void Serialize(CArchive& ar);
-#ifdef SHARED_HANDLERS
-	virtual void InitializeSearchContent();
-	virtual void OnDrawThumbnail(CDC& dc, LPRECT lprcBounds);
-#endif // SHARED_HANDLERS
 
 	// Implementation
 public:

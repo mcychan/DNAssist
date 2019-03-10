@@ -75,10 +75,6 @@ public:
 	virtual void SetModifiedFlag(BOOL bModified);
 	virtual void Serialize(CArchive& ar);
 	void AddToHistory();
-#ifdef SHARED_HANDLERS
-	virtual void InitializeSearchContent();
-	virtual void OnDrawThumbnail(CDC& dc, LPRECT lprcBounds);
-#endif // SHARED_HANDLERS
 
 // Implementation
 public:
