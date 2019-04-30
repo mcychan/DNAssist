@@ -734,7 +734,7 @@ void CResultView::MakeGraphicMap(int& nWidth, int nHeight)
 	// If the sequence is circular
 	//
 	if(pDoc->GetSeqForm() == 'C') {
-		center = CPoint(nWidth / 2 + leftoffset, nHeight / 2);
+		center = CPoint(nWidth / 2 + leftoffset - 20, nHeight / 2 - 150);
 		if(nWidth < nHeight) {			
 			outercircle = CRect(center.x - nWidth / 4, center.y - nWidth / 4,
       								center.x - nWidth / 4 + nWidth / 2, center.y - nWidth / 4 + nWidth / 2);
@@ -1088,11 +1088,6 @@ void CResultView::OnDraw(CDC* pDCView)
 	
 	auto pDoc = GetDocument();
 	if (m_pDC.get() == NULL) {		
-		if(pDoc->displayflags & DF_GRAPHIC) {
-			pagewidth *= 2;
-			pageheight *= 2;
-		}
-
 		m_pDC = make_unique<CMemoryDC>(pDCView, pagewidth, pageheight);
 		//draw background		
 		CRect rcDoc(0, 0, pagewidth, pageheight);
@@ -1121,12 +1116,6 @@ void CResultView::OnDraw(CDC* pDCView)
 		nDstHeight = pageheight - yPos;
 	else
 		nDstHeight = pageheight;
-
-	if (pDoc->displayflags & DF_GRAPHIC) {
-		xPos += 20;
-		if(pDoc->GetSeqForm() == 'C')
-			yPos += 150;
-	}
 
 	pDCView->BitBlt(rcClient.left, rcClient.top, nDstWidth, nDstHeight,
 		m_pDC.get(),
