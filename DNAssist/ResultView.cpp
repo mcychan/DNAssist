@@ -734,10 +734,10 @@ void CResultView::MakeGraphicMap(int& nWidth, int nHeight)
 	// If the sequence is circular
 	//
 	if(pDoc->GetSeqForm() == 'C') {
-		if(nWidth < nHeight) {
-			center = CPoint(nWidth / 2 + leftoffset, nHeight / 2);
+		center = CPoint(nWidth / 2 + leftoffset, nHeight / 2);
+		if(nWidth < nHeight) {			
 			outercircle = CRect(center.x - nWidth / 4, center.y - nWidth / 4,
-      								center.x - nWidth / 4 + nWidth / 2, center.y - nWidth / 4+nWidth / 2);
+      								center.x - nWidth / 4 + nWidth / 2, center.y - nWidth / 4 + nWidth / 2);
 			innercircle = CRect(center.x - nWidth / 4 + (nWidth / 2) * 2 * percentageofouter / 100,
       								center.y - nWidth / 4 + (nWidth / 2) * 2 *percentageofouter / 100,
                               center.x - nWidth / 4 + nWidth / 2 - (nWidth / 2) * 2 * percentageofouter / 100,
@@ -749,7 +749,6 @@ void CResultView::MakeGraphicMap(int& nWidth, int nHeight)
 			innerend = CPoint(center.x, center.y - nWidth / 4 + (nWidth / 2) * 2 * percentageofouter / 100);
 		}
 		else {
-			center = CPoint(nWidth / 2 + leftoffset, nHeight / 2);
 			outercircle = CRect(center.x - nHeight / 4, center.y - nHeight / 4,
       								center.x - nHeight / 4 + nHeight / 2, center.y - nHeight / 4 + nHeight / 2);
 			innercircle = CRect(center.x - nHeight / 4 + (nHeight / 2) * 2 * percentageofouter / 100,
@@ -791,7 +790,7 @@ void CResultView::MakeGraphicMap(int& nWidth, int nHeight)
 	}
 	else if(pDoc->GetSeqForm() == 'L') {
 		MakeGraphicLabelTag();
-		center = CPoint(leftoffset + nWidth / 2, nHeight / 2);
+		center = CPoint(leftoffset + nWidth / 2, nHeight / 2 + 100);
 		sequencerectangle = CRect(center.x - nHeight / 3, center.y - 0.5 * chardim.y,
 			center.x - nHeight / 3 + nHeight * 2 / 3, center.y + 0.5 * chardim.y);
 
@@ -1034,7 +1033,7 @@ void CResultView::PaintSeqData(CDC* pDC, CPrintInfo* pInfo)
 		else {
 			int start, end;
 			if(pDoc->displayflags & DF_GRAPHIC) {
-				start = (rect.top - topoffset) / chardim.y - GetLinesPerPage();
+				start = (rect.top - topoffset) / chardim.y - GetLinesPerPage();				
 				end = 1 + start;
 			}
 			else {
@@ -1086,23 +1085,21 @@ void CResultView::OnDraw(CDC* pDCView)
 
 	const LONG cx = rcClient.right;      // view client area width
 	const LONG cy = rcClient.bottom;     // view client area height	
+	
+	auto pDoc = GetDocument();
+	if (m_pDC.get() == NULL) {		
+		if(pDoc->displayflags & DF_GRAPHIC) {
+			pagewidth *= 2;
+			pageheight *= 2;
+		}
 
-	if (m_pDC.get() == NULL) {
 		m_pDC = make_unique<CMemoryDC>(pDCView, pagewidth, pageheight);
 		//draw background		
 		CRect rcDoc(0, 0, pagewidth, pageheight);
 		m_pDC->FillSolidRect(rcDoc, m_colorAddrBkgnd);
 
 		PaintSeqData(m_pDC.get(), NULL);
-
-		ReleaseDC(m_pDC.get());
-		CResultDoc* pDoc = GetDocument();
-		if (pDoc->displayflags & DF_GRAPHIC) {
-			if(pDoc->GetSeqForm() == 'L')
-				ScrollToPosition(CPoint(0, pageheight / 8));
-			else
-				ScrollToPosition(CPoint(0, pageheight / 4));
-		}
+		ReleaseDC(m_pDC.get());		
 	}
 
 	CPoint point = GetScrollPosition();
@@ -1110,8 +1107,8 @@ void CResultView::OnDraw(CDC* pDCView)
 		character_dimension.cy = textmetric.tmHeight + textmetric.tmExternalLeading;
 	const size_t nScrolledLine = floor(point.y / character_dimension.cy);
 
-	const LONG xPos = point.x;           // horizontal scroll position
-	const LONG yPos = nScrolledLine * character_dimension.cy;           // vertical scroll position
+	LONG xPos = point.x;           // horizontal scroll position
+	LONG yPos = nScrolledLine * character_dimension.cy;           // vertical scroll position
 													   // source and destination cordinates and sizes
 	LONG nDstWidth, nDstHeight;
 
@@ -1124,6 +1121,12 @@ void CResultView::OnDraw(CDC* pDCView)
 		nDstHeight = pageheight - yPos;
 	else
 		nDstHeight = pageheight;
+
+	if (pDoc->displayflags & DF_GRAPHIC) {
+		xPos += 20;
+		if(pDoc->GetSeqForm() == 'C')
+			yPos += 150;
+	}
 
 	pDCView->BitBlt(rcClient.left, rcClient.top, nDstWidth, nDstHeight,
 		m_pDC.get(),
@@ -1250,7 +1253,7 @@ CPoint CResultView::GetGraphicNameTagCoordinates(CDC* pDC)
 	word.x = pDC->GetTextExtent(name).cx;
 	word.y = localmetrics.tmHeight + localmetrics.tmExternalLeading;
 
-	coords.x = center.x - word.x / 2;
+	coords.x = center.x - word.x / 1.25;
 	if(pDoc->GetSeqForm() == 'C')
 		coords.y = center.y - word.y;
 	else
@@ -1304,7 +1307,7 @@ CPoint CResultView::GetGraphicSizeTagCoordinates(CDC* pDC)
 	if(GetDocument()->GetSeqForm() == 'C')
 		coords.y = center.y + word.y;
 	else
-		coords.y = center.y + 3 * word.y;
+		coords.y = center.y + 4 * word.y;
 
 	boldfont.DeleteObject();
 	return coords;

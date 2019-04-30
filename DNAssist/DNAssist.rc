@@ -97,7 +97,7 @@ ICO_D2                  ICON                    "res\\D2.ico"
 // Bitmap
 //
 
-IDR_TITLE               BITMAP                  "C:\\DNAssist\\DNAssist\\res\\Title.bmp"
+IDR_TITLE               BITMAP                  "res\\Title.bmp"
 
 IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
 
