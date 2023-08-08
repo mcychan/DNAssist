@@ -239,14 +239,35 @@ BOOL CMainFrame::PreCreateWindow(CREATESTRUCT& cs)
 
 LRESULT CMainFrame::OnProgressComplete(WPARAM wParam, LPARAM lParam)
 {
-	theApp.ProgressComplete();
-	return 0;
+	if (IsWindow(m_progBar.GetSafeHwnd()))
+		m_progBar.ShowWindow(SW_HIDE);
+
+	// Clear the taskbar progress bar.
+	if (m_pTaskbarList)
+		m_pTaskbarList->SetProgressState(m_hWnd, TBPF_NOPROGRESS);
+
+	return 0L;
 }
 
 LRESULT CMainFrame::OnUpdateProgress(WPARAM wParam, LPARAM lParam)
 {
-	theApp.SetProgressValue((short)wParam);	
-	return 0;
+	if (!IsWindow(m_progBar.GetSafeHwnd())) {
+		//Create the progress control
+		CRect rProgressRect;
+		m_wndStatusBar.GetWindowRect(&rProgressRect);
+		rProgressRect.DeflateRect(1, 1);		// 1 pixel border...
+		m_progBar.Create(WS_VISIBLE | WS_CHILD | PBS_SMOOTH, rProgressRect, &m_wndStatusBar, 1);
+		m_progBar.SetRange(0, 100); //Set the range to between 0 and 100
+	}
+
+	int pos = (int)wParam;
+	m_progBar.SetPos(pos);
+	m_progBar.ShowWindow(SW_SHOW);
+
+	if (m_pTaskbarList)
+		m_pTaskbarList->SetProgressValue(m_hWnd, pos, 100);
+
+	return 0L;
 }
 
 BOOL CMainFrame::DestroyWindow()
@@ -294,6 +315,8 @@ BOOL CMainFrame::DestroyWindow()
 	GetWindowPlacement(&wp);
 	theApp.WriteProfileBinary(_T("Window"), _T("Position"), (LPBYTE)&wp, sizeof(wp));
 
+	if (theApp.IsWin7())
+		m_pTaskbarList.Release();
 	return CMDIFrameWnd::DestroyWindow();
 }
 

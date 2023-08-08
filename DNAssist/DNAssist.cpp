@@ -43,11 +43,7 @@ CDNAssistApp::CDNAssistApp()
 {
 	// TODO: replace application ID string below with unique ID string; recommended
 	// format for string is CompanyName.ProductName.SubProduct.VersionInformation
-	SetAppID(_T("DNAssist.3.10"));
-
-	// TODO: add construction code here,
-	m_pTaskbarList.Release();
-	initedTaskBar = false;
+	SetAppID(_T("DNAssist.3.11"));
 }
 
 // The one and only CDNAssistApp object
@@ -82,9 +78,6 @@ BOOL CDNAssistApp::InitInstance()
 	AfxEnableControlContainer();
 
 	EnableTaskbarInteraction(FALSE);
-
-	// AfxInitRichEdit2() is required to use RichEdit control	
-	// AfxInitRichEdit2();
 
 	// Standard initialization
 	// If you are not using these features and wish to reduce the size
@@ -170,41 +163,7 @@ int CDNAssistApp::ExitInstance()
 {
 	//TODO: handle additional resources you may have added
 	AfxOleTerm(FALSE);
-
-#if (_MSC_VER > 1400)
-	m_pTaskbarList.Release();
-#endif
-
 	return CWinApp::ExitInstance();
-}
-
-static bool IsWin7() {
-	DWORD dwMajor = LOBYTE(LOWORD(GetVersion()));
-	DWORD dwMinor = HIBYTE(LOWORD(GetVersion()));
-	return (dwMajor > 6 || (dwMajor == 6 && dwMinor > 0));
-}
-
-void CDNAssistApp::SetProgressValue(short pos)
-{
-#if (_MSC_VER > 1400)
-	if (IsWin7()) {
-		if (!initedTaskBar) {
-			m_pTaskbarList.CoCreateInstance(CLSID_TaskbarList);
-			initedTaskBar = true;
-		}
-		if(m_pTaskbarList)
-			m_pTaskbarList->SetProgressValue(m_pMainWnd->m_hWnd, pos, 100);
-	}	
-#endif
-}
-
-void CDNAssistApp::ProgressComplete()
-{
-	// Clear the taskbar progress bar.
-#if (_MSC_VER > 1400)
-	if (IsWin7() && m_pTaskbarList)
-		m_pTaskbarList->SetProgressState(m_pMainWnd->m_hWnd, TBPF_NOPROGRESS);
-#endif
 }
 
 
@@ -219,6 +178,16 @@ CString CDNAssistApp::GetAppLoc()
 	if (nIndex != -1)
 		m_sAppPath = m_sAppPath.Left(nIndex + 1);
 	return m_sAppPath;
+}
+
+BOOL CDNAssistApp::GeMajorVersion(DWORD majorVersion) const
+{
+	OSVERSIONINFOEX osVersionInfo;
+	::ZeroMemory(&osVersionInfo, sizeof(OSVERSIONINFOEX));
+	osVersionInfo.dwOSVersionInfoSize = sizeof(OSVERSIONINFOEX);
+	osVersionInfo.dwMajorVersion = majorVersion;
+	ULONGLONG maskCondition = ::VerSetConditionMask(0, VER_MAJORVERSION, VER_GREATER_EQUAL);
+	return ::VerifyVersionInfo(&osVersionInfo, VER_MAJORVERSION, maskCondition);
 }
 
 // CAboutDlg dialog used for App About

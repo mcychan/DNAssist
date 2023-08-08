@@ -31,6 +31,8 @@ using namespace std;
 
 class CDNAssistApp : public CWinApp
 {
+private:
+	BOOL GeMajorVersion(DWORD majorVersion) const;
 public:
 	CDNAssistApp();
 	inline const char* GetApplicationName() {
@@ -153,11 +155,6 @@ protected:
 	CDocTemplate* m_pDrewPlotTemplate;
 	CDocTemplate* m_pDNAViewTemplate;
 
-#if (_MSC_VER > 1400)
-	CComPtr<ITaskbarList3> m_pTaskbarList;
-	bool initedTaskBar;
-#endif
-
 // Overrides
 public:
 	virtual BOOL InitInstance();
@@ -167,8 +164,10 @@ public:
 	int GetTransFacFormatOptions();
 	int GetEnzymeAttributeOptions();
 	int GetTransFacOptions();
-	void SetProgressValue(short pos);
-	void ProgressComplete();
+	inline bool IsWin7() const
+	{
+		return GeMajorVersion(6);
+	}
 
 // Implementation
 	afx_msg void OnAppAbout();
