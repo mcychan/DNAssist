@@ -68,6 +68,9 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	EnableDocking(CBRS_ALIGN_ANY);
 	DockControlBar(&m_wndToolBar);
 
+	if (theApp.IsWin7())
+		CoCreateInstance(CLSID_TaskbarList, NULL, CLSCTX_INPROC_SERVER, IID_ITaskbarList3, (void**)&m_pTaskbarList);
+
 	// create mdi tabs 
 	m_wndMDITabs.Create(this, MT_TOP);
 
@@ -239,9 +242,6 @@ BOOL CMainFrame::PreCreateWindow(CREATESTRUCT& cs)
 
 LRESULT CMainFrame::OnProgressComplete(WPARAM wParam, LPARAM lParam)
 {
-	if (IsWindow(m_progBar.GetSafeHwnd()))
-		m_progBar.ShowWindow(SW_HIDE);
-
 	// Clear the taskbar progress bar.
 	if (m_pTaskbarList)
 		m_pTaskbarList->SetProgressState(m_hWnd, TBPF_NOPROGRESS);
@@ -251,19 +251,7 @@ LRESULT CMainFrame::OnProgressComplete(WPARAM wParam, LPARAM lParam)
 
 LRESULT CMainFrame::OnUpdateProgress(WPARAM wParam, LPARAM lParam)
 {
-	if (!IsWindow(m_progBar.GetSafeHwnd())) {
-		//Create the progress control
-		CRect rProgressRect;
-		m_wndStatusBar.GetWindowRect(&rProgressRect);
-		rProgressRect.DeflateRect(1, 1);		// 1 pixel border...
-		m_progBar.Create(WS_VISIBLE | WS_CHILD | PBS_SMOOTH, rProgressRect, &m_wndStatusBar, 1);
-		m_progBar.SetRange(0, 100); //Set the range to between 0 and 100
-	}
-
 	int pos = (int)wParam;
-	m_progBar.SetPos(pos);
-	m_progBar.ShowWindow(SW_SHOW);
-
 	if (m_pTaskbarList)
 		m_pTaskbarList->SetProgressValue(m_hWnd, pos, 100);
 

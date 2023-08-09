@@ -11,6 +11,8 @@
 
 #include "targetver.h"
 
+#define WM_USER_THREAD_COMPLETE (WM_USER+1236)
+#define WM_USER_THREAD_UPDATE_PROGRESS (WM_USER+1237)
 
 #define _AFX_NO_MFC_CONTROLS_IN_DIALOGS
 #define _ATL_CSTRING_EXPLICIT_CONSTRUCTORS      // some CString constructors will be explicit

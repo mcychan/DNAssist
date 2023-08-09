@@ -20,26 +20,26 @@
 //	CAPTION "Dialog"
 //	FONT 8, "MS Shell Dlg"
 //	BEGIN
-//		PUSHBUTTON      "&Cancel",IDCANCEL,129,50,50,14
-//		CONTROL         "",IDC_PROGRESS_BAR,"msctls_progress32",WS_BORDER,7,25,172,14
-//		LTEXT           "Static",IDC_PROGRESS_TEXT,7,7,172,8,SS_CENTERIMAGE
+//		PUSHBUTTON      "&Cancel", IDCANCEL, 129, 50, 50, 14
+//		CONTROL         "", IDC_PROGRESS_BAR, "msctls_progress32", WS_BORDER, 7, 25, 172, 14
+//		LTEXT           "Static", IDC_PROGRESS_TEXT, 7, 7, 172, 8, SS_CENTERIMAGE
 //	END
 //
 static const unsigned char dlg_145[] = 
 {
-	0xc8,0x08,0xc8,0x82,0x00,0x00,0x00,0x00,0x03,0x00,0x00,0x00,0x00,0x00,0xbb,0x00,0x46,
-	0x00,0x00,0x00,0x00,0x00,0x44,0x00,0x69,0x00,0x61,0x00,0x6c,0x00,0x6f,0x00,0x67,
-	0x00,0x00,0x00,0x08,0x00,0x4d,0x00,0x53,0x00,0x20,0x00,0x53,0x00,0x68,0x00,0x65,
-	0x00,0x6c,0x00,0x6c,0x00,0x20,0x00,0x44,0x00,0x6c,0x00,0x67,0x00,0x00,0x00,0x00,
-	0x00,0x01,0x50,0x00,0x00,0x00,0x00,0x81,0x00,0x32,0x00,0x32,0x00,0x0e,0x00,0x02,
-	0x00,0xff,0xff,0x80,0x00,0x26,0x00,0x43,0x00,0x61,0x00,0x6e,0x00,0x63,0x00,0x65,
-	0x00,0x6c,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x80,0x50,0x00,0x00,0x00,0x00,0x07,
-	0x00,0x19,0x00,0xac,0x00,0x0e,0x00,0xfa,0x03,0x6d,0x00,0x73,0x00,0x63,0x00,0x74,
-	0x00,0x6c,0x00,0x73,0x00,0x5f,0x00,0x70,0x00,0x72,0x00,0x6f,0x00,0x67,0x00,0x72,
-	0x00,0x65,0x00,0x73,0x00,0x73,0x00,0x33,0x00,0x32,0x00,0x00,0x00,0x00,0x00,0x00,
-	0x00,0x00,0x00,0x00,0x02,0x02,0x50,0x00,0x00,0x00,0x00,0x07,0x00,0x07,0x00,0xac,
-	0x00,0x08,0x00,0x02,0x04,0xff,0xff,0x82,0x00,0x53,0x00,0x74,0x00,0x61,0x00,0x74,
-	0x00,0x69,0x00,0x63,0x00,0x00,0x00,0x00,0x00
+	0xc8, 0x08, 0xc8, 0x82, 0x00, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0xbb, 0x00, 0x46, 
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x44, 0x00, 0x69, 0x00, 0x61, 0x00, 0x6c, 0x00, 0x6f, 0x00, 0x67, 
+	0x00, 0x00, 0x00, 0x08, 0x00, 0x4d, 0x00, 0x53, 0x00, 0x20, 0x00, 0x53, 0x00, 0x68, 0x00, 0x65, 
+	0x00, 0x6c, 0x00, 0x6c, 0x00, 0x20, 0x00, 0x44, 0x00, 0x6c, 0x00, 0x67, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x01, 0x50, 0x00, 0x00, 0x00, 0x00, 0x81, 0x00, 0x32, 0x00, 0x32, 0x00, 0x0e, 0x00, 0x02, 
+	0x00, 0xff, 0xff, 0x80, 0x00, 0x26, 0x00, 0x43, 0x00, 0x61, 0x00, 0x6e, 0x00, 0x63, 0x00, 0x65, 
+	0x00, 0x6c, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x50, 0x00, 0x00, 0x00, 0x00, 0x07, 
+	0x00, 0x19, 0x00, 0xac, 0x00, 0x0e, 0x00, 0xfa, 0x03, 0x6d, 0x00, 0x73, 0x00, 0x63, 0x00, 0x74, 
+	0x00, 0x6c, 0x00, 0x73, 0x00, 0x5f, 0x00, 0x70, 0x00, 0x72, 0x00, 0x6f, 0x00, 0x67, 0x00, 0x72, 
+	0x00, 0x65, 0x00, 0x73, 0x00, 0x73, 0x00, 0x33, 0x00, 0x32, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	0x00, 0x00, 0x00, 0x00, 0x02, 0x02, 0x50, 0x00, 0x00, 0x00, 0x00, 0x07, 0x00, 0x07, 0x00, 0xac, 
+	0x00, 0x08, 0x00, 0x02, 0x04, 0xff, 0xff, 0x82, 0x00, 0x53, 0x00, 0x74, 0x00, 0x61, 0x00, 0x74, 
+	0x00, 0x69, 0x00, 0x63, 0x00, 0x00, 0x00, 0x00, 0x00
 };
 // Do not change these values - they go hand in hand with above template
 #define CUPDIALOG_TEXTBOX_ID		(1026)		//Static Control Id
@@ -47,7 +47,7 @@ static const unsigned char dlg_145[] =
 #define CUPDIALOG_CANCELBUTTON_ID	(IDCANCEL)	//Cancel Button Control Id
 #define CUPDIALOG_TERMINATE_DELAY	(500)		//Amount of time to wait after signaling the termination, in MilliSeconds.
 
-CUPDialog::CUPDialog(HWND hParentWnd,LP_CUPDIALOG_USERPROC lpUserProc, LPVOID lpUserProcParam, wstring* lpszDlgTitle, bool bAllowCancel/*=true*/)
+CUPDialog::CUPDialog(HWND hParentWnd, LP_CUPDIALOG_USERPROC lpUserProc, LPVOID lpUserProcParam, wstring* lpszDlgTitle, bool bAllowCancel/*=true*/)
 {
 	m_hThread = NULL;							//No Thread Yet !!
 
@@ -87,7 +87,7 @@ void CUPDialog::Cleanup()
 	{
 		Sleep(m_dwTerminateDelay);
 		DWORD dwExitCode = 0;
-        if(GetExitCodeThread(m_hThread,&dwExitCode) && dwExitCode == STILL_ACTIVE)
+		if(GetExitCodeThread(m_hThread, &dwExitCode) && dwExitCode == STILL_ACTIVE)
 			TerminateThread(m_hThread, IDCANCEL);
 	}
 
@@ -97,7 +97,7 @@ void CUPDialog::Cleanup()
 		m_hThread = NULL;
 	}
 
-    m_ThreadData.bAlive = false;
+	m_ThreadData.bAlive = false;
 	m_ThreadData.bTerminate = false;
 	m_ThreadData.hThreadWnd = NULL;
 }
@@ -109,12 +109,12 @@ INT_PTR CUPDialog::DoModal()
 	if(m_lpszTemplateName == NULL)	// if no custom dialog template is supplied to us, lets use the built-in one
 		return DialogBoxIndirectParam(NULL, (LPDLGTEMPLATE) dlg_145, m_hParentWnd, (DLGPROC) ProgressDlgProc, (LPARAM)this); 
 	else
-		return DialogBoxParam(m_hInst,m_lpszTemplateName,m_hParentWnd,ProgressDlgProc,(LPARAM)this);
+		return DialogBoxParam(m_hInst, m_lpszTemplateName, m_hParentWnd, ProgressDlgProc, (LPARAM)this);
 }
 
 static DWORD WINAPI ThreadProc(LPVOID lpThreadParameter)	//Calls the User Progress Procedure
 {
-    LPPROGRESSTHREADDATA pThreadData = (LPPROGRESSTHREADDATA) lpThreadParameter;
+	LPPROGRESSTHREADDATA pThreadData = (LPPROGRESSTHREADDATA) lpThreadParameter;
 
 	pThreadData->bAlive = true;
 
@@ -130,12 +130,12 @@ TerminateThreadProc:
 	pThreadData->bAlive = false;
 
 	if(pThreadData->bTerminate == false)
-		::PostMessage(pThreadData->hThreadWnd,PROGRESSTHREADDATA::WM_PROGRESSTHREADCOMPLETED,MAKEWPARAM(nResult,0),0);
+		::PostMessage(pThreadData->hThreadWnd, PROGRESSTHREADDATA::WM_PROGRESSTHREADCOMPLETED, MAKEWPARAM(nResult, 0), 0);
 
 	return 0;    
 }
 
-INT_PTR CALLBACK ProgressDlgProc(HWND hDlg,UINT Message,WPARAM wParam,LPARAM lParam)
+INT_PTR CALLBACK ProgressDlgProc(HWND hDlg, UINT Message, WPARAM wParam, LPARAM lParam)
 {
 	BOOL bProcessed = FALSE;
 	CUPDialog *pProgressDialog = NULL;
@@ -146,17 +146,17 @@ INT_PTR CALLBACK ProgressDlgProc(HWND hDlg,UINT Message,WPARAM wParam,LPARAM lPa
 		{
 			pProgressDialog = (CUPDialog*) lParam;
 
-			SetWindowLongPtr(hDlg,GWLP_USERDATA,(LONG_PTR)pProgressDialog);
+			SetWindowLongPtr(hDlg, GWLP_USERDATA, (LONG_PTR)pProgressDialog);
 
 			if(pProgressDialog->m_bAllowCancel == false)
-				SendMessage(hDlg,PROGRESSTHREADDATA::WM_DISABLECONTROLS,wParam,lParam);
+				SendMessage(hDlg, PROGRESSTHREADDATA::WM_DISABLECONTROLS, wParam, lParam);
 
-			SendMessage(GetDlgItem(hDlg, pProgressDialog->m_nStaticControlId),WM_SETTEXT, 0, (LPARAM) pProgressDialog->m_ThreadData.GetStatus());
+			SendMessage(GetDlgItem(hDlg, pProgressDialog->m_nStaticControlId), WM_SETTEXT, 0, (LPARAM) pProgressDialog->m_ThreadData.GetStatus());
 
-			SendMessage(GetDlgItem(hDlg, pProgressDialog->m_nProgressBarControlId),PBM_SETPOS,0,0);
+			SendMessage(GetDlgItem(hDlg, pProgressDialog->m_nProgressBarControlId), PBM_SETPOS, 0, 0);
 			
 			CString caption = _T("Please wait..");
-			SendMessage(hDlg,WM_SETTEXT,0,(LPARAM) (LPCTSTR) caption);
+			SendMessage(hDlg, WM_SETTEXT, 0, (LPARAM) (LPCTSTR) caption);
 
 			((LPPROGRESSTHREADDATA)(LPVOID)(&pProgressDialog->m_ThreadData))->hThreadWnd = hDlg;
 
@@ -164,19 +164,19 @@ INT_PTR CALLBACK ProgressDlgProc(HWND hDlg,UINT Message,WPARAM wParam,LPARAM lPa
 
 			DWORD dwThreadId = 0;
 
-			pProgressDialog->m_hThread = CreateThread(NULL,NULL,ThreadProc,&pProgressDialog->m_ThreadData,0,&dwThreadId);
+			pProgressDialog->m_hThread = CreateThread(NULL, NULL, ThreadProc, &pProgressDialog->m_ThreadData, 0, &dwThreadId);
 
-			if(pProgressDialog->m_hThread == NULL)	EndDialog(hDlg,IDABORT);
+			if(pProgressDialog->m_hThread == NULL)	EndDialog(hDlg, IDABORT);
 
 			return TRUE;
 		}
 	case WM_COMMAND:
 		{
-			pProgressDialog = (CUPDialog*)GetWindowLongPtr(hDlg,GWLP_USERDATA);
+			pProgressDialog = (CUPDialog*)GetWindowLongPtr(hDlg, GWLP_USERDATA);
 
 			if(pProgressDialog->m_nCancelButtonId == LOWORD(wParam))
 			{
-				SendMessage(hDlg,PROGRESSTHREADDATA::WM_CANCELPROGRESSTHREAD,0,0);
+				SendMessage(hDlg, PROGRESSTHREADDATA::WM_CANCELPROGRESSTHREAD, 0, 0);
 				bProcessed = TRUE;
 			}
 			break;
@@ -185,62 +185,65 @@ INT_PTR CALLBACK ProgressDlgProc(HWND hDlg,UINT Message,WPARAM wParam,LPARAM lPa
 		{
 			if(SC_CLOSE == wParam)
 			{
-				SendMessage(hDlg,PROGRESSTHREADDATA::WM_CANCELPROGRESSTHREAD,0,0);
+				SendMessage(hDlg, PROGRESSTHREADDATA::WM_CANCELPROGRESSTHREAD, 0, 0);
 				bProcessed = TRUE;
 			}
 			break;
 		}
 	case PROGRESSTHREADDATA::WM_DISABLECONTROLS:
 		{
-			pProgressDialog = (CUPDialog*)GetWindowLongPtr(hDlg,GWLP_USERDATA);
-			EnableMenuItem(GetSystemMenu(hDlg,false),SC_CLOSE,MF_DISABLED|MF_GRAYED|MF_BYCOMMAND);
-			EnableWindow(GetDlgItem(hDlg, pProgressDialog->m_nCancelButtonId),false);
+			pProgressDialog = (CUPDialog*)GetWindowLongPtr(hDlg, GWLP_USERDATA);
+			EnableMenuItem(GetSystemMenu(hDlg, false), SC_CLOSE, MF_DISABLED|MF_GRAYED|MF_BYCOMMAND);
+			EnableWindow(GetDlgItem(hDlg, pProgressDialog->m_nCancelButtonId), false);
 			bProcessed = TRUE;
 			break;
 		}
 	case PROGRESSTHREADDATA::WM_ENABLECONTROLS:
 		{
-			pProgressDialog = (CUPDialog*)GetWindowLongPtr(hDlg,GWLP_USERDATA);
-			EnableMenuItem(GetSystemMenu(hDlg,false),SC_CLOSE,MF_ENABLED|MF_BYCOMMAND);
-			EnableWindow(GetDlgItem(hDlg, pProgressDialog->m_nCancelButtonId),true);
+			pProgressDialog = (CUPDialog*)GetWindowLongPtr(hDlg, GWLP_USERDATA);
+			EnableMenuItem(GetSystemMenu(hDlg, false), SC_CLOSE, MF_ENABLED|MF_BYCOMMAND);
+			EnableWindow(GetDlgItem(hDlg, pProgressDialog->m_nCancelButtonId), true);
 			bProcessed = TRUE;
 			break;
 		}
 	case PROGRESSTHREADDATA::WM_PROGRESSTHREADCOMPLETED:		//wParam = IDOK or IDCANCEL depending on the Success of Thread
 		{
+			AfxGetApp()->m_pMainWnd->SendMessage(WM_USER_THREAD_COMPLETE, 0, 0);
 			EndDialog(hDlg, wParam);
 			bProcessed = TRUE;
 			break;
 		}		
 	case PROGRESSTHREADDATA::WM_PROGRESSTEXTUPDATE:				//lParam = ProgressText;
 		{
-			pProgressDialog = (CUPDialog*)GetWindowLongPtr(hDlg,GWLP_USERDATA);
-			SendMessage(GetDlgItem(hDlg, pProgressDialog->m_nStaticControlId),WM_SETTEXT,0,lParam);
+			pProgressDialog = (CUPDialog*)GetWindowLongPtr(hDlg, GWLP_USERDATA);
+			SendMessage(GetDlgItem(hDlg, pProgressDialog->m_nStaticControlId), WM_SETTEXT, 0, lParam);
 			bProcessed = TRUE;
 			break;
 		}
 	case PROGRESSTHREADDATA::WM_PROGRESSBARUPDATE:				//wParam = % Progress; 
 		{
-			pProgressDialog = (CUPDialog*)GetWindowLongPtr(hDlg,GWLP_USERDATA);
-			SendMessage(GetDlgItem(hDlg, pProgressDialog->m_nProgressBarControlId),PBM_SETPOS,wParam,0);
+			AfxGetApp()->m_pMainWnd->SendMessage(WM_USER_THREAD_UPDATE_PROGRESS, wParam, 0);
+			pProgressDialog = (CUPDialog*)GetWindowLongPtr(hDlg, GWLP_USERDATA);
+			SendMessage(GetDlgItem(hDlg, pProgressDialog->m_nProgressBarControlId), PBM_SETPOS, wParam, 0);			
 			bProcessed = TRUE;
 			break;
 		}
 	case PROGRESSTHREADDATA::WM_CANCELPROGRESSTHREAD:			//Enough to Signal the Thread - Actual Handle Would be Closed in the Dialog Destructor
 		{
-			pProgressDialog = (CUPDialog*)GetWindowLongPtr(hDlg,GWLP_USERDATA);
+			AfxGetMainWnd()->SendMessage(WM_USER_THREAD_COMPLETE, 0, 0);
+			pProgressDialog = (CUPDialog*)GetWindowLongPtr(hDlg, GWLP_USERDATA);
 			{
 				LPPROGRESSTHREADDATA pThreadData = (LPPROGRESSTHREADDATA)(LPVOID)(&pProgressDialog->m_ThreadData);
 				pThreadData->bTerminate = true;
-				SendMessage(GetDlgItem(hDlg, pProgressDialog->m_nStaticControlId),WM_SETTEXT,0,(LPARAM)(_T("Termination Initiated..")));
-				SendMessage(hDlg,PROGRESSTHREADDATA::WM_DISABLECONTROLS,wParam,lParam);
+				SendMessage(GetDlgItem(hDlg, pProgressDialog->m_nStaticControlId), WM_SETTEXT, 0, (LPARAM)(_T("Termination Initiated..")));
+				SendMessage(hDlg, PROGRESSTHREADDATA::WM_DISABLECONTROLS, wParam, lParam);
 				if(pThreadData->bAlive)
 					Sleep(pProgressDialog->m_dwTerminateDelay);
 				if(pThreadData->bAlive)
-					SendMessage(GetDlgItem(hDlg, pProgressDialog->m_nStaticControlId),WM_SETTEXT,0,(LPARAM)(_T("Termination Complete ..Shutting Down !!")));
+					SendMessage(GetDlgItem(hDlg, pProgressDialog->m_nStaticControlId), WM_SETTEXT, 0, (LPARAM)(_T("Termination Complete ..Shutting Down !!")));
 				if(pThreadData->bAlive)
 					Sleep(pProgressDialog->m_dwTerminateDelay);
-				EndDialog(hDlg, MAKEWPARAM(IDCANCEL,1));
+				EndDialog(hDlg, MAKEWPARAM(IDCANCEL, 1));
 			}
 			bProcessed = TRUE;
 			break;
@@ -248,7 +251,7 @@ INT_PTR CALLBACK ProgressDlgProc(HWND hDlg,UINT Message,WPARAM wParam,LPARAM lPa
 	}
 
 	if(pProgressDialog == NULL) // pProgressDialog could be NULL if we have not processed this message (or initialized the value)
-		pProgressDialog = (CUPDialog*)GetWindowLongPtr(hDlg,GWLP_USERDATA);
+		pProgressDialog = (CUPDialog*)GetWindowLongPtr(hDlg, GWLP_USERDATA);
 
 	if(pProgressDialog != NULL)	// pProgressDialog could be NULL if we have not yet set the GWLP_USERDATA
 	{

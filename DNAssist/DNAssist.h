@@ -19,8 +19,6 @@
 
 using namespace std;
 
-#define WM_USER_THREAD_COMPLETE (WM_USER+1236)
-#define WM_USER_THREAD_UPDATE_PROGRESS (WM_USER+1237)
 #define WM_FIND_DIALOG	WM_APP + CFindDialog::IDD
 #define WM_FIND_ORF_DIALOG	WM_APP + CFindORFDialog::IDD
 #define WM_FIND_PATTERN_DIALOG	WM_APP + CFindPatternDialog::IDD

@@ -39,7 +39,6 @@ protected:  // control bar embedded members
 	CToolBar          m_wndToolBar;
 	CStatusBar        m_wndStatusBar;
 	CMDITabs	m_wndMDITabs;
-	CProgressCtrl m_progBar;
 	CComPtr<ITaskbarList3> m_pTaskbarList;
 
 // Generated message map functions
