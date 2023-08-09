@@ -9,21 +9,22 @@
 #include <vector>
 using namespace std;
 
-#define MAXLINE 512			/* Max. line length */
-#define MAXNAMES		30	/* Max chars read for seq. names */
-#define MAXTITLES		60      /* Title length */
-#define FILENAMELEN 	256             /* Max. file name length */
+#define EOS '\0'				/* End-Of-String */
+#define MAXLINE 512      /* Max. line length */
+#define MAXNAMES    30  /* Max chars read for seq. names */
+#define MAXTITLES    60      /* Title length */
+#define FILENAMELEN   256             /* Max. file name length */
 
 #define UNKNOWN   0
 #define EMBLSWISS 1
-#define PIR 	  2
+#define PIR     2
 #define PEARSON   3
-#define GDE    	  4
-#define CLUSTAL   5	/* DES */
+#define GDE        4
+#define CLUSTAL   5  /* DES */
 #define MSF       6 /* DES */
-#define RSF       7	/* JULIE */
-#define USER      8	/* DES */
-#define PHYLIP    9	/* DES */
+#define RSF       7  /* JULIE */
+#define USER      8  /* DES */
+#define PHYLIP    9  /* DES */
 
 #define NONE      0
 #define SECST     1
@@ -37,14 +38,14 @@ using namespace std;
 
 #define PAGE_LEN       22   /* Number of lines of help sent to screen */
 
-#define PAGEWIDTH	80  /* maximum characters on output file page */
-#define LINELENGTH     	60  /* Output file line length */
-#define GCG_LINELENGTH 	50
+#define PAGEWIDTH  80  /* maximum characters on output file page */
+#define LINELENGTH       60  /* Output file line length */
+#define GCG_LINELENGTH   50
 
-#ifdef VMS						/* Defaults for VAX VMS */
+#ifdef VMS            /* Defaults for VAX VMS */
 #define COMMANDSEP '/'
-#define DIRDELIM ']'		/* Last character before file name in full file
-							   specs */
+#define DIRDELIM ']'    /* Last character before file name in full file
+                 specs */
 #define INT_SCALE_FACTOR 1000 /* Scaling factor to convert float to integer for profile scores */
 
 #elif MAC
@@ -63,7 +64,7 @@ using namespace std;
 #define INT_SCALE_FACTOR 100  /* Scaling factor to convert float to integer for profile scores */
 #endif
 
-#define NUMRES 32		/* max size of comparison matrix */
+#define NUMRES 32    /* max size of comparison matrix */
 
 #define INPUT 0
 #define ALIGNED 1
@@ -74,8 +75,8 @@ using namespace std;
 #define NODE 0
 #define LEAF 1
 
-#define GAPCOL 32		/* position of gap open penalty in profile */
-#define LENCOL 33		/* position of gap extension penalty in profile */
+#define GAPCOL 32    /* position of gap open penalty in profile */
+#define LENCOL 33    /* position of gap extension penalty in profile */
 
 #define ENDALN 127
 
@@ -83,7 +84,7 @@ using namespace std;
 #define tbgap(k)  ((k) <= 0 ? 0 : tb + gh * (k))
 #define tegap(k)  ((k) <= 0 ? 0 : te + gh * (k))
 
-typedef struct node : public enable_shared_from_this<node> {		/* phylogenetic tree structure */
+typedef struct node : public enable_shared_from_this<node> {    /* phylogenetic tree structure */
 	shared_ptr<node> left;
 	shared_ptr<node> right;
 	node* parent;
@@ -115,8 +116,8 @@ private:
 	int print_ptr, prf_length1, prf_length2, profile_no, profile1_nseqs, prot_wind_gap,prot_ktup,prot_window, prot_signif;
 	int sb1, sb2, se1, se2, seq1, seq2, seqFormat;
 	int strand_end_plus = 1, strand_penalty, strand_end_penalty, struct_penalties, struct_penalties1, struct_penalties2, strand_end_minus;
-	int vatend, wind_gap, ktup, window, signif;	
-	size_t boot_ran_seed;	
+	int vatend, wind_gap, ktup, window, signif;  
+	size_t boot_ran_seed;  
 	float dna_gap_open, dna_gap_extend;
 	float prot_gap_open, prot_gap_extend;
 	float pw_go_penalty, pw_ge_penalty;
@@ -131,7 +132,7 @@ private:
 	string sec_struct_mask, sec_struct_mask1, sec_struct_mask2;
 	string ss_name, ss_name1, ss_name2, slopes;
 	string seqname, tree_gaps;
-	wstring clustal_outname, gcg_outname, outfile_name, phylip_name, phylip_outname, nbrf_outname, gde_outname;	
+	wstring clustal_outname, gcg_outname, outfile_name, phylip_name, phylip_outname, nbrf_outname, gde_outname;
 
 	unique_ptr<short[]> aa_xref;
 	unique_ptr<short[]> def_aa_xref, def_dna_xref, dna_xref;
@@ -139,7 +140,7 @@ private:
 	unique_ptr<int[]> aln_len, boot_positions, boot_totals, tkill;
 	unique_ptr<int[]> displ, diag_index, seq_weight, zza, zzb, zzc, zzd, DD, HH, RR, SS, gS;
 	unique_ptr<double[]> av, left_branch, right_branch, save_left_branch, save_right_branch;
-	vector<int> seqlen_array, output_index;	
+	vector<int> seqlen_array, output_index;
 	vector<string> alignment, seq_array, names, titles;
 	treeptr root;
 	unique_ptr<treeptr[]> lptr, nptr, olptr, ptrs;
@@ -158,7 +159,7 @@ private:
 	inline short multiple_align_menu()
 	{
 		return align(phylip_name) ? 1 : 0;
-	}	
+	}
 
 	/* alnscore.c */
 	void aln_score();
@@ -169,17 +170,10 @@ private:
 	int seq_input(bool);
 	bool open_alignment_output(const wstring& );
 	void create_alignment_output(int fseq,int lseq);
-	void profile_align(string& p1_tree_name,string& p2_tree_name);/* Align 2 alignments */
-	void make_tree(wstring& phylip_name);
-	void get_tree(wstring& phylip_name);
 	int profile_input();                        /* read a profile */
 	void new_sequence_align(wstring& phylip_name);
 	bool user_mat(string& , short *, short *);
 	void clustal_out(vector<string>&, int*, int, int, int, int);
-	void nbrf_out(ofstream& , int, int, int, int);
-	void gcg_out(ofstream& , int, int, int, int);
-	void phylip_out(ofstream& , int, int, int, int);
-	void gde_out(ofstream& , int, int, int, int);
 	void print_sec_struct_mask(int prf_length, const string& mask, string& struct_mask);
 	void fix_gaps();
 
@@ -205,8 +199,7 @@ private:
 	void addrandinit(unsigned long s);
 	/* readmat.c */
 	void init_matrix();
-	int get_matrix(const short* matptr, short* xref, vector<vector<int> >& matrix, bool neg_flag,
-	                int scale);
+	int get_matrix(const short* matptr, short* xref, vector<vector<int> >& matrix, bool neg_flag, int scale);
 	int read_user_matrix(const string& filename, short *usermat, short *xref);
 	int getargs(const string& inline1, vector<string>& args, int max);
 	/* sequence.c */
@@ -252,13 +245,13 @@ private:
 
 	/* calcgapcoeff.c */
 	void calc_gap_coeff(vector<string>& alignment, int *gaps, vector<vector<int> >& profile, bool struct_penalties,
-		                   string& gap_penalty_mask, int first_seq, int last_seq,
-		                   int prf_length, int gapcoef, int lencoef);
+                       string& gap_penalty_mask, int first_seq, int last_seq,
+                       int prf_length, int gapcoef, int lencoef);
 	void calc_gap_penalty_mask(int prf_length, const string& mask, string& gap_mask);
 	void calc_prf1(vector<vector<int> >& profile, vector<string>& alignment, int *gaps, vector<vector<int> >& matrix,
-		               int *seq_weight, int prf_length, int first_seq, int last_seq);
+                   int *seq_weight, int prf_length, int first_seq, int last_seq);
 	void calc_prf2(vector<vector<int> >& profile, vector<string>& alignment, int *seq_weight, int prf_length,
-		               int first_seq, int last_seq);
+                   int first_seq, int last_seq);
 	int calc_weight(int leaf);
 	void mark_group1(treeptr p, int *groups, int n);
 	void mark_group2(treeptr p, int *groups, int n);
@@ -323,10 +316,10 @@ public:
 	unique_ptr<int[]> order;
 	string hyd_residues, pw_dnamtrxname, mtrxname;
 	vector<string> hpsequences, result;
-	
+
 	CMultAlignment();
 	int main_menu();
-	inline void copy_chars(const wstring& data)
+	void copy_chars(const wstring& data)
 	{
 		int i = 0;
 		for (; i < data.size() && i < 256; ++i)

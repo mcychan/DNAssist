@@ -624,7 +624,7 @@ void CMultAlignment::aln_score()
 
 	score = 0;
 	for (s1 = 1; s1 <= nseqs; s1++) {
-		for (s2 = 1;s2 < s1; s2++) {
+		for (s2 = 1; s2 < s1; s2++) {
 
 			l1 = seqlen_array[s1];
 			l2 = seqlen_array[s2];
@@ -797,7 +797,8 @@ void CMultAlignment::print_sec_struct_mask(int prf_length, const string& mask, s
 		if (tolower(mask[i]) == 'a' || mask[i] == '$') {
 			for (j = 0; j < helix_end_minus; ++j) {
 				if (i + j >= prf_length || (tolower(mask[i + j]) != 'a'
-									&& mask[i + j] != '$')) break;
+									&& mask[i + j] != '$'))
+					break;
 				struct_mask[i + j] = 'a';
 			}
 			i += j;
@@ -813,7 +814,7 @@ void CMultAlignment::print_sec_struct_mask(int prf_length, const string& mask, s
 				i++;
 			}
 			for (j = 0; j < helix_end_minus; ++j) {
-				if ((i - j - 1>=0) && (tolower(mask[i - j - 1]) == 'a'
+				if ((i - j - 1 >= 0) && (tolower(mask[i - j - 1]) == 'a'
 									|| mask[i - j - 1] == '$'))
 					struct_mask[i - j - 1] = 'a';
 			}
@@ -821,13 +822,15 @@ void CMultAlignment::print_sec_struct_mask(int prf_length, const string& mask, s
 		else if (tolower(mask[i]) == 'b' || mask[i] == '%') {
 			for (j = 0; j < strand_end_minus; ++j) {
 				if (i + j >= prf_length || (tolower(mask[i + j]) != 'b'
-									&& mask[i + j] != '%')) break;
+									&& mask[i + j] != '%'))
+					break;
 				struct_mask[i + j] = 'b';
 			}
 			i += j;
 			while (tolower(mask[i]) == 'b'
 									|| mask[i] == '%') {
-				if (i>=prf_length) break;
+				if (i >= prf_length)
+					break;
 				if (mask[i] == '%') {
 					struct_mask[i] = 'B';
 					i++;
@@ -1176,14 +1179,14 @@ void CMultAlignment::get_gde_ss(int length)
 			blank_to_(sname);
 
 			struct_penalties = GMASK;
-			for (i=0;i<length;i++)
+			for (i = 0; i < length; ++i)
 				gap_penalty_mask[i] = '1';
 			len = 0;
 			while(getline(fin, line)) {
 				if(line[0] == '%' || line[0] == '#' || line[0] == '"')
 					break;
-				for(i=offset;i < length;i++) {
-					c=line[i];
+				for(i = offset; i < length; ++i) {
+					c = line[i];
 					if(c == '\n' || c == '\0')
 						break;			/* EOL */
 					gap_penalty_mask[len++]=c;
@@ -1518,7 +1521,7 @@ void CMultAlignment::get_path(const string& str, string& path)
 	register int i;
 
 	path = str;
-	for(i=path.length() - 1; i > -1; --i) {
+	for(i = path.length() - 1; i > -1; --i) {
 		if(str[i] == DIRDELIM) {
 			i = -1;
 			break;
@@ -1733,21 +1736,6 @@ short CMultAlignment::align(wstring& phylip_name)
 	phylip_name.clear();
 	clustal_outfile.close();
 	return 1;
-}
-
-void CMultAlignment::profile_align(string& p1_tree_name,string& p2_tree_name)
-{
-	//nothing ??
-}
-
-void CMultAlignment::make_tree(wstring& phylip_name)
-{
-	//all commented out
-}
-
-void CMultAlignment::get_tree(wstring& phylip_name)
-{
-	//nothing ??
 }
 
 int CMultAlignment::profile_input()	/* read a profile	*/
@@ -2183,7 +2171,7 @@ void CMultAlignment::calc_gap_coeff(vector<string>& alignment, int *gaps, vector
 		}
 		else {
 			scale = ((float)(numseq - gaps[j]) / (float) numseq) * reduced_gap;
-			profile[j + 1][GAPCOL] = scale*gapcoef;
+			profile[j + 1][GAPCOL] = scale * gapcoef;
 			profile[j + 1][LENCOL] = 0.5 * lencoef;
 		}
 /*
@@ -2245,7 +2233,7 @@ void CMultAlignment::calc_gap_penalty_mask(int prf_length, const string& mask, s
 			}
 			i += j;
 			while (tolower(mask[i]) == 'a' || mask[i] == '$') {
-				if (i>=prf_length)
+				if (i >= prf_length)
 					break;
 				if (mask[i] == '$') {
 					struct_mask[i] = 'A';
@@ -2269,12 +2257,12 @@ void CMultAlignment::calc_gap_penalty_mask(int prf_length, const string& mask, s
 		}
 		else if (tolower(mask[i]) == 'b' || mask[i] == '%') {
 			for (j = -strand_end_plus; j < 0; ++j) {
-				if ((i + j>=0) && (tolower(struct_mask[i + j]) != 'a')
+				if ((i + j >= 0) && (tolower(struct_mask[i + j]) != 'a')
 					&& (tolower(struct_mask[i + j]) != 'b'))
 					struct_mask[i + j] = 'b';
 			}
 			for (j = 0; j<strand_end_minus; ++j) {
-				if (i + j>=prf_length || (tolower(mask[i + j]) != 'b'
+				if ((i + j >= prf_length) || (tolower(mask[i + j]) != 'b'
 					&& mask[i + j] != '%'))
 					break;
 				struct_mask[i + j] = 'b';
@@ -2307,7 +2295,7 @@ void CMultAlignment::calc_gap_penalty_mask(int prf_length, const string& mask, s
 			i++;
 	}
 
-	for(i=0;i<prf_length;i++) {
+	for(i = 0; i < prf_length; ++i) {
 		switch (struct_mask[i]) {
 			case 'A':
 				gap_mask[i] = helix_penalty + '0';
@@ -3097,7 +3085,7 @@ int CMultAlignment::read_tree(wstring& treefile, int first_seq, int last_seq)
 			if (names[i + 1].length() > MAXNAMES)
 				cout << "name " << names[i + 1] << " is too long for PHYLIP tree format (max " << MAXNAMES << " chars)";
 
-			for (k = 0; k < names[i + 1].length() && k < MAXNAMES; k++) {
+			for (k = 0; k < names[i + 1].length() && k < MAXNAMES; ++k) {
 				c = names[i + 1][k];
 				if ((c > 0x40) && (c < 0x5b))
 					c |= 0x20;
@@ -3108,7 +3096,7 @@ int CMultAlignment::read_tree(wstring& treefile, int first_seq, int last_seq)
 			name2[k] = '\0';
 			found = false;
 			for (j=0; j<numseq; ++j) {
-				for (k = 0; k < lptr[j]->name.length() && k < MAXNAMES; k++) {
+				for (k = 0; k < lptr[j]->name.length() && k < MAXNAMES; ++k) {
 					c = lptr[j]->name[k];
 					if ((c > 0x40) && (c < 0x5b))
 						c |= 0x20;
@@ -3336,7 +3324,7 @@ int CMultAlignment::malign(int istart, wstring& phylip_name) /* full progressive
 				string text = textStream.str();
 				wstring caption(text.begin(), text.end());
 				copy_chars(caption);
-				*pPercent = 100 * (set* i) / range;
+				*pPercent = 100 * (set * i) / range;
 				if ((sets[set][i] != 0) && (maxid[i] > divergence_cutoff)) {
 					entries++;
 					if (aligned[i] == 0) {
@@ -4014,13 +4002,13 @@ int CMultAlignment::diff(int A, int B, int M, int N, int tb, int te)
 		if(M > 0)
 			del(M);
 
-		return -(int) tbgap(M);
+		return -tbgap(M);
 	}
 
 	if(M <= 1) {
 		if(M <= 0) {
 			add(N);
-			return -(int) tbgap(N);
+			return -tbgap(N);
 		}
 
 		midh = -(tb + gh) - tegap(N);
@@ -4231,14 +4219,15 @@ int CMultAlignment::pairalign(int istart, int iend, int jstart, int jend)
 			return -1;
 	}
 
-	for (si = max(0, istart); si < nseqs && si < iend; ++si) {
-		*pPercent = si / (min(nseqs, iend) - max(0, istart)) * 100.0;
+	int ibegin = max(0, istart);
+	for (si = ibegin; si < nseqs && si < iend; ++si) {
+		*pPercent = (si - ibegin) / (min(nseqs, iend) - ibegin) * 100.0;
 		n = seqlen_array[si + 1];
 		len1 = 0;
 		for (int i = 1; i <= n; ++i) {
 			c = seq_array[si + 1][i];
 			if (c != gap_pos1 && c != gap_pos2)
-				len1++;
+				++len1;
 		}
 
 		for (sj = max(si + 1, jstart + 1); sj < nseqs && sj < jend; ++sj) {
@@ -4254,7 +4243,7 @@ int CMultAlignment::pairalign(int istart, int iend, int jstart, int jend)
 			for (int i = 1; i <= m; ++i) {
 				c = seq_array[sj + 1][i];
 				if (c != gap_pos1 && c != gap_pos2)
-					len2++;
+					++len2;
 			}
 
 			if (dnaflag) {
@@ -4263,9 +4252,9 @@ int CMultAlignment::pairalign(int istart, int iend, int jstart, int jend)
 			}
 			else {
 				if (mat_avscore <= 0)
-					g = 200 * (float)(pw_go_penalty + log((double)(min(n,m))));
+					g = 200 * (float)(pw_go_penalty + log((double)(min(n, m))));
 				else
-					g = 2 * mat_avscore * (float)(pw_go_penalty + log((double)(min(n,m))));
+					g = 2 * mat_avscore * (float)(pw_go_penalty + log((double)(min(n, m))));
 				gh = pw_ge_penalty * int_scale;
 			}
 
@@ -4324,7 +4313,7 @@ void CMultAlignment::pdel(int k)
 	if(last_print < 0)
 		last_print = displ[print_ptr - 1] -= k;
 	else
-		last_print = displ[print_ptr++] = -(k);
+		last_print = displ[print_ptr++] = -k;
 }
 
 void CMultAlignment::padd(int k)
@@ -4676,7 +4665,7 @@ void CMultAlignment::ptracepath(int *alen)
 		}
 	}
 
-	(*alen) = pos;
+	*alen = pos;
 }
 
 string CMultAlignment::add_ggaps_mask(string& mask, int len, const string& path1, const string& path2)
@@ -4743,7 +4732,7 @@ void CMultAlignment::add_ggaps()
 		ta[i] = ENDALN;
 
 		len = alignment_len;
-		alignment[j].resize(len+2);
+		alignment[j].resize(len + 2);
 		for (i = 0; i < len; ++i)
 			alignment[j][i] = ta[i];
 		alignment[j][i] = ENDALN;
@@ -4752,7 +4741,7 @@ void CMultAlignment::add_ggaps()
 
 	for (j = nseqs1; j < nseqs1 + nseqs2; ++j) {
 		ix = 0;
-		for (i=0; i<alignment_len; ++i) {
+		for (i = 0; i < alignment_len; ++i) {
 			if (aln_path2[i] == 2) {
 				if (ix < aln_len[j])
 					ta[i] = alignment[j][ix];
@@ -4772,7 +4761,7 @@ void CMultAlignment::add_ggaps()
 		ta[i] = ENDALN;
 
 		len = alignment_len;
-		alignment[j].resize(len+2);
+		alignment[j].resize(len + 2);
 		for (i = 0; i < len; ++i)
 			alignment[j][i] = ta[i];
 		alignment[j][i] = ENDALN;
@@ -4986,7 +4975,7 @@ int CMultAlignment::prfalign(int *group, int *aligned)
 		if (group[i + 1] == 1) {
 			len = seqlen_array[i + 1];
 			alignment[nseqs1].clear();
-			alignment[nseqs1].resize(len+2);
+			alignment[nseqs1].resize(len + 2);
 			for (j = 0; j < len; ++j)
 				alignment[nseqs1][j] = seq_array[i + 1][j + 1];
 			alignment[nseqs1][j] = ENDALN;
@@ -5553,7 +5542,7 @@ void CMultAlignment::nj_tree(vector<string>& tree_description, ofstream& tree)
 		if(av[l[i]] > 0.0) {
 			if(verbose)
 				tree << "\n\t\t Node:" << setw(4) << l[i] << "(" << setprecision(5) << branch[i] << ") ";
-		for(k = last_seq - first_seq - 2; k >= 1; k--)
+		for(k = last_seq - first_seq - 2; k >= 1; --k)
 			if(tree_description[k][l[i]] == 1) {
 				for(j = 1; j <= last_seq - first_seq + 1; ++j)
 					if(tree_description[k][j] == 1)
@@ -5584,7 +5573,7 @@ int CMultAlignment::two_way_split(vector<string>& tree_description, ofstream& tr
 	if(start_row != last_seq - first_seq - 1)
 		tree << "(\n";
 
-	for(col = 1; col <= last_seq - first_seq + 1; col++) {
+	for(col = 1; col <= last_seq - first_seq + 1; ++col) {
 		if(tree_description[start_row][col] == flag) {
 			test_col = col;
 			break;
@@ -5592,7 +5581,7 @@ int CMultAlignment::two_way_split(vector<string>& tree_description, ofstream& tr
 	}
 
 	single_seq = true;
-	for(row=start_row - 1; row >= 1; row--)
+	for(row = start_row - 1; row >= 1; --row)
 		if(tree_description[row][test_col] == 1) {
 			single_seq = false;
 			new_row = row;
@@ -5606,10 +5595,10 @@ int CMultAlignment::two_way_split(vector<string>& tree_description, ofstream& tr
 			return 0;
 		}
 
-		tree << ":" << setprecision(5) << left_branch[start_row] << ",\n";
+		tree << ":" << setprecision(5) << left_branch[start_row];
 	}
 	else {
-		for(col = 1; col <= last_seq - first_seq + 1; col++) {
+		for(col = 1; col <= last_seq - first_seq + 1; ++col) {
 			if((tree_description[start_row][col] == 1)&&
 				(tree_description[new_row][col] == 1))
 				tree_description[start_row][col] = 0;
@@ -5627,7 +5616,7 @@ int CMultAlignment::two_way_split(vector<string>& tree_description, ofstream& tr
 	}
 
 
-	for(col = 1; col <= last_seq - first_seq + 1; col++)
+	for(col = 1; col <= last_seq - first_seq + 1; ++col)
 		if(tree_description[start_row][col] == flag) {
 			test_col = col;
 			break;
@@ -5635,7 +5624,7 @@ int CMultAlignment::two_way_split(vector<string>& tree_description, ofstream& tr
 
 	single_seq = true;
 	new_row = 0;
-	for(row = start_row - 1; row >= 1; row--)
+	for(row = start_row - 1; row >= 1; --row)
 		if(tree_description[row][test_col] == 1) {
 			single_seq = false;
 			new_row = row;
@@ -5648,7 +5637,7 @@ int CMultAlignment::two_way_split(vector<string>& tree_description, ofstream& tr
 		tree << ":" << setprecision(5) << right_branch[start_row] << '\n';
 	}
 	else {
-		for(col = 1; col <= last_seq - first_seq + 1; col++) {
+		for(col = 1; col <= last_seq - first_seq + 1; ++col) {
 			if((tree_description[start_row][col] == 1)&&
 				(tree_description[new_row][col] == 1))
 				tree_description[start_row][col] = 0;
@@ -5683,7 +5672,7 @@ void CMultAlignment::print_phylip_tree(vector<string>& tree_description, ofstrea
 	tree << ",\n";
 
 	old_row = two_way_split(tree_description, tree, last_seq - first_seq - 1, 3, bootstrap);
-	tree << ":" << setprecision(5) << left_branch[last_seq-first_seq+1];
+	tree << ":" << setprecision(5) << left_branch[last_seq - first_seq + 1];
 	if (bootstrap == BS_BRANCH_LABELS && old_row > 0 && boot_totals[old_row] > 0)
 		tree << "[" << boot_totals[old_row] << "]";
 	tree << ")";
@@ -5770,7 +5759,7 @@ void CMultAlignment::new_sequence_align(wstring& phylip_name)
 			calc_gap_penalty_mask(seqlen_array[1], sec_struct_mask1, gap_penalty_mask1);
 
 		if (struct_penalties2 == SECST)
-			calc_gap_penalty_mask(seqlen_array[profile1_nseqs+1], sec_struct_mask2, gap_penalty_mask2);
+			calc_gap_penalty_mask(seqlen_array[profile1_nseqs + 1], sec_struct_mask2, gap_penalty_mask2);
 
 
 	/* create the new tree file, if necessary */
@@ -5829,7 +5818,7 @@ void CMultAlignment::new_sequence_align(wstring& phylip_name)
 		return;
 
 	if (usemenu)
-		cout << "\n\n\n";
+		cout << endl << endl << endl;
 
 	create_alignment_output(1, nseqs);
 	phylip_name.clear();
@@ -5869,7 +5858,7 @@ void CMultAlignment::clustal_out(vector<string>& result, int* order, int fres, i
 	int catident1[NUMRES], catident2[NUMRES];
 
 	string temp;
-	temp.resize(len+1);
+	temp.resize(len + 1);
 	result.resize(lseq);
 
 	unique_ptr<int[]> seq_no = make_unique<int[]>(nseqs + 1);
@@ -5881,7 +5870,7 @@ void CMultAlignment::clustal_out(vector<string>& result, int* order, int fres, i
 		ss_mask1.resize(seqlen_array[1] + 10);
 		for (i = 0; i < seqlen_array[1]; ++i)
 			ss_mask1[i] = sec_struct_mask1[i];
-		print_sec_struct_mask(seqlen_array[1], sec_struct_mask1,ss_mask1);
+		print_sec_struct_mask(seqlen_array[1], sec_struct_mask1, ss_mask1);
 	}
 	if (struct_penalties2 == SECST && use_ss2) {
 		ss_mask2.resize(seqlen_array[profile1_nseqs + 1] + 10);
@@ -5970,7 +5959,7 @@ void CMultAlignment::clustal_out(vector<string>& result, int* order, int fres, i
 					print_seq_no[i] = 1;
 				}
 			}
-			for(; j<=ptr; ++j)
+			for(; j <= ptr; ++j)
 				seq1[j] = '-';
 			temp = seq1.substr(pos);
 			temp.resize(ptr - pos + 1);
@@ -5978,7 +5967,7 @@ void CMultAlignment::clustal_out(vector<string>& result, int* order, int fres, i
 			order[ii - 1] = i;
 		}
 
-		for(i = pos;i <= ptr; ++i) {
+		for(i = pos; i <= ptr; ++i) {
 			seq1[i] = ' ';
 			ident = 0;
 			for(j = 1; res_cat1[j - 1] != ""; ++j)
@@ -5992,16 +5981,16 @@ void CMultAlignment::clustal_out(vector<string>& result, int* order, int fres, i
 					char idx = seq_array[j][i];
 					if (idx >= amino_acid_codes.length())
 						continue;
-					for(k = 1; res_cat1[k - 1] != ""; k++) {
-						for(l = 0; (c = res_cat1[k - 1][l]); l++) {
+					for(k = 1; res_cat1[k - 1] != ""; ++k) {
+						for(l = 0; (c = res_cat1[k - 1][l]); ++l) {
 							if (amino_acid_codes[idx] == c) {
 								catident1[k - 1]++;
 								break;
 							}
 						}
 					}
-					for(k = 1; res_cat2[k - 1] != ""; k++) {
-						for(l = 0;(c = res_cat2[k - 1][l]); l++) {
+					for(k = 1; res_cat2[k - 1] != ""; ++k) {
+						for(l = 0; (c = res_cat2[k - 1][l]); ++l) {
 							if (amino_acid_codes[idx] == c) {
 								catident2[k - 1]++;
 								break;
@@ -6013,14 +6002,14 @@ void CMultAlignment::clustal_out(vector<string>& result, int* order, int fres, i
 			if(ident == lseq - fseq + 1)
 				seq1[i] = '*';
 			else if (!dnaflag) {
-				for(k = 1; res_cat1[k - 1] != ""; k++) {
+				for(k = 1; res_cat1[k - 1] != ""; ++k) {
 					if (catident1[k - 1] == lseq - fseq + 1) {
 						seq1[i] = ':';
 						break;
 					}
 				}
 				if(seq1[i] == ' ') {
-					for(k = 1; res_cat2[k - 1] != ""; k++) {
+					for(k = 1; res_cat2[k - 1] != ""; ++k) {
 						if (catident2[k - 1] == lseq - fseq + 1) {
 							seq1[i] = '.';
 							break;
@@ -6039,26 +6028,6 @@ void CMultAlignment::clustal_out(vector<string>& result, int* order, int fres, i
 		ss_mask1.clear();
 	if (struct_penalties2 == SECST && use_ss2)
 		ss_mask2.clear();
-}
-
-void CMultAlignment::nbrf_out(ofstream& nbout, int fres, int len, int fseq, int lseq)
-{
-	//nothing
-}
-
-void CMultAlignment::gcg_out(ofstream& gcgout, int fres, int len, int fseq, int lseq)
-{
-	//nothing
-}
-
-void CMultAlignment::phylip_out(ofstream& phyout, int fres, int len, int fseq, int lseq)
-{
-	//nothing
-}
-
-void CMultAlignment::gde_out(ofstream& gdeout, int fres, int len, int fseq, int lseq)
-{
-	//nothing
 }
 
 int CMultAlignment::getargs(const string& inline1, vector<string>& args, int max)
@@ -6330,7 +6299,7 @@ void CMultAlignment::make_n_ptrs(int *tptr, int *pl, int naseq, int len)
 	for(int i = 1; i <= len; ++i)
 		tptr[i] = 0;
 
-	for(int i = 1; i <= len-ktup + 1; ++i) {
+	for(int i = 1; i <= len - ktup + 1; ++i) {
 		int code = 0;
 		bool flag = false;
 		for(int j = 1; j <= ktup; ++j) {
@@ -6471,7 +6440,7 @@ void CMultAlignment::pair_align(int seq_no,int l1,int l2)
 
 	tl1 = (l1 + l2) - 1;
 
-	for(i = 1;i <= tl1; ++i) {
+	for(i = 1; i <= tl1; ++i) {
 		slopes[i] = displ[i] = 0;
 		diag_index[i] = i;
 	}
@@ -6680,8 +6649,8 @@ void CMultAlignment::show_pair()
 					}
 				}
 	/*
-				tmat[i][j]=calc_score;
-				tmat[j][i]=calc_score;
+				tmat[i][j] = calc_score;
+				tmat[j][i] = calc_score;
 	*/
 
 							tmat[i][j] = (100.0 - calc_score) / 100.0;
@@ -6700,8 +6669,8 @@ void CMultAlignment::distance_matrix_output(ofstream& ofile)
 {
 	int i,j;
 
-	ofile << setw(6) << last_seq-first_seq+1;
-	for(i = 1;i<=last_seq - first_seq + 1; ++i) {
+	ofile << setw(6) << last_seq - first_seq + 1;
+	for(i = 1; i <= last_seq - first_seq + 1; ++i) {
 		ofile << "\n " << setw(max_names) << names[i];
 		for(j = 1; j <= last_seq - first_seq + 1; ++j) {
 			ofile << setprecision(3) << tmat[i][j];
@@ -6846,7 +6815,7 @@ void CMultAlignment::compare_tree(vector<string>& tree1, vector<string>& tree2, 
 		for(j = 1; j <= n - 3; ++j)  {
 			nhits1 = 0;
 			nhits2 = 0;
-			for(k = 1; k <= n; k++) {
+			for(k = 1; k <= n; ++k) {
 				if(tree1[i][k] == tree2[j][k])
 					nhits1++;
 				if(tree1[i][k] != tree2[j][k])
@@ -6864,9 +6833,9 @@ void CMultAlignment::print_tree(vector<string>& tree_description, ofstream& tree
 
 	tree << "\n";
 
-	for(row = 1; row <= last_seq - first_seq - 2; row++)  {
+	for(row = 1; row <= last_seq - first_seq - 2; ++row)  {
 		tree << " \n";
-		for(col = 1; col <= last_seq - first_seq + 1; col++) {
+		for(col = 1; col <= last_seq - first_seq + 1; ++col) {
 			if(tree_description[row][col] == 0)
 				tree << '*';
 			else
@@ -6876,7 +6845,7 @@ void CMultAlignment::print_tree(vector<string>& tree_description, ofstream& tree
 			tree << setw(7) << totals[row];
 	}
 	tree << " \n";
-	for(col = 1; col <= last_seq-first_seq + 1; col++)
+	for(col = 1; col <= last_seq-first_seq + 1; ++col)
 		tree << setw(1) << tree_description[last_seq - first_seq - 1][col];
 	tree << "\n";
 }
@@ -7171,27 +7140,27 @@ int CMultAlignment::dna_distance_matrix(ofstream& tree)
 	}
 
 	for(m = 1; m < last_seq - first_seq + 1; ++m)	  /* for every pair of sequence */
-	for(n = m + 1; n <= last_seq - first_seq + 1; ++n) {
-		p = q = e = 0.0;
-		tmat[m][n] = tmat[n][m] = 0.0;
-		for(i = 1; i <= seqlen_array[first_seq]; ++i) {
-			j = boot_positions[i];
-						if(tossgaps && (tree_gaps[j] > 0) )
-				goto skip;			 /* gap position */
-			res1 = seq_array[m + first_seq - 1][j];
-			res2 = seq_array[n + first_seq - 1][j];
-			if(res1 == gap_pos1 || res1 == gap_pos2 ||
-				res2 == gap_pos1 || res2 == gap_pos2)
-				goto skip;			 /* gap in a seq*/
-			e += 1.0;
-			if(res1 != res2) {
-				if(transition(res1, res2))
-					p += 1.0;
-				else
-					q += 1.0;
+		for(n = m + 1; n <= last_seq - first_seq + 1; ++n) {
+			p = q = e = 0.0;
+			tmat[m][n] = tmat[n][m] = 0.0;
+			for(i = 1; i <= seqlen_array[first_seq]; ++i) {
+				j = boot_positions[i];
+							if(tossgaps && (tree_gaps[j] > 0) )
+					goto skip;			 /* gap position */
+				res1 = seq_array[m + first_seq - 1][j];
+				res2 = seq_array[n + first_seq - 1][j];
+				if(res1 == gap_pos1 || res1 == gap_pos2 ||
+					res2 == gap_pos1 || res2 == gap_pos2)
+					goto skip;			 /* gap in a seq*/
+				e += 1.0;
+				if(res1 != res2) {
+					if(transition(res1, res2))
+						p += 1.0;
+					else
+						q += 1.0;
+				}
+				skip:;
 			}
-			skip:;
-		}
 
 
 	/* Kimura's 2 parameter correction for multiple substitutions */
